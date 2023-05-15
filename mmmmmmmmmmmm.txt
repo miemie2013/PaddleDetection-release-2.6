@@ -1,0 +1,18 @@
+## 快速开始
+
+### 训练
+
+# 单卡
+python tools/train.py -c configs/ppyoloe/distill/ppyoloe_plus_crn_l_80e_coco_distill.yml --slim_config configs/slim/distill/ppyoloe_plus_distill_x_distill_l.yml
+
+
+# 多卡
+python -m paddle.distributed.launch --log_dir=ppyoloe_plus_distill_x_distill_l/ --gpus 0,1,2,3,4,5,6,7 tools/train.py -c configs/ppyoloe/distill/ppyoloe_plus_crn_l_80e_coco_distill.yml --slim_config configs/slim/distill/ppyoloe_plus_distill_x_distill_l.yml
+
+
+
+
+- `-c`: 指定模型配置文件，也是student配置文件。
+- `--slim_config`: 指定压缩策略配置文件，也是teacher配置文件。
+
+
