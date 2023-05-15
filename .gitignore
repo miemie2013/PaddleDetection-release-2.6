@@ -86,3 +86,7 @@ kernel_meta/
 # MAC
 *.DS_Store
 
+*.pdparams
+*.pth
+*.pt
+
