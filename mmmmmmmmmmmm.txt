@@ -1,5 +1,10 @@
 ## 快速开始
 
+
+pip install sklearn pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
 ### 训练
 
 # 单卡

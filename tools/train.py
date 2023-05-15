@@ -153,6 +153,17 @@ def run(FLAGS, cfg):
 
 def main():
     FLAGS = parse_args()
+    # 判断是否是调试状态
+    isDebug = True if sys.gettrace() else False
+    if isDebug:
+        print('Debug Mode.')
+        FLAGS.config = '../' + FLAGS.config
+        if FLAGS.slim_config is not None:
+            FLAGS.slim_config = '../' + FLAGS.slim_config
+        if FLAGS.proposals_path is not None:
+            FLAGS.proposals_path = '../' + FLAGS.proposals_path
+        if FLAGS.vdl_log_dir is not None:
+            FLAGS.vdl_log_dir = '../' + FLAGS.vdl_log_dir
     cfg = load_config(FLAGS.config)
     merge_args(cfg, FLAGS)
     merge_config(FLAGS.opt)

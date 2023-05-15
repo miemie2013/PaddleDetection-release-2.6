@@ -126,6 +126,7 @@ class Trainer(object):
             self.model.model.load_meanstd(cfg['TestReader'][
                 'sample_transforms'])
         elif 'slim' in cfg and cfg['slim_type'] == 'Distill':
+            # miemie2013: 蒸馏时，执行
             self.model.student_model.load_meanstd(cfg['TestReader'][
                 'sample_transforms'])
         elif 'slim' in cfg and cfg[

@@ -17,7 +17,7 @@ This code is based on https://github.com/xingyizhou/CenterTrack/blob/master/src/
 
 import copy
 import numpy as np
-import sklearn
+# import sklearn
 
 from ppdet.core.workspace import register, serializable
 from ppdet.utils.logger import setup_logger
