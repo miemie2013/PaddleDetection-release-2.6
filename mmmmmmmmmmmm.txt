@@ -50,6 +50,9 @@ nohup python -m paddle.distributed.launch --gpus 8,9 tools/train.py -c configs/p
 ----------------------- 知识蒸馏 -----------------------
 1.先训练老师模型:
 读 COCO 预训练模型（实际上由obj365 fine-tune 得到）进行fine-tune：
+python tools/train.py -c configs/ppyoloe/ppyoloe_plus_crn_l_16e_voc2012.yml --eval
+
+
 nohup python tools/train.py -c configs/ppyoloe/ppyoloe_plus_crn_l_16e_voc2012.yml --eval     > ppyoloe_plus_l_from_coco.log 2>&1 &
 
 
