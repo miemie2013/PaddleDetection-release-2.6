@@ -482,6 +482,7 @@ class Trainer(object):
             self.loader.dataset.set_epoch(epoch_id)
             model.train()
             iter_tic = time.time()
+            train_start = time.time()
             for step_id, data in enumerate(self.loader):
                 self.status['data_time'].update(time.time() - iter_tic)
                 self.status['step_id'] = step_id
@@ -557,6 +558,9 @@ class Trainer(object):
                 if self.use_ema:
                     self.ema.update()
                 iter_tic = time.time()
+            if self._local_rank == 0:
+                cost = time.time() - train_start
+                logger.info('Train epoch %d cost time: %.1f s.' % (epoch_id + 1, cost))
 
             if self.cfg.get('unstructured_prune'):
                 self.pruner.update_params()
