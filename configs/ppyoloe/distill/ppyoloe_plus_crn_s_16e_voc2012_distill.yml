@@ -1,0 +1,17 @@
+_BASE_: [
+  '../ppyoloe_plus_crn_s_16e_voc2012.yml',
+]
+for_distill: True
+architecture: PPYOLOE
+PPYOLOE:
+  backbone: CSPResNet
+  neck: CustomCSPPAN
+  yolo_head: PPYOLOEHead
+  post_process: ~
+
+
+weights: output/ppyoloe_plus_crn_s_16e_voc2012_distill/model_final
+
+pretrain_weights: https://paddledet.bj.bcebos.com/models/ppyoloe_plus_crn_s_80e_coco.pdparams
+depth_mult: 0.33
+width_mult: 0.50
