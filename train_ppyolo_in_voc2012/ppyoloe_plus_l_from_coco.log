@@ -1,0 +1,972 @@
+nohup: ignoring input
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+Warning: Unable to use JDE/FairMOT/ByteTrack, please install lap, for example: `pip install lap`, see https://github.com/gatagat/lap
+Warning: Unable to use MOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+loading annotations into memory...
+Done (t=0.13s)
+creating index...
+index created!
+[05/19 19:34:11] ppdet.data.source.coco INFO: Load [5717 samples valid, 0 samples invalid] in file ../VOCdevkit/VOC2012/annotations2/voc2012_train.json.
+W0519 19:34:11.160406 13369 gpu_resources.cc:61] Please NOTE: device: 0, GPU Compute Capability: 8.9, Driver API Version: 12.1, Runtime API Version: 11.3
+W0519 19:34:11.164333 13369 gpu_resources.cc:91] device: 0, cuDNN Version: 8.2.
+[05/19 19:34:14] ppdet.utils.checkpoint INFO: The shape [80] in pretrained weight yolo_head.pred_cls.0.bias is unmatched with the shape [20] in model yolo_head.pred_cls.0.bias. And the weight yolo_head.pred_cls.0.bias will not be loaded
+[05/19 19:34:14] ppdet.utils.checkpoint INFO: The shape [80, 768, 3, 3] in pretrained weight yolo_head.pred_cls.0.weight is unmatched with the shape [20, 768, 3, 3] in model yolo_head.pred_cls.0.weight. And the weight yolo_head.pred_cls.0.weight will not be loaded
+[05/19 19:34:14] ppdet.utils.checkpoint INFO: The shape [80] in pretrained weight yolo_head.pred_cls.1.bias is unmatched with the shape [20] in model yolo_head.pred_cls.1.bias. And the weight yolo_head.pred_cls.1.bias will not be loaded
+[05/19 19:34:14] ppdet.utils.checkpoint INFO: The shape [80, 384, 3, 3] in pretrained weight yolo_head.pred_cls.1.weight is unmatched with the shape [20, 384, 3, 3] in model yolo_head.pred_cls.1.weight. And the weight yolo_head.pred_cls.1.weight will not be loaded
+[05/19 19:34:14] ppdet.utils.checkpoint INFO: The shape [80] in pretrained weight yolo_head.pred_cls.2.bias is unmatched with the shape [20] in model yolo_head.pred_cls.2.bias. And the weight yolo_head.pred_cls.2.bias will not be loaded
+[05/19 19:34:14] ppdet.utils.checkpoint INFO: The shape [80, 192, 3, 3] in pretrained weight yolo_head.pred_cls.2.weight is unmatched with the shape [20, 192, 3, 3] in model yolo_head.pred_cls.2.weight. And the weight yolo_head.pred_cls.2.weight will not be loaded
+[05/19 19:34:14] ppdet.utils.checkpoint INFO: Finish loading model weights: /home/tanqiyou/.cache/paddle/weights/ppyoloe_plus_crn_l_80e_coco.pdparams
+[05/19 19:34:17] ppdet.engine INFO: Epoch: [0] [  0/714] learning_rate: 0.000000 loss: 4.774112 loss_cls: 4.070059 loss_iou: 0.119842 loss_dfl: 0.808899 loss_l1: 0.253380 eta: 10:38:32 batch_cost: 3.3537 data_cost: 0.0027 ips: 2.3854 images/s
+[05/19 19:34:22] ppdet.engine INFO: Epoch: [0] [ 20/714] learning_rate: 0.000007 loss: 4.796048 loss_cls: 4.041033 loss_iou: 0.122003 loss_dfl: 0.867054 loss_l1: 0.341442 eta: 1:08:13 batch_cost: 0.2092 data_cost: 0.0003 ips: 38.2445 images/s
+[05/19 19:34:27] ppdet.engine INFO: Epoch: [0] [ 40/714] learning_rate: 0.000014 loss: 4.634264 loss_cls: 3.915192 loss_iou: 0.103867 loss_dfl: 0.817510 loss_l1: 0.281578 eta: 0:52:27 batch_cost: 0.1899 data_cost: 0.0002 ips: 42.1369 images/s
+[05/19 19:34:31] ppdet.engine INFO: Epoch: [0] [ 60/714] learning_rate: 0.000021 loss: 4.250772 loss_cls: 3.447742 loss_iou: 0.123583 loss_dfl: 0.813531 loss_l1: 0.302452 eta: 0:45:26 batch_cost: 0.1650 data_cost: 0.0002 ips: 48.4909 images/s
+[05/19 19:34:36] ppdet.engine INFO: Epoch: [0] [ 80/714] learning_rate: 0.000028 loss: 3.590683 loss_cls: 2.859172 loss_iou: 0.112630 loss_dfl: 0.839593 loss_l1: 0.337838 eta: 0:42:12 batch_cost: 0.1724 data_cost: 0.0002 ips: 46.3993 images/s
+[05/19 19:34:40] ppdet.engine INFO: Epoch: [0] [100/714] learning_rate: 0.000035 loss: 3.015072 loss_cls: 2.372941 loss_iou: 0.110959 loss_dfl: 0.828827 loss_l1: 0.270030 eta: 0:40:02 batch_cost: 0.1671 data_cost: 0.0002 ips: 47.8679 images/s
+[05/19 19:34:44] ppdet.engine INFO: Epoch: [0] [120/714] learning_rate: 0.000042 loss: 2.510167 loss_cls: 1.858557 loss_iou: 0.107891 loss_dfl: 0.796466 loss_l1: 0.293019 eta: 0:38:36 batch_cost: 0.1686 data_cost: 0.0002 ips: 47.4356 images/s
+[05/19 19:34:48] ppdet.engine INFO: Epoch: [0] [140/714] learning_rate: 0.000049 loss: 2.520825 loss_cls: 1.772635 loss_iou: 0.124254 loss_dfl: 0.873138 loss_l1: 0.322224 eta: 0:37:30 batch_cost: 0.1659 data_cost: 0.0002 ips: 48.2152 images/s
+[05/19 19:34:53] ppdet.engine INFO: Epoch: [0] [160/714] learning_rate: 0.000056 loss: 2.255970 loss_cls: 1.445043 loss_iou: 0.117592 loss_dfl: 0.864875 loss_l1: 0.368728 eta: 0:37:04 batch_cost: 0.1841 data_cost: 0.0008 ips: 43.4484 images/s
+[05/19 19:34:57] ppdet.engine INFO: Epoch: [0] [180/714] learning_rate: 0.000063 loss: 2.101326 loss_cls: 1.295667 loss_iou: 0.128225 loss_dfl: 0.896253 loss_l1: 0.389243 eta: 0:36:37 batch_cost: 0.1785 data_cost: 0.0005 ips: 44.8093 images/s
+[05/19 19:35:01] ppdet.engine INFO: Epoch: [0] [200/714] learning_rate: 0.000070 loss: 2.078644 loss_cls: 1.290438 loss_iou: 0.132321 loss_dfl: 0.804528 loss_l1: 0.324026 eta: 0:36:03 batch_cost: 0.1686 data_cost: 0.0002 ips: 47.4480 images/s
+[05/19 19:35:06] ppdet.engine INFO: Epoch: [0] [220/714] learning_rate: 0.000077 loss: 1.970824 loss_cls: 1.193402 loss_iou: 0.128006 loss_dfl: 0.833436 loss_l1: 0.314761 eta: 0:35:42 batch_cost: 0.1761 data_cost: 0.0002 ips: 45.4199 images/s
+[05/19 19:35:10] ppdet.engine INFO: Epoch: [0] [240/714] learning_rate: 0.000084 loss: 1.844922 loss_cls: 1.159474 loss_iou: 0.119600 loss_dfl: 0.828711 loss_l1: 0.266856 eta: 0:35:21 batch_cost: 0.1724 data_cost: 0.0002 ips: 46.3954 images/s
+[05/19 19:35:14] ppdet.engine INFO: Epoch: [0] [260/714] learning_rate: 0.000091 loss: 1.926132 loss_cls: 1.205015 loss_iou: 0.113883 loss_dfl: 0.811929 loss_l1: 0.279897 eta: 0:35:04 batch_cost: 0.1747 data_cost: 0.0002 ips: 45.8021 images/s
+[05/19 19:35:19] ppdet.engine INFO: Epoch: [0] [280/714] learning_rate: 0.000098 loss: 1.846448 loss_cls: 1.237399 loss_iou: 0.104879 loss_dfl: 0.788583 loss_l1: 0.281313 eta: 0:34:45 batch_cost: 0.1687 data_cost: 0.0002 ips: 47.4226 images/s
+[05/19 19:35:23] ppdet.engine INFO: Epoch: [0] [300/714] learning_rate: 0.000105 loss: 1.891137 loss_cls: 1.122200 loss_iou: 0.115378 loss_dfl: 0.859173 loss_l1: 0.337382 eta: 0:34:25 batch_cost: 0.1657 data_cost: 0.0002 ips: 48.2701 images/s
+[05/19 19:35:27] ppdet.engine INFO: Epoch: [0] [320/714] learning_rate: 0.000112 loss: 1.982715 loss_cls: 1.208287 loss_iou: 0.133538 loss_dfl: 0.868402 loss_l1: 0.348828 eta: 0:34:04 batch_cost: 0.1604 data_cost: 0.0002 ips: 49.8710 images/s
+[05/19 19:35:31] ppdet.engine INFO: Epoch: [0] [340/714] learning_rate: 0.000119 loss: 1.827376 loss_cls: 1.041304 loss_iou: 0.128398 loss_dfl: 0.846422 loss_l1: 0.321067 eta: 0:33:46 batch_cost: 0.1619 data_cost: 0.0001 ips: 49.4276 images/s
+[05/19 19:35:35] ppdet.engine INFO: Epoch: [0] [360/714] learning_rate: 0.000126 loss: 1.895601 loss_cls: 1.161314 loss_iou: 0.124076 loss_dfl: 0.826519 loss_l1: 0.280844 eta: 0:33:40 batch_cost: 0.1787 data_cost: 0.0001 ips: 44.7587 images/s
+[05/19 19:35:39] ppdet.engine INFO: Epoch: [0] [380/714] learning_rate: 0.000133 loss: 1.906931 loss_cls: 1.176919 loss_iou: 0.133476 loss_dfl: 0.836691 loss_l1: 0.347598 eta: 0:33:32 batch_cost: 0.1755 data_cost: 0.0001 ips: 45.5935 images/s
+[05/19 19:35:43] ppdet.engine INFO: Epoch: [0] [400/714] learning_rate: 0.000140 loss: 1.942560 loss_cls: 1.138244 loss_iou: 0.134457 loss_dfl: 0.857006 loss_l1: 0.317775 eta: 0:33:22 batch_cost: 0.1707 data_cost: 0.0005 ips: 46.8661 images/s
+[05/19 19:35:47] ppdet.engine INFO: Epoch: [0] [420/714] learning_rate: 0.000147 loss: 2.027152 loss_cls: 1.225025 loss_iou: 0.144836 loss_dfl: 0.857467 loss_l1: 0.312079 eta: 0:33:11 batch_cost: 0.1668 data_cost: 0.0002 ips: 47.9618 images/s
+[05/19 19:35:51] ppdet.engine INFO: Epoch: [0] [440/714] learning_rate: 0.000154 loss: 1.914816 loss_cls: 1.184048 loss_iou: 0.121463 loss_dfl: 0.855259 loss_l1: 0.349838 eta: 0:32:54 batch_cost: 0.1553 data_cost: 0.0001 ips: 51.5275 images/s
+[05/19 19:35:55] ppdet.engine INFO: Epoch: [0] [460/714] learning_rate: 0.000161 loss: 1.929943 loss_cls: 1.149992 loss_iou: 0.123553 loss_dfl: 0.840365 loss_l1: 0.305932 eta: 0:32:36 batch_cost: 0.1487 data_cost: 0.0002 ips: 53.7844 images/s
+[05/19 19:35:59] ppdet.engine INFO: Epoch: [0] [480/714] learning_rate: 0.000168 loss: 2.050902 loss_cls: 1.167245 loss_iou: 0.139914 loss_dfl: 0.883574 loss_l1: 0.357385 eta: 0:32:24 batch_cost: 0.1609 data_cost: 0.0001 ips: 49.7259 images/s
+[05/19 19:36:02] ppdet.engine INFO: Epoch: [0] [500/714] learning_rate: 0.000175 loss: 2.017368 loss_cls: 1.208121 loss_iou: 0.142271 loss_dfl: 0.900388 loss_l1: 0.347969 eta: 0:32:07 batch_cost: 0.1461 data_cost: 0.0001 ips: 54.7476 images/s
+[05/19 19:36:06] ppdet.engine INFO: Epoch: [0] [520/714] learning_rate: 0.000182 loss: 2.091504 loss_cls: 1.335602 loss_iou: 0.134193 loss_dfl: 0.875949 loss_l1: 0.343183 eta: 0:31:52 batch_cost: 0.1484 data_cost: 0.0001 ips: 53.8974 images/s
+[05/19 19:36:10] ppdet.engine INFO: Epoch: [0] [540/714] learning_rate: 0.000189 loss: 2.020961 loss_cls: 1.205785 loss_iou: 0.127320 loss_dfl: 0.857419 loss_l1: 0.364912 eta: 0:31:48 batch_cost: 0.1745 data_cost: 0.0001 ips: 45.8489 images/s
+[05/19 19:36:14] ppdet.engine INFO: Epoch: [0] [560/714] learning_rate: 0.000196 loss: 2.230838 loss_cls: 1.267017 loss_iou: 0.151740 loss_dfl: 0.932210 loss_l1: 0.377162 eta: 0:31:37 batch_cost: 0.1559 data_cost: 0.0004 ips: 51.3290 images/s
+[05/19 19:36:18] ppdet.engine INFO: Epoch: [0] [580/714] learning_rate: 0.000203 loss: 2.012951 loss_cls: 1.258952 loss_iou: 0.139489 loss_dfl: 0.888994 loss_l1: 0.360489 eta: 0:31:29 batch_cost: 0.1640 data_cost: 0.0004 ips: 48.7750 images/s
+[05/19 19:36:21] ppdet.engine INFO: Epoch: [0] [600/714] learning_rate: 0.000210 loss: 2.033883 loss_cls: 1.219637 loss_iou: 0.138602 loss_dfl: 0.909415 loss_l1: 0.393687 eta: 0:31:17 batch_cost: 0.1496 data_cost: 0.0002 ips: 53.4929 images/s
+[05/19 19:36:25] ppdet.engine INFO: Epoch: [0] [620/714] learning_rate: 0.000217 loss: 2.180703 loss_cls: 1.325814 loss_iou: 0.156730 loss_dfl: 0.879428 loss_l1: 0.360283 eta: 0:31:01 batch_cost: 0.1376 data_cost: 0.0001 ips: 58.1233 images/s
+[05/19 19:36:29] ppdet.engine INFO: Epoch: [0] [640/714] learning_rate: 0.000224 loss: 2.149649 loss_cls: 1.263546 loss_iou: 0.160379 loss_dfl: 0.874831 loss_l1: 0.393690 eta: 0:30:51 batch_cost: 0.1530 data_cost: 0.0001 ips: 52.2943 images/s
+[05/19 19:36:32] ppdet.engine INFO: Epoch: [0] [660/714] learning_rate: 0.000231 loss: 1.954943 loss_cls: 1.170550 loss_iou: 0.130281 loss_dfl: 0.890151 loss_l1: 0.373673 eta: 0:30:43 batch_cost: 0.1583 data_cost: 0.0001 ips: 50.5464 images/s
+[05/19 19:36:36] ppdet.engine INFO: Epoch: [0] [680/714] learning_rate: 0.000238 loss: 2.014637 loss_cls: 1.318555 loss_iou: 0.140639 loss_dfl: 0.844341 loss_l1: 0.314553 eta: 0:30:33 batch_cost: 0.1513 data_cost: 0.0001 ips: 52.8696 images/s
+[05/19 19:36:40] ppdet.engine INFO: Epoch: [0] [700/714] learning_rate: 0.000245 loss: 2.248201 loss_cls: 1.328157 loss_iou: 0.164704 loss_dfl: 0.961966 loss_l1: 0.438093 eta: 0:30:27 batch_cost: 0.1607 data_cost: 0.0001 ips: 49.7827 images/s
+[05/19 19:36:43] ppdet.engine INFO: Train epoch 1 cost time: 149.3 s.
+[05/19 19:36:44] ppdet.engine INFO: Epoch: [1] [  0/714] learning_rate: 0.000250 loss: 2.289433 loss_cls: 1.421676 loss_iou: 0.148708 loss_dfl: 0.943653 loss_l1: 0.464956 eta: 0:30:38 batch_cost: 0.2231 data_cost: 0.0347 ips: 35.8558 images/s
+[05/19 19:36:48] ppdet.engine INFO: Epoch: [1] [ 20/714] learning_rate: 0.000250 loss: 2.204363 loss_cls: 1.289446 loss_iou: 0.165265 loss_dfl: 0.983045 loss_l1: 0.478449 eta: 0:30:31 batch_cost: 0.1584 data_cost: 0.0007 ips: 50.5020 images/s
+[05/19 19:36:52] ppdet.engine INFO: Epoch: [1] [ 40/714] learning_rate: 0.000250 loss: 2.093758 loss_cls: 1.338007 loss_iou: 0.141377 loss_dfl: 0.897765 loss_l1: 0.372885 eta: 0:30:26 batch_cost: 0.1654 data_cost: 0.0001 ips: 48.3725 images/s
+[05/19 19:36:55] ppdet.engine INFO: Epoch: [1] [ 60/714] learning_rate: 0.000250 loss: 1.992451 loss_cls: 1.188992 loss_iou: 0.149208 loss_dfl: 0.898914 loss_l1: 0.352324 eta: 0:30:15 batch_cost: 0.1448 data_cost: 0.0003 ips: 55.2622 images/s
+[05/19 19:37:00] ppdet.engine INFO: Epoch: [1] [ 80/714] learning_rate: 0.000250 loss: 2.156695 loss_cls: 1.321050 loss_iou: 0.150584 loss_dfl: 0.943456 loss_l1: 0.362403 eta: 0:30:14 batch_cost: 0.1785 data_cost: 0.0003 ips: 44.8257 images/s
+[05/19 19:37:04] ppdet.engine INFO: Epoch: [1] [100/714] learning_rate: 0.000250 loss: 2.285567 loss_cls: 1.371450 loss_iou: 0.159127 loss_dfl: 0.961338 loss_l1: 0.421218 eta: 0:30:07 batch_cost: 0.1580 data_cost: 0.0006 ips: 50.6413 images/s
+[05/19 19:37:07] ppdet.engine INFO: Epoch: [1] [120/714] learning_rate: 0.000250 loss: 2.091766 loss_cls: 1.334860 loss_iou: 0.137506 loss_dfl: 0.868741 loss_l1: 0.358566 eta: 0:29:58 batch_cost: 0.1462 data_cost: 0.0001 ips: 54.7263 images/s
+[05/19 19:37:12] ppdet.engine INFO: Epoch: [1] [140/714] learning_rate: 0.000250 loss: 2.245025 loss_cls: 1.387744 loss_iou: 0.144943 loss_dfl: 0.929001 loss_l1: 0.377113 eta: 0:29:57 batch_cost: 0.1805 data_cost: 0.0003 ips: 44.3259 images/s
+[05/19 19:37:15] ppdet.engine INFO: Epoch: [1] [160/714] learning_rate: 0.000250 loss: 2.220358 loss_cls: 1.277326 loss_iou: 0.168236 loss_dfl: 0.999238 loss_l1: 0.447650 eta: 0:29:48 batch_cost: 0.1476 data_cost: 0.0002 ips: 54.1938 images/s
+[05/19 19:37:19] ppdet.engine INFO: Epoch: [1] [180/714] learning_rate: 0.000250 loss: 2.178184 loss_cls: 1.278205 loss_iou: 0.163245 loss_dfl: 0.948751 loss_l1: 0.456180 eta: 0:29:45 batch_cost: 0.1709 data_cost: 0.0001 ips: 46.7974 images/s
+[05/19 19:37:24] ppdet.engine INFO: Epoch: [1] [200/714] learning_rate: 0.000250 loss: 2.085711 loss_cls: 1.213893 loss_iou: 0.156655 loss_dfl: 0.931790 loss_l1: 0.447443 eta: 0:29:42 batch_cost: 0.1725 data_cost: 0.0001 ips: 46.3809 images/s
+[05/19 19:37:27] ppdet.engine INFO: Epoch: [1] [220/714] learning_rate: 0.000250 loss: 2.316003 loss_cls: 1.362285 loss_iou: 0.163524 loss_dfl: 0.951735 loss_l1: 0.466914 eta: 0:29:36 batch_cost: 0.1559 data_cost: 0.0001 ips: 51.3234 images/s
+[05/19 19:37:31] ppdet.engine INFO: Epoch: [1] [240/714] learning_rate: 0.000250 loss: 2.276220 loss_cls: 1.317513 loss_iou: 0.180946 loss_dfl: 1.009525 loss_l1: 0.514028 eta: 0:29:29 batch_cost: 0.1532 data_cost: 0.0004 ips: 52.2360 images/s
+[05/19 19:37:35] ppdet.engine INFO: Epoch: [1] [260/714] learning_rate: 0.000250 loss: 2.373509 loss_cls: 1.456815 loss_iou: 0.174359 loss_dfl: 1.002230 loss_l1: 0.514722 eta: 0:29:23 batch_cost: 0.1550 data_cost: 0.0001 ips: 51.6032 images/s
+[05/19 19:37:39] ppdet.engine INFO: Epoch: [1] [280/714] learning_rate: 0.000250 loss: 2.253109 loss_cls: 1.278134 loss_iou: 0.171800 loss_dfl: 0.994327 loss_l1: 0.449214 eta: 0:29:16 batch_cost: 0.1551 data_cost: 0.0001 ips: 51.5813 images/s
+[05/19 19:37:42] ppdet.engine INFO: Epoch: [1] [300/714] learning_rate: 0.000250 loss: 1.990461 loss_cls: 1.187784 loss_iou: 0.148013 loss_dfl: 0.905694 loss_l1: 0.456357 eta: 0:29:10 batch_cost: 0.1553 data_cost: 0.0001 ips: 51.4988 images/s
+[05/19 19:37:46] ppdet.engine INFO: Epoch: [1] [320/714] learning_rate: 0.000250 loss: 2.081645 loss_cls: 1.194041 loss_iou: 0.146985 loss_dfl: 0.935119 loss_l1: 0.388461 eta: 0:29:03 batch_cost: 0.1500 data_cost: 0.0001 ips: 53.3280 images/s
+[05/19 19:37:50] ppdet.engine INFO: Epoch: [1] [340/714] learning_rate: 0.000250 loss: 2.093406 loss_cls: 1.243567 loss_iou: 0.142845 loss_dfl: 0.926952 loss_l1: 0.388366 eta: 0:28:58 batch_cost: 0.1583 data_cost: 0.0001 ips: 50.5518 images/s
+[05/19 19:37:54] ppdet.engine INFO: Epoch: [1] [360/714] learning_rate: 0.000250 loss: 2.158738 loss_cls: 1.235184 loss_iou: 0.155231 loss_dfl: 0.965906 loss_l1: 0.484129 eta: 0:29:00 batch_cost: 0.1937 data_cost: 0.0001 ips: 41.3004 images/s
+[05/19 19:37:58] ppdet.engine INFO: Epoch: [1] [380/714] learning_rate: 0.000250 loss: 2.106337 loss_cls: 1.231644 loss_iou: 0.162512 loss_dfl: 0.951664 loss_l1: 0.420455 eta: 0:28:56 batch_cost: 0.1642 data_cost: 0.0001 ips: 48.7220 images/s
+[05/19 19:38:02] ppdet.engine INFO: Epoch: [1] [400/714] learning_rate: 0.000249 loss: 2.169154 loss_cls: 1.271210 loss_iou: 0.176614 loss_dfl: 1.005180 loss_l1: 0.459220 eta: 0:28:49 batch_cost: 0.1501 data_cost: 0.0003 ips: 53.2842 images/s
+[05/19 19:38:06] ppdet.engine INFO: Epoch: [1] [420/714] learning_rate: 0.000249 loss: 2.073499 loss_cls: 1.140226 loss_iou: 0.150861 loss_dfl: 0.891764 loss_l1: 0.357881 eta: 0:28:43 batch_cost: 0.1515 data_cost: 0.0001 ips: 52.7913 images/s
+[05/19 19:38:10] ppdet.engine INFO: Epoch: [1] [440/714] learning_rate: 0.000249 loss: 2.120826 loss_cls: 1.232392 loss_iou: 0.162099 loss_dfl: 0.869711 loss_l1: 0.361544 eta: 0:28:39 batch_cost: 0.1642 data_cost: 0.0001 ips: 48.7314 images/s
+[05/19 19:38:13] ppdet.engine INFO: Epoch: [1] [460/714] learning_rate: 0.000249 loss: 2.190823 loss_cls: 1.331780 loss_iou: 0.152003 loss_dfl: 0.940275 loss_l1: 0.359551 eta: 0:28:33 batch_cost: 0.1517 data_cost: 0.0001 ips: 52.7370 images/s
+[05/19 19:38:18] ppdet.engine INFO: Epoch: [1] [480/714] learning_rate: 0.000249 loss: 2.271346 loss_cls: 1.242876 loss_iou: 0.172139 loss_dfl: 0.985116 loss_l1: 0.498810 eta: 0:28:33 batch_cost: 0.1876 data_cost: 0.0001 ips: 42.6372 images/s
+[05/19 19:38:22] ppdet.engine INFO: Epoch: [1] [500/714] learning_rate: 0.000249 loss: 2.068161 loss_cls: 1.166101 loss_iou: 0.171208 loss_dfl: 0.967057 loss_l1: 0.435380 eta: 0:28:31 batch_cost: 0.1788 data_cost: 0.0001 ips: 44.7329 images/s
+[05/19 19:38:26] ppdet.engine INFO: Epoch: [1] [520/714] learning_rate: 0.000249 loss: 1.985315 loss_cls: 1.215535 loss_iou: 0.122724 loss_dfl: 0.850322 loss_l1: 0.363461 eta: 0:28:27 batch_cost: 0.1647 data_cost: 0.0001 ips: 48.5708 images/s
+[05/19 19:38:29] ppdet.engine INFO: Epoch: [1] [540/714] learning_rate: 0.000249 loss: 2.114239 loss_cls: 1.311977 loss_iou: 0.160473 loss_dfl: 0.922355 loss_l1: 0.415253 eta: 0:28:21 batch_cost: 0.1457 data_cost: 0.0001 ips: 54.8977 images/s
+[05/19 19:38:33] ppdet.engine INFO: Epoch: [1] [560/714] learning_rate: 0.000249 loss: 2.101503 loss_cls: 1.180964 loss_iou: 0.158710 loss_dfl: 0.984765 loss_l1: 0.444980 eta: 0:28:14 batch_cost: 0.1473 data_cost: 0.0001 ips: 54.3166 images/s
+[05/19 19:38:37] ppdet.engine INFO: Epoch: [1] [580/714] learning_rate: 0.000249 loss: 1.920831 loss_cls: 1.151433 loss_iou: 0.142162 loss_dfl: 0.893119 loss_l1: 0.369033 eta: 0:28:09 batch_cost: 0.1578 data_cost: 0.0001 ips: 50.7107 images/s
+[05/19 19:38:40] ppdet.engine INFO: Epoch: [1] [600/714] learning_rate: 0.000249 loss: 2.027555 loss_cls: 1.175468 loss_iou: 0.159861 loss_dfl: 0.934757 loss_l1: 0.398102 eta: 0:28:03 batch_cost: 0.1484 data_cost: 0.0001 ips: 53.9130 images/s
+[05/19 19:38:45] ppdet.engine INFO: Epoch: [1] [620/714] learning_rate: 0.000249 loss: 1.998842 loss_cls: 1.153389 loss_iou: 0.150138 loss_dfl: 0.917830 loss_l1: 0.394321 eta: 0:28:01 batch_cost: 0.1741 data_cost: 0.0001 ips: 45.9391 images/s
+[05/19 19:38:48] ppdet.engine INFO: Epoch: [1] [640/714] learning_rate: 0.000249 loss: 2.238825 loss_cls: 1.254217 loss_iou: 0.189100 loss_dfl: 0.997842 loss_l1: 0.446430 eta: 0:27:56 batch_cost: 0.1550 data_cost: 0.0002 ips: 51.6088 images/s
+[05/19 19:38:52] ppdet.engine INFO: Epoch: [1] [660/714] learning_rate: 0.000249 loss: 2.066900 loss_cls: 1.249250 loss_iou: 0.153749 loss_dfl: 0.934877 loss_l1: 0.371523 eta: 0:27:52 batch_cost: 0.1630 data_cost: 0.0001 ips: 49.0666 images/s
+[05/19 19:38:56] ppdet.engine INFO: Epoch: [1] [680/714] learning_rate: 0.000248 loss: 2.072218 loss_cls: 1.193637 loss_iou: 0.148622 loss_dfl: 0.918611 loss_l1: 0.408460 eta: 0:27:47 batch_cost: 0.1573 data_cost: 0.0001 ips: 50.8614 images/s
+[05/19 19:39:00] ppdet.engine INFO: Epoch: [1] [700/714] learning_rate: 0.000248 loss: 1.974351 loss_cls: 1.131433 loss_iou: 0.136205 loss_dfl: 0.909350 loss_l1: 0.381288 eta: 0:27:45 batch_cost: 0.1754 data_cost: 0.0002 ips: 45.5999 images/s
+[05/19 19:39:03] ppdet.engine INFO: Train epoch 2 cost time: 140.1 s.
+[05/19 19:39:05] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+loading annotations into memory...
+Done (t=0.21s)
+creating index...
+index created!
+[05/19 19:39:05] ppdet.data.source.coco INFO: Load [5823 samples valid, 0 samples invalid] in file ../VOCdevkit/VOC2012/annotations2/voc2012_val.json.
+loading annotations into memory...
+Done (t=0.16s)
+creating index...
+index created!
+[05/19 19:39:06] ppdet.engine INFO: Eval iter: 0
+[05/19 19:39:34] ppdet.engine INFO: Eval iter: 100
+[05/19 19:40:00] ppdet.engine INFO: Eval iter: 200
+[05/19 19:40:27] ppdet.engine INFO: Eval iter: 300
+[05/19 19:40:51] ppdet.engine INFO: Eval iter: 400
+[05/19 19:41:15] ppdet.engine INFO: Eval iter: 500
+[05/19 19:41:38] ppdet.engine INFO: Eval iter: 600
+[05/19 19:42:03] ppdet.engine INFO: Eval iter: 700
+[05/19 19:42:28] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.07s)
+creating index...
+index created!
+[05/19 19:42:28] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=9.08s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=35.20s).
+Accumulating evaluation results...
+DONE (t=17.96s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.760
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.636
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.206
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.440
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.680
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.486
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.737
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.779
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.496
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.692
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.841
+[05/19 19:43:32] ppdet.engine INFO: Total sample number: 5823, average FPS: 31.53711203152964
+[05/19 19:43:32] ppdet.engine INFO: Best test bbox ap is 0.585.
+[05/19 19:43:33] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 19:43:34] ppdet.engine INFO: Epoch: [2] [  0/714] learning_rate: 0.000248 loss: 2.070921 loss_cls: 1.199644 loss_iou: 0.155850 loss_dfl: 0.915763 loss_l1: 0.366627 eta: 0:27:43 batch_cost: 0.1624 data_cost: 0.0002 ips: 49.2602 images/s
+[05/19 19:43:37] ppdet.engine INFO: Epoch: [2] [ 20/714] learning_rate: 0.000248 loss: 1.847899 loss_cls: 1.041562 loss_iou: 0.146585 loss_dfl: 0.918083 loss_l1: 0.398795 eta: 0:27:38 batch_cost: 0.1571 data_cost: 0.0001 ips: 50.9272 images/s
+[05/19 19:43:41] ppdet.engine INFO: Epoch: [2] [ 40/714] learning_rate: 0.000248 loss: 1.966246 loss_cls: 1.072079 loss_iou: 0.155111 loss_dfl: 0.896718 loss_l1: 0.379147 eta: 0:27:30 batch_cost: 0.1332 data_cost: 0.0001 ips: 60.0764 images/s
+[05/19 19:43:44] ppdet.engine INFO: Epoch: [2] [ 60/714] learning_rate: 0.000248 loss: 1.966635 loss_cls: 1.104185 loss_iou: 0.133148 loss_dfl: 0.918098 loss_l1: 0.389516 eta: 0:27:25 batch_cost: 0.1480 data_cost: 0.0001 ips: 54.0689 images/s
+[05/19 19:43:48] ppdet.engine INFO: Epoch: [2] [ 80/714] learning_rate: 0.000248 loss: 1.855777 loss_cls: 1.110727 loss_iou: 0.153469 loss_dfl: 0.902917 loss_l1: 0.391703 eta: 0:27:16 batch_cost: 0.1286 data_cost: 0.0001 ips: 62.2318 images/s
+[05/19 19:43:51] ppdet.engine INFO: Epoch: [2] [100/714] learning_rate: 0.000248 loss: 1.870718 loss_cls: 1.042179 loss_iou: 0.151451 loss_dfl: 0.853800 loss_l1: 0.346680 eta: 0:27:11 batch_cost: 0.1519 data_cost: 0.0001 ips: 52.6828 images/s
+[05/19 19:43:56] ppdet.engine INFO: Epoch: [2] [120/714] learning_rate: 0.000248 loss: 1.959657 loss_cls: 1.147731 loss_iou: 0.142623 loss_dfl: 0.967832 loss_l1: 0.391897 eta: 0:27:10 batch_cost: 0.1841 data_cost: 0.0001 ips: 43.4619 images/s
+[05/19 19:44:00] ppdet.engine INFO: Epoch: [2] [140/714] learning_rate: 0.000248 loss: 2.016306 loss_cls: 1.174752 loss_iou: 0.157930 loss_dfl: 0.949261 loss_l1: 0.413355 eta: 0:27:07 batch_cost: 0.1632 data_cost: 0.0001 ips: 49.0327 images/s
+[05/19 19:44:03] ppdet.engine INFO: Epoch: [2] [160/714] learning_rate: 0.000247 loss: 1.890547 loss_cls: 1.044288 loss_iou: 0.137771 loss_dfl: 0.908528 loss_l1: 0.404255 eta: 0:27:02 batch_cost: 0.1541 data_cost: 0.0001 ips: 51.9156 images/s
+[05/19 19:44:07] ppdet.engine INFO: Epoch: [2] [180/714] learning_rate: 0.000247 loss: 1.960317 loss_cls: 1.095880 loss_iou: 0.131042 loss_dfl: 0.903606 loss_l1: 0.364804 eta: 0:26:58 batch_cost: 0.1584 data_cost: 0.0001 ips: 50.4901 images/s
+[05/19 19:44:11] ppdet.engine INFO: Epoch: [2] [200/714] learning_rate: 0.000247 loss: 2.098347 loss_cls: 1.217556 loss_iou: 0.162171 loss_dfl: 0.916676 loss_l1: 0.408377 eta: 0:26:53 batch_cost: 0.1516 data_cost: 0.0001 ips: 52.7629 images/s
+[05/19 19:44:15] ppdet.engine INFO: Epoch: [2] [220/714] learning_rate: 0.000247 loss: 1.938456 loss_cls: 1.084370 loss_iou: 0.161761 loss_dfl: 0.932984 loss_l1: 0.389290 eta: 0:26:50 batch_cost: 0.1649 data_cost: 0.0001 ips: 48.5278 images/s
+[05/19 19:44:19] ppdet.engine INFO: Epoch: [2] [240/714] learning_rate: 0.000247 loss: 2.003357 loss_cls: 1.162337 loss_iou: 0.150250 loss_dfl: 0.900396 loss_l1: 0.356779 eta: 0:26:46 batch_cost: 0.1605 data_cost: 0.0001 ips: 49.8303 images/s
+[05/19 19:44:23] ppdet.engine INFO: Epoch: [2] [260/714] learning_rate: 0.000247 loss: 1.992015 loss_cls: 1.156864 loss_iou: 0.157234 loss_dfl: 0.871936 loss_l1: 0.346410 eta: 0:26:42 batch_cost: 0.1561 data_cost: 0.0001 ips: 51.2442 images/s
+[05/19 19:44:26] ppdet.engine INFO: Epoch: [2] [280/714] learning_rate: 0.000247 loss: 2.081251 loss_cls: 1.201954 loss_iou: 0.146830 loss_dfl: 0.957795 loss_l1: 0.380568 eta: 0:26:38 batch_cost: 0.1577 data_cost: 0.0002 ips: 50.7368 images/s
+[05/19 19:44:30] ppdet.engine INFO: Epoch: [2] [300/714] learning_rate: 0.000247 loss: 1.955432 loss_cls: 1.114685 loss_iou: 0.148678 loss_dfl: 0.877705 loss_l1: 0.325613 eta: 0:26:31 batch_cost: 0.1304 data_cost: 0.0002 ips: 61.3425 images/s
+[05/19 19:44:34] ppdet.engine INFO: Epoch: [2] [320/714] learning_rate: 0.000246 loss: 2.011211 loss_cls: 1.086373 loss_iou: 0.152490 loss_dfl: 0.988406 loss_l1: 0.458616 eta: 0:26:30 batch_cost: 0.1830 data_cost: 0.0002 ips: 43.7258 images/s
+[05/19 19:44:38] ppdet.engine INFO: Epoch: [2] [340/714] learning_rate: 0.000246 loss: 1.985585 loss_cls: 1.097829 loss_iou: 0.139668 loss_dfl: 0.893174 loss_l1: 0.337509 eta: 0:26:25 batch_cost: 0.1518 data_cost: 0.0001 ips: 52.6894 images/s
+[05/19 19:44:42] ppdet.engine INFO: Epoch: [2] [360/714] learning_rate: 0.000246 loss: 2.071836 loss_cls: 1.194507 loss_iou: 0.133493 loss_dfl: 0.940568 loss_l1: 0.407987 eta: 0:26:23 batch_cost: 0.1785 data_cost: 0.0001 ips: 44.8058 images/s
+[05/19 19:44:46] ppdet.engine INFO: Epoch: [2] [380/714] learning_rate: 0.000246 loss: 1.913334 loss_cls: 1.135924 loss_iou: 0.138205 loss_dfl: 0.914537 loss_l1: 0.362731 eta: 0:26:18 batch_cost: 0.1466 data_cost: 0.0001 ips: 54.5612 images/s
+[05/19 19:44:49] ppdet.engine INFO: Epoch: [2] [400/714] learning_rate: 0.000246 loss: 1.868492 loss_cls: 1.037918 loss_iou: 0.157568 loss_dfl: 0.833282 loss_l1: 0.342331 eta: 0:26:12 batch_cost: 0.1426 data_cost: 0.0004 ips: 56.1126 images/s
+[05/19 19:44:53] ppdet.engine INFO: Epoch: [2] [420/714] learning_rate: 0.000246 loss: 2.093336 loss_cls: 1.182629 loss_iou: 0.163513 loss_dfl: 0.923444 loss_l1: 0.427001 eta: 0:26:09 batch_cost: 0.1671 data_cost: 0.0004 ips: 47.8669 images/s
+[05/19 19:44:57] ppdet.engine INFO: Epoch: [2] [440/714] learning_rate: 0.000246 loss: 1.926879 loss_cls: 1.100768 loss_iou: 0.150781 loss_dfl: 0.881061 loss_l1: 0.341585 eta: 0:26:03 batch_cost: 0.1281 data_cost: 0.0001 ips: 62.4680 images/s
+[05/19 19:45:00] ppdet.engine INFO: Epoch: [2] [460/714] learning_rate: 0.000245 loss: 2.053256 loss_cls: 1.170305 loss_iou: 0.164043 loss_dfl: 0.972903 loss_l1: 0.455906 eta: 0:25:59 batch_cost: 0.1584 data_cost: 0.0003 ips: 50.4950 images/s
+[05/19 19:45:04] ppdet.engine INFO: Epoch: [2] [480/714] learning_rate: 0.000245 loss: 2.012404 loss_cls: 1.164706 loss_iou: 0.148033 loss_dfl: 0.942234 loss_l1: 0.440728 eta: 0:25:54 batch_cost: 0.1466 data_cost: 0.0001 ips: 54.5673 images/s
+[05/19 19:45:08] ppdet.engine INFO: Epoch: [2] [500/714] learning_rate: 0.000245 loss: 1.888671 loss_cls: 1.082580 loss_iou: 0.138402 loss_dfl: 0.923074 loss_l1: 0.367765 eta: 0:25:51 batch_cost: 0.1688 data_cost: 0.0001 ips: 47.3893 images/s
+[05/19 19:45:12] ppdet.engine INFO: Epoch: [2] [520/714] learning_rate: 0.000245 loss: 1.977536 loss_cls: 1.118618 loss_iou: 0.153595 loss_dfl: 0.928736 loss_l1: 0.359486 eta: 0:25:47 batch_cost: 0.1507 data_cost: 0.0001 ips: 53.0884 images/s
+[05/19 19:45:16] ppdet.engine INFO: Epoch: [2] [540/714] learning_rate: 0.000245 loss: 1.978685 loss_cls: 1.127102 loss_iou: 0.154305 loss_dfl: 0.892406 loss_l1: 0.373578 eta: 0:25:42 batch_cost: 0.1529 data_cost: 0.0001 ips: 52.3246 images/s
+[05/19 19:45:20] ppdet.engine INFO: Epoch: [2] [560/714] learning_rate: 0.000245 loss: 2.135077 loss_cls: 1.231033 loss_iou: 0.154737 loss_dfl: 0.946274 loss_l1: 0.412954 eta: 0:25:39 batch_cost: 0.1603 data_cost: 0.0002 ips: 49.9203 images/s
+[05/19 19:45:23] ppdet.engine INFO: Epoch: [2] [580/714] learning_rate: 0.000244 loss: 1.905854 loss_cls: 1.097488 loss_iou: 0.154207 loss_dfl: 0.903155 loss_l1: 0.367321 eta: 0:25:33 batch_cost: 0.1388 data_cost: 0.0001 ips: 57.6481 images/s
+[05/19 19:45:28] ppdet.engine INFO: Epoch: [2] [600/714] learning_rate: 0.000244 loss: 2.011112 loss_cls: 1.208847 loss_iou: 0.144382 loss_dfl: 0.891597 loss_l1: 0.367122 eta: 0:25:32 batch_cost: 0.1872 data_cost: 0.0001 ips: 42.7313 images/s
+[05/19 19:45:31] ppdet.engine INFO: Epoch: [2] [620/714] learning_rate: 0.000244 loss: 1.857951 loss_cls: 1.039578 loss_iou: 0.156447 loss_dfl: 0.910882 loss_l1: 0.377885 eta: 0:25:28 batch_cost: 0.1529 data_cost: 0.0004 ips: 52.3229 images/s
+[05/19 19:45:35] ppdet.engine INFO: Epoch: [2] [640/714] learning_rate: 0.000244 loss: 1.932451 loss_cls: 1.141847 loss_iou: 0.132059 loss_dfl: 0.835633 loss_l1: 0.326993 eta: 0:25:25 batch_cost: 0.1648 data_cost: 0.0005 ips: 48.5580 images/s
+[05/19 19:45:39] ppdet.engine INFO: Epoch: [2] [660/714] learning_rate: 0.000244 loss: 1.837309 loss_cls: 1.040079 loss_iou: 0.135751 loss_dfl: 0.880740 loss_l1: 0.355291 eta: 0:25:20 batch_cost: 0.1446 data_cost: 0.0001 ips: 55.3186 images/s
+[05/19 19:45:43] ppdet.engine INFO: Epoch: [2] [680/714] learning_rate: 0.000244 loss: 1.892946 loss_cls: 1.055108 loss_iou: 0.144828 loss_dfl: 0.858926 loss_l1: 0.335864 eta: 0:25:17 batch_cost: 0.1664 data_cost: 0.0001 ips: 48.0835 images/s
+[05/19 19:45:47] ppdet.engine INFO: Epoch: [2] [700/714] learning_rate: 0.000243 loss: 1.865876 loss_cls: 1.062626 loss_iou: 0.154039 loss_dfl: 0.860374 loss_l1: 0.334521 eta: 0:25:12 batch_cost: 0.1384 data_cost: 0.0002 ips: 57.7861 images/s
+[05/19 19:45:50] ppdet.engine INFO: Train epoch 3 cost time: 136.2 s.
+[05/19 19:45:51] ppdet.engine INFO: Epoch: [3] [  0/714] learning_rate: 0.000243 loss: 1.911334 loss_cls: 1.152165 loss_iou: 0.144620 loss_dfl: 0.826274 loss_l1: 0.328289 eta: 0:25:13 batch_cost: 0.1942 data_cost: 0.0415 ips: 41.1945 images/s
+[05/19 19:45:55] ppdet.engine INFO: Epoch: [3] [ 20/714] learning_rate: 0.000243 loss: 2.007848 loss_cls: 1.128951 loss_iou: 0.160336 loss_dfl: 0.927768 loss_l1: 0.395231 eta: 0:25:11 batch_cost: 0.1754 data_cost: 0.0001 ips: 45.6003 images/s
+[05/19 19:45:59] ppdet.engine INFO: Epoch: [3] [ 40/714] learning_rate: 0.000243 loss: 1.992434 loss_cls: 1.241689 loss_iou: 0.142522 loss_dfl: 0.896424 loss_l1: 0.348349 eta: 0:25:07 batch_cost: 0.1573 data_cost: 0.0003 ips: 50.8423 images/s
+[05/19 19:46:02] ppdet.engine INFO: Epoch: [3] [ 60/714] learning_rate: 0.000243 loss: 1.915474 loss_cls: 1.048333 loss_iou: 0.138483 loss_dfl: 0.924383 loss_l1: 0.391085 eta: 0:25:02 batch_cost: 0.1464 data_cost: 0.0001 ips: 54.6300 images/s
+[05/19 19:46:06] ppdet.engine INFO: Epoch: [3] [ 80/714] learning_rate: 0.000242 loss: 1.914085 loss_cls: 1.165163 loss_iou: 0.133540 loss_dfl: 0.878334 loss_l1: 0.343211 eta: 0:24:58 batch_cost: 0.1558 data_cost: 0.0001 ips: 51.3479 images/s
+[05/19 19:46:10] ppdet.engine INFO: Epoch: [3] [100/714] learning_rate: 0.000242 loss: 2.074059 loss_cls: 1.189824 loss_iou: 0.144212 loss_dfl: 0.914885 loss_l1: 0.385532 eta: 0:24:56 batch_cost: 0.1723 data_cost: 0.0001 ips: 46.4200 images/s
+[05/19 19:46:14] ppdet.engine INFO: Epoch: [3] [120/714] learning_rate: 0.000242 loss: 1.886443 loss_cls: 1.082229 loss_iou: 0.139114 loss_dfl: 0.875653 loss_l1: 0.336648 eta: 0:24:53 batch_cost: 0.1623 data_cost: 0.0001 ips: 49.2986 images/s
+[05/19 19:46:18] ppdet.engine INFO: Epoch: [3] [140/714] learning_rate: 0.000242 loss: 1.861492 loss_cls: 1.045284 loss_iou: 0.127944 loss_dfl: 0.863287 loss_l1: 0.287632 eta: 0:24:48 batch_cost: 0.1452 data_cost: 0.0003 ips: 55.1039 images/s
+[05/19 19:46:21] ppdet.engine INFO: Epoch: [3] [160/714] learning_rate: 0.000242 loss: 1.962623 loss_cls: 1.134930 loss_iou: 0.145389 loss_dfl: 0.878349 loss_l1: 0.373473 eta: 0:24:45 batch_cost: 0.1622 data_cost: 0.0001 ips: 49.3240 images/s
+[05/19 19:46:25] ppdet.engine INFO: Epoch: [3] [180/714] learning_rate: 0.000241 loss: 1.899992 loss_cls: 1.070412 loss_iou: 0.156554 loss_dfl: 0.889066 loss_l1: 0.369497 eta: 0:24:40 batch_cost: 0.1465 data_cost: 0.0002 ips: 54.6065 images/s
+[05/19 19:46:29] ppdet.engine INFO: Epoch: [3] [200/714] learning_rate: 0.000241 loss: 2.024333 loss_cls: 1.196910 loss_iou: 0.149233 loss_dfl: 0.904409 loss_l1: 0.350472 eta: 0:24:37 batch_cost: 0.1602 data_cost: 0.0001 ips: 49.9459 images/s
+[05/19 19:46:32] ppdet.engine INFO: Epoch: [3] [220/714] learning_rate: 0.000241 loss: 2.014185 loss_cls: 1.127906 loss_iou: 0.169634 loss_dfl: 0.920309 loss_l1: 0.393264 eta: 0:24:32 batch_cost: 0.1398 data_cost: 0.0001 ips: 57.2149 images/s
+[05/19 19:46:36] ppdet.engine INFO: Epoch: [3] [240/714] learning_rate: 0.000241 loss: 1.850355 loss_cls: 1.096102 loss_iou: 0.142323 loss_dfl: 0.913601 loss_l1: 0.385101 eta: 0:24:28 batch_cost: 0.1587 data_cost: 0.0001 ips: 50.4093 images/s
+[05/19 19:46:40] ppdet.engine INFO: Epoch: [3] [260/714] learning_rate: 0.000241 loss: 1.940280 loss_cls: 1.091796 loss_iou: 0.143845 loss_dfl: 0.892088 loss_l1: 0.348301 eta: 0:24:26 batch_cost: 0.1737 data_cost: 0.0001 ips: 46.0438 images/s
+[05/19 19:46:44] ppdet.engine INFO: Epoch: [3] [280/714] learning_rate: 0.000240 loss: 1.755436 loss_cls: 0.977837 loss_iou: 0.132506 loss_dfl: 0.837936 loss_l1: 0.296722 eta: 0:24:22 batch_cost: 0.1513 data_cost: 0.0001 ips: 52.8617 images/s
+[05/19 19:46:48] ppdet.engine INFO: Epoch: [3] [300/714] learning_rate: 0.000240 loss: 1.988723 loss_cls: 1.069043 loss_iou: 0.136248 loss_dfl: 0.888912 loss_l1: 0.392185 eta: 0:24:18 batch_cost: 0.1603 data_cost: 0.0001 ips: 49.9186 images/s
+[05/19 19:46:52] ppdet.engine INFO: Epoch: [3] [320/714] learning_rate: 0.000240 loss: 1.952554 loss_cls: 1.143106 loss_iou: 0.146958 loss_dfl: 0.858368 loss_l1: 0.323752 eta: 0:24:14 batch_cost: 0.1450 data_cost: 0.0006 ips: 55.1908 images/s
+[05/19 19:46:55] ppdet.engine INFO: Epoch: [3] [340/714] learning_rate: 0.000240 loss: 1.918691 loss_cls: 1.078238 loss_iou: 0.136136 loss_dfl: 0.894580 loss_l1: 0.347295 eta: 0:24:10 batch_cost: 0.1542 data_cost: 0.0001 ips: 51.8931 images/s
+[05/19 19:46:59] ppdet.engine INFO: Epoch: [3] [360/714] learning_rate: 0.000239 loss: 2.025906 loss_cls: 1.068372 loss_iou: 0.147174 loss_dfl: 0.919448 loss_l1: 0.396311 eta: 0:24:05 batch_cost: 0.1435 data_cost: 0.0001 ips: 55.7379 images/s
+[05/19 19:47:03] ppdet.engine INFO: Epoch: [3] [380/714] learning_rate: 0.000239 loss: 1.996437 loss_cls: 1.077702 loss_iou: 0.142509 loss_dfl: 0.932035 loss_l1: 0.412587 eta: 0:24:03 batch_cost: 0.1815 data_cost: 0.0001 ips: 44.0846 images/s
+[05/19 19:47:07] ppdet.engine INFO: Epoch: [3] [400/714] learning_rate: 0.000239 loss: 1.835079 loss_cls: 1.062200 loss_iou: 0.139915 loss_dfl: 0.876436 loss_l1: 0.322189 eta: 0:24:00 batch_cost: 0.1651 data_cost: 0.0001 ips: 48.4465 images/s
+[05/19 19:47:11] ppdet.engine INFO: Epoch: [3] [420/714] learning_rate: 0.000239 loss: 1.911598 loss_cls: 1.099820 loss_iou: 0.150668 loss_dfl: 0.859097 loss_l1: 0.328617 eta: 0:23:58 batch_cost: 0.1693 data_cost: 0.0001 ips: 47.2654 images/s
+[05/19 19:47:15] ppdet.engine INFO: Epoch: [3] [440/714] learning_rate: 0.000238 loss: 1.829698 loss_cls: 1.026706 loss_iou: 0.146349 loss_dfl: 0.915889 loss_l1: 0.346491 eta: 0:23:53 batch_cost: 0.1432 data_cost: 0.0001 ips: 55.8781 images/s
+[05/19 19:47:18] ppdet.engine INFO: Epoch: [3] [460/714] learning_rate: 0.000238 loss: 1.881068 loss_cls: 1.014060 loss_iou: 0.150942 loss_dfl: 0.921617 loss_l1: 0.357455 eta: 0:23:49 batch_cost: 0.1482 data_cost: 0.0001 ips: 53.9693 images/s
+[05/19 19:47:23] ppdet.engine INFO: Epoch: [3] [480/714] learning_rate: 0.000238 loss: 1.990440 loss_cls: 1.226741 loss_iou: 0.139330 loss_dfl: 0.849887 loss_l1: 0.327754 eta: 0:23:46 batch_cost: 0.1737 data_cost: 0.0001 ips: 46.0530 images/s
+[05/19 19:47:26] ppdet.engine INFO: Epoch: [3] [500/714] learning_rate: 0.000238 loss: 1.931184 loss_cls: 1.042939 loss_iou: 0.154241 loss_dfl: 0.878932 loss_l1: 0.394059 eta: 0:23:43 batch_cost: 0.1533 data_cost: 0.0001 ips: 52.1866 images/s
+[05/19 19:47:30] ppdet.engine INFO: Epoch: [3] [520/714] learning_rate: 0.000237 loss: 1.907721 loss_cls: 1.090534 loss_iou: 0.148151 loss_dfl: 0.892954 loss_l1: 0.345696 eta: 0:23:38 batch_cost: 0.1397 data_cost: 0.0001 ips: 57.2834 images/s
+[05/19 19:47:34] ppdet.engine INFO: Epoch: [3] [540/714] learning_rate: 0.000237 loss: 1.856488 loss_cls: 1.029031 loss_iou: 0.136433 loss_dfl: 0.864811 loss_l1: 0.339002 eta: 0:23:35 batch_cost: 0.1709 data_cost: 0.0001 ips: 46.7995 images/s
+[05/19 19:47:38] ppdet.engine INFO: Epoch: [3] [560/714] learning_rate: 0.000237 loss: 1.657549 loss_cls: 0.928220 loss_iou: 0.150526 loss_dfl: 0.875213 loss_l1: 0.345697 eta: 0:23:32 batch_cost: 0.1559 data_cost: 0.0004 ips: 51.3245 images/s
+[05/19 19:47:41] ppdet.engine INFO: Epoch: [3] [580/714] learning_rate: 0.000237 loss: 1.840005 loss_cls: 1.065670 loss_iou: 0.130950 loss_dfl: 0.879072 loss_l1: 0.368870 eta: 0:23:28 batch_cost: 0.1488 data_cost: 0.0004 ips: 53.7577 images/s
+[05/19 19:47:45] ppdet.engine INFO: Epoch: [3] [600/714] learning_rate: 0.000236 loss: 1.992655 loss_cls: 1.110926 loss_iou: 0.147455 loss_dfl: 0.888733 loss_l1: 0.384354 eta: 0:23:23 batch_cost: 0.1478 data_cost: 0.0001 ips: 54.1283 images/s
+[05/19 19:47:49] ppdet.engine INFO: Epoch: [3] [620/714] learning_rate: 0.000236 loss: 1.940266 loss_cls: 1.106213 loss_iou: 0.159061 loss_dfl: 0.904054 loss_l1: 0.385413 eta: 0:23:19 batch_cost: 0.1505 data_cost: 0.0001 ips: 53.1390 images/s
+[05/19 19:47:52] ppdet.engine INFO: Epoch: [3] [640/714] learning_rate: 0.000236 loss: 1.967421 loss_cls: 1.180610 loss_iou: 0.142487 loss_dfl: 0.843928 loss_l1: 0.316337 eta: 0:23:16 batch_cost: 0.1515 data_cost: 0.0001 ips: 52.8092 images/s
+[05/19 19:47:56] ppdet.engine INFO: Epoch: [3] [660/714] learning_rate: 0.000236 loss: 1.787245 loss_cls: 0.987881 loss_iou: 0.135928 loss_dfl: 0.832373 loss_l1: 0.318404 eta: 0:23:13 batch_cost: 0.1658 data_cost: 0.0001 ips: 48.2430 images/s
+[05/19 19:48:00] ppdet.engine INFO: Epoch: [3] [680/714] learning_rate: 0.000235 loss: 1.899296 loss_cls: 1.073219 loss_iou: 0.134555 loss_dfl: 0.843075 loss_l1: 0.335632 eta: 0:23:08 batch_cost: 0.1423 data_cost: 0.0001 ips: 56.2334 images/s
+[05/19 19:48:04] ppdet.engine INFO: Epoch: [3] [700/714] learning_rate: 0.000235 loss: 2.030237 loss_cls: 1.178191 loss_iou: 0.153957 loss_dfl: 0.895941 loss_l1: 0.357436 eta: 0:23:05 batch_cost: 0.1556 data_cost: 0.0001 ips: 51.4067 images/s
+[05/19 19:48:07] ppdet.engine INFO: Train epoch 4 cost time: 137.0 s.
+[05/19 19:48:08] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 19:48:08] ppdet.engine INFO: Eval iter: 0
+[05/19 19:48:31] ppdet.engine INFO: Eval iter: 100
+[05/19 19:48:55] ppdet.engine INFO: Eval iter: 200
+[05/19 19:49:18] ppdet.engine INFO: Eval iter: 300
+[05/19 19:49:40] ppdet.engine INFO: Eval iter: 400
+[05/19 19:49:58] ppdet.engine INFO: Eval iter: 500
+[05/19 19:50:15] ppdet.engine INFO: Eval iter: 600
+[05/19 19:50:34] ppdet.engine INFO: Eval iter: 700
+[05/19 19:50:56] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.07s)
+creating index...
+index created!
+[05/19 19:50:56] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=9.23s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=31.94s).
+Accumulating evaluation results...
+DONE (t=15.29s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.609
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.784
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.664
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.222
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.703
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.497
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.746
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.786
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.498
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.691
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.849
+[05/19 19:51:55] ppdet.engine INFO: Total sample number: 5823, average FPS: 38.58090257412572
+[05/19 19:51:55] ppdet.engine INFO: Best test bbox ap is 0.609.
+[05/19 19:51:55] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 19:51:56] ppdet.engine INFO: Epoch: [4] [  0/714] learning_rate: 0.000235 loss: 2.074022 loss_cls: 1.140095 loss_iou: 0.148226 loss_dfl: 0.933889 loss_l1: 0.386611 eta: 0:23:02 batch_cost: 0.1717 data_cost: 0.0001 ips: 46.5979 images/s
+[05/19 19:52:00] ppdet.engine INFO: Epoch: [4] [ 20/714] learning_rate: 0.000235 loss: 1.669153 loss_cls: 0.865587 loss_iou: 0.132510 loss_dfl: 0.852915 loss_l1: 0.420461 eta: 0:22:58 batch_cost: 0.1478 data_cost: 0.0002 ips: 54.1215 images/s
+[05/19 19:52:03] ppdet.engine INFO: Epoch: [4] [ 40/714] learning_rate: 0.000234 loss: 1.673713 loss_cls: 0.848776 loss_iou: 0.132800 loss_dfl: 0.860816 loss_l1: 0.412674 eta: 0:22:54 batch_cost: 0.1528 data_cost: 0.0001 ips: 52.3519 images/s
+[05/19 19:52:07] ppdet.engine INFO: Epoch: [4] [ 60/714] learning_rate: 0.000234 loss: 1.718371 loss_cls: 0.864555 loss_iou: 0.128069 loss_dfl: 0.888842 loss_l1: 0.382596 eta: 0:22:51 batch_cost: 0.1648 data_cost: 0.0001 ips: 48.5425 images/s
+[05/19 19:52:11] ppdet.engine INFO: Epoch: [4] [ 80/714] learning_rate: 0.000234 loss: 1.601793 loss_cls: 0.806660 loss_iou: 0.138913 loss_dfl: 0.846524 loss_l1: 0.352799 eta: 0:22:47 batch_cost: 0.1423 data_cost: 0.0001 ips: 56.2134 images/s
+[05/19 19:52:15] ppdet.engine INFO: Epoch: [4] [100/714] learning_rate: 0.000234 loss: 1.659548 loss_cls: 0.908428 loss_iou: 0.133502 loss_dfl: 0.886175 loss_l1: 0.338885 eta: 0:22:44 batch_cost: 0.1659 data_cost: 0.0001 ips: 48.2273 images/s
+[05/19 19:52:19] ppdet.engine INFO: Epoch: [4] [120/714] learning_rate: 0.000233 loss: 1.598777 loss_cls: 0.866145 loss_iou: 0.131873 loss_dfl: 0.867189 loss_l1: 0.382449 eta: 0:22:41 batch_cost: 0.1593 data_cost: 0.0001 ips: 50.2078 images/s
+[05/19 19:52:22] ppdet.engine INFO: Epoch: [4] [140/714] learning_rate: 0.000233 loss: 1.658426 loss_cls: 0.884885 loss_iou: 0.120793 loss_dfl: 0.876722 loss_l1: 0.357035 eta: 0:22:38 batch_cost: 0.1638 data_cost: 0.0002 ips: 48.8432 images/s
+[05/19 19:52:26] ppdet.engine INFO: Epoch: [4] [160/714] learning_rate: 0.000233 loss: 1.562776 loss_cls: 0.811669 loss_iou: 0.123727 loss_dfl: 0.819748 loss_l1: 0.343754 eta: 0:22:34 batch_cost: 0.1460 data_cost: 0.0001 ips: 54.7787 images/s
+[05/19 19:52:29] ppdet.engine INFO: Epoch: [4] [180/714] learning_rate: 0.000232 loss: 1.540623 loss_cls: 0.841191 loss_iou: 0.123186 loss_dfl: 0.851748 loss_l1: 0.359012 eta: 0:22:29 batch_cost: 0.1311 data_cost: 0.0001 ips: 61.0419 images/s
+[05/19 19:52:33] ppdet.engine INFO: Epoch: [4] [200/714] learning_rate: 0.000232 loss: 1.587142 loss_cls: 0.829963 loss_iou: 0.119958 loss_dfl: 0.835717 loss_l1: 0.332599 eta: 0:22:24 batch_cost: 0.1346 data_cost: 0.0001 ips: 59.4249 images/s
+[05/19 19:52:37] ppdet.engine INFO: Epoch: [4] [220/714] learning_rate: 0.000232 loss: 1.642546 loss_cls: 0.850568 loss_iou: 0.130773 loss_dfl: 0.853184 loss_l1: 0.371950 eta: 0:22:21 batch_cost: 0.1599 data_cost: 0.0001 ips: 50.0301 images/s
+[05/19 19:52:40] ppdet.engine INFO: Epoch: [4] [240/714] learning_rate: 0.000231 loss: 1.658435 loss_cls: 0.877176 loss_iou: 0.117452 loss_dfl: 0.872044 loss_l1: 0.339741 eta: 0:22:17 batch_cost: 0.1514 data_cost: 0.0001 ips: 52.8560 images/s
+[05/19 19:52:44] ppdet.engine INFO: Epoch: [4] [260/714] learning_rate: 0.000231 loss: 1.534903 loss_cls: 0.834731 loss_iou: 0.115152 loss_dfl: 0.828446 loss_l1: 0.330116 eta: 0:22:14 batch_cost: 0.1539 data_cost: 0.0001 ips: 51.9862 images/s
+[05/19 19:52:48] ppdet.engine INFO: Epoch: [4] [280/714] learning_rate: 0.000231 loss: 1.538631 loss_cls: 0.843951 loss_iou: 0.117156 loss_dfl: 0.851550 loss_l1: 0.313693 eta: 0:22:11 batch_cost: 0.1668 data_cost: 0.0001 ips: 47.9627 images/s
+[05/19 19:52:52] ppdet.engine INFO: Epoch: [4] [300/714] learning_rate: 0.000231 loss: 1.602202 loss_cls: 0.842866 loss_iou: 0.120118 loss_dfl: 0.872101 loss_l1: 0.343879 eta: 0:22:07 batch_cost: 0.1563 data_cost: 0.0001 ips: 51.1962 images/s
+[05/19 19:52:56] ppdet.engine INFO: Epoch: [4] [320/714] learning_rate: 0.000230 loss: 1.536824 loss_cls: 0.856117 loss_iou: 0.112057 loss_dfl: 0.851960 loss_l1: 0.325046 eta: 0:22:05 batch_cost: 0.1795 data_cost: 0.0002 ips: 44.5623 images/s
+[05/19 19:53:00] ppdet.engine INFO: Epoch: [4] [340/714] learning_rate: 0.000230 loss: 1.560017 loss_cls: 0.799261 loss_iou: 0.117231 loss_dfl: 0.861733 loss_l1: 0.355413 eta: 0:22:02 batch_cost: 0.1554 data_cost: 0.0002 ips: 51.4727 images/s
+[05/19 19:53:04] ppdet.engine INFO: Epoch: [4] [360/714] learning_rate: 0.000230 loss: 1.555312 loss_cls: 0.842841 loss_iou: 0.113192 loss_dfl: 0.858325 loss_l1: 0.346068 eta: 0:21:59 batch_cost: 0.1746 data_cost: 0.0001 ips: 45.8310 images/s
+[05/19 19:53:08] ppdet.engine INFO: Epoch: [4] [380/714] learning_rate: 0.000229 loss: 1.470736 loss_cls: 0.799311 loss_iou: 0.099094 loss_dfl: 0.819034 loss_l1: 0.267837 eta: 0:21:56 batch_cost: 0.1600 data_cost: 0.0001 ips: 49.9942 images/s
+[05/19 19:53:12] ppdet.engine INFO: Epoch: [4] [400/714] learning_rate: 0.000229 loss: 1.622531 loss_cls: 0.875158 loss_iou: 0.121142 loss_dfl: 0.875748 loss_l1: 0.366005 eta: 0:21:53 batch_cost: 0.1665 data_cost: 0.0001 ips: 48.0521 images/s
+[05/19 19:53:16] ppdet.engine INFO: Epoch: [4] [420/714] learning_rate: 0.000229 loss: 1.596969 loss_cls: 0.850136 loss_iou: 0.125713 loss_dfl: 0.861015 loss_l1: 0.331191 eta: 0:21:50 batch_cost: 0.1685 data_cost: 0.0002 ips: 47.4820 images/s
+[05/19 19:53:20] ppdet.engine INFO: Epoch: [4] [440/714] learning_rate: 0.000228 loss: 1.533468 loss_cls: 0.827971 loss_iou: 0.122133 loss_dfl: 0.843950 loss_l1: 0.321171 eta: 0:21:47 batch_cost: 0.1636 data_cost: 0.0001 ips: 48.9050 images/s
+[05/19 19:53:24] ppdet.engine INFO: Epoch: [4] [460/714] learning_rate: 0.000228 loss: 1.498795 loss_cls: 0.823359 loss_iou: 0.108206 loss_dfl: 0.848176 loss_l1: 0.301893 eta: 0:21:43 batch_cost: 0.1497 data_cost: 0.0002 ips: 53.4323 images/s
+[05/19 19:53:28] ppdet.engine INFO: Epoch: [4] [480/714] learning_rate: 0.000228 loss: 1.603844 loss_cls: 0.872144 loss_iou: 0.111225 loss_dfl: 0.858423 loss_l1: 0.371513 eta: 0:21:40 batch_cost: 0.1625 data_cost: 0.0002 ips: 49.2360 images/s
+[05/19 19:53:32] ppdet.engine INFO: Epoch: [4] [500/714] learning_rate: 0.000227 loss: 1.649867 loss_cls: 0.894369 loss_iou: 0.122636 loss_dfl: 0.909596 loss_l1: 0.336249 eta: 0:21:37 batch_cost: 0.1679 data_cost: 0.0002 ips: 47.6552 images/s
+[05/19 19:53:36] ppdet.engine INFO: Epoch: [4] [520/714] learning_rate: 0.000227 loss: 1.550961 loss_cls: 0.835806 loss_iou: 0.110040 loss_dfl: 0.830694 loss_l1: 0.309705 eta: 0:21:34 batch_cost: 0.1713 data_cost: 0.0002 ips: 46.7022 images/s
+[05/19 19:53:39] ppdet.engine INFO: Epoch: [4] [540/714] learning_rate: 0.000227 loss: 1.592982 loss_cls: 0.850881 loss_iou: 0.120922 loss_dfl: 0.853669 loss_l1: 0.338803 eta: 0:21:30 batch_cost: 0.1425 data_cost: 0.0008 ips: 56.1341 images/s
+[05/19 19:53:44] ppdet.engine INFO: Epoch: [4] [560/714] learning_rate: 0.000226 loss: 1.545957 loss_cls: 0.845277 loss_iou: 0.117455 loss_dfl: 0.860980 loss_l1: 0.321666 eta: 0:21:28 batch_cost: 0.1707 data_cost: 0.0002 ips: 46.8540 images/s
+[05/19 19:53:47] ppdet.engine INFO: Epoch: [4] [580/714] learning_rate: 0.000226 loss: 1.473979 loss_cls: 0.829052 loss_iou: 0.111649 loss_dfl: 0.793900 loss_l1: 0.286090 eta: 0:21:24 batch_cost: 0.1431 data_cost: 0.0002 ips: 55.8946 images/s
+[05/19 19:53:51] ppdet.engine INFO: Epoch: [4] [600/714] learning_rate: 0.000226 loss: 1.616005 loss_cls: 0.914891 loss_iou: 0.117108 loss_dfl: 0.841437 loss_l1: 0.334737 eta: 0:21:20 batch_cost: 0.1569 data_cost: 0.0002 ips: 50.9843 images/s
+[05/19 19:53:55] ppdet.engine INFO: Epoch: [4] [620/714] learning_rate: 0.000225 loss: 1.590508 loss_cls: 0.857927 loss_iou: 0.114297 loss_dfl: 0.822021 loss_l1: 0.319455 eta: 0:21:18 batch_cost: 0.1751 data_cost: 0.0002 ips: 45.6927 images/s
+[05/19 19:53:59] ppdet.engine INFO: Epoch: [4] [640/714] learning_rate: 0.000225 loss: 1.623180 loss_cls: 0.856943 loss_iou: 0.129193 loss_dfl: 0.897169 loss_l1: 0.350946 eta: 0:21:15 batch_cost: 0.1656 data_cost: 0.0004 ips: 48.3190 images/s
+[05/19 19:54:03] ppdet.engine INFO: Epoch: [4] [660/714] learning_rate: 0.000225 loss: 1.522142 loss_cls: 0.802498 loss_iou: 0.114648 loss_dfl: 0.837717 loss_l1: 0.326518 eta: 0:21:11 batch_cost: 0.1593 data_cost: 0.0002 ips: 50.2284 images/s
+[05/19 19:54:07] ppdet.engine INFO: Epoch: [4] [680/714] learning_rate: 0.000224 loss: 1.626640 loss_cls: 0.858293 loss_iou: 0.129582 loss_dfl: 0.867818 loss_l1: 0.376124 eta: 0:21:08 batch_cost: 0.1659 data_cost: 0.0002 ips: 48.2156 images/s
+[05/19 19:54:12] ppdet.engine INFO: Epoch: [4] [700/714] learning_rate: 0.000224 loss: 1.558151 loss_cls: 0.827300 loss_iou: 0.130757 loss_dfl: 0.872537 loss_l1: 0.361612 eta: 0:21:06 batch_cost: 0.1746 data_cost: 0.0002 ips: 45.8080 images/s
+[05/19 19:54:15] ppdet.engine INFO: Train epoch 5 cost time: 139.3 s.
+[05/19 19:54:16] ppdet.engine INFO: Epoch: [5] [  0/714] learning_rate: 0.000224 loss: 1.542220 loss_cls: 0.849729 loss_iou: 0.110585 loss_dfl: 0.850867 loss_l1: 0.352916 eta: 0:21:06 batch_cost: 0.2257 data_cost: 0.0436 ips: 35.4441 images/s
+[05/19 19:54:20] ppdet.engine INFO: Epoch: [5] [ 20/714] learning_rate: 0.000223 loss: 1.578440 loss_cls: 0.852151 loss_iou: 0.126277 loss_dfl: 0.823825 loss_l1: 0.304133 eta: 0:21:02 batch_cost: 0.1444 data_cost: 0.0002 ips: 55.3869 images/s
+[05/19 19:54:24] ppdet.engine INFO: Epoch: [5] [ 40/714] learning_rate: 0.000223 loss: 1.618826 loss_cls: 0.842892 loss_iou: 0.131752 loss_dfl: 0.831182 loss_l1: 0.370313 eta: 0:20:59 batch_cost: 0.1514 data_cost: 0.0002 ips: 52.8312 images/s
+[05/19 19:54:28] ppdet.engine INFO: Epoch: [5] [ 60/714] learning_rate: 0.000223 loss: 1.551061 loss_cls: 0.824250 loss_iou: 0.114655 loss_dfl: 0.828571 loss_l1: 0.325453 eta: 0:20:56 batch_cost: 0.1799 data_cost: 0.0002 ips: 44.4581 images/s
+[05/19 19:54:32] ppdet.engine INFO: Epoch: [5] [ 80/714] learning_rate: 0.000222 loss: 1.511152 loss_cls: 0.755566 loss_iou: 0.117332 loss_dfl: 0.843279 loss_l1: 0.325965 eta: 0:20:54 batch_cost: 0.1783 data_cost: 0.0002 ips: 44.8676 images/s
+[05/19 19:54:36] ppdet.engine INFO: Epoch: [5] [100/714] learning_rate: 0.000222 loss: 1.647968 loss_cls: 0.841822 loss_iou: 0.119702 loss_dfl: 0.864215 loss_l1: 0.341598 eta: 0:20:51 batch_cost: 0.1656 data_cost: 0.0004 ips: 48.3220 images/s
+[05/19 19:54:40] ppdet.engine INFO: Epoch: [5] [120/714] learning_rate: 0.000221 loss: 1.474278 loss_cls: 0.805838 loss_iou: 0.103527 loss_dfl: 0.808133 loss_l1: 0.306377 eta: 0:20:47 batch_cost: 0.1531 data_cost: 0.0004 ips: 52.2440 images/s
+[05/19 19:54:45] ppdet.engine INFO: Epoch: [5] [140/714] learning_rate: 0.000221 loss: 1.587150 loss_cls: 0.878109 loss_iou: 0.113606 loss_dfl: 0.854104 loss_l1: 0.345363 eta: 0:20:45 batch_cost: 0.1908 data_cost: 0.0003 ips: 41.9373 images/s
+[05/19 19:54:49] ppdet.engine INFO: Epoch: [5] [160/714] learning_rate: 0.000221 loss: 1.551865 loss_cls: 0.815770 loss_iou: 0.125772 loss_dfl: 0.862205 loss_l1: 0.329719 eta: 0:20:41 batch_cost: 0.1545 data_cost: 0.0002 ips: 51.7685 images/s
+[05/19 19:54:53] ppdet.engine INFO: Epoch: [5] [180/714] learning_rate: 0.000220 loss: 1.628318 loss_cls: 0.897433 loss_iou: 0.126328 loss_dfl: 0.861386 loss_l1: 0.370310 eta: 0:20:38 batch_cost: 0.1670 data_cost: 0.0005 ips: 47.9128 images/s
+[05/19 19:54:57] ppdet.engine INFO: Epoch: [5] [200/714] learning_rate: 0.000220 loss: 1.578760 loss_cls: 0.807777 loss_iou: 0.114494 loss_dfl: 0.841597 loss_l1: 0.306322 eta: 0:20:36 batch_cost: 0.1845 data_cost: 0.0006 ips: 43.3609 images/s
+[05/19 19:55:01] ppdet.engine INFO: Epoch: [5] [220/714] learning_rate: 0.000220 loss: 1.494195 loss_cls: 0.791500 loss_iou: 0.108299 loss_dfl: 0.843269 loss_l1: 0.298188 eta: 0:20:33 batch_cost: 0.1603 data_cost: 0.0005 ips: 49.9012 images/s
+[05/19 19:55:05] ppdet.engine INFO: Epoch: [5] [240/714] learning_rate: 0.000219 loss: 1.508102 loss_cls: 0.782889 loss_iou: 0.108403 loss_dfl: 0.835879 loss_l1: 0.325811 eta: 0:20:30 batch_cost: 0.1665 data_cost: 0.0003 ips: 48.0611 images/s
+[05/19 19:55:09] ppdet.engine INFO: Epoch: [5] [260/714] learning_rate: 0.000219 loss: 1.503934 loss_cls: 0.828945 loss_iou: 0.111583 loss_dfl: 0.850843 loss_l1: 0.323250 eta: 0:20:27 batch_cost: 0.1623 data_cost: 0.0002 ips: 49.2794 images/s
+[05/19 19:55:14] ppdet.engine INFO: Epoch: [5] [280/714] learning_rate: 0.000218 loss: 1.550194 loss_cls: 0.847071 loss_iou: 0.116988 loss_dfl: 0.893824 loss_l1: 0.379261 eta: 0:20:25 batch_cost: 0.1891 data_cost: 0.0008 ips: 42.3026 images/s
+[05/19 19:55:18] ppdet.engine INFO: Epoch: [5] [300/714] learning_rate: 0.000218 loss: 1.511586 loss_cls: 0.816682 loss_iou: 0.109727 loss_dfl: 0.844688 loss_l1: 0.330172 eta: 0:20:21 batch_cost: 0.1507 data_cost: 0.0002 ips: 53.0685 images/s
+[05/19 19:55:22] ppdet.engine INFO: Epoch: [5] [320/714] learning_rate: 0.000218 loss: 1.477371 loss_cls: 0.829936 loss_iou: 0.108949 loss_dfl: 0.804925 loss_l1: 0.279928 eta: 0:20:17 batch_cost: 0.1552 data_cost: 0.0002 ips: 51.5571 images/s
+[05/19 19:55:25] ppdet.engine INFO: Epoch: [5] [340/714] learning_rate: 0.000217 loss: 1.461437 loss_cls: 0.771242 loss_iou: 0.109106 loss_dfl: 0.787561 loss_l1: 0.308350 eta: 0:20:14 batch_cost: 0.1524 data_cost: 0.0001 ips: 52.5075 images/s
+[05/19 19:55:29] ppdet.engine INFO: Epoch: [5] [360/714] learning_rate: 0.000217 loss: 1.534579 loss_cls: 0.825993 loss_iou: 0.121589 loss_dfl: 0.841103 loss_l1: 0.324398 eta: 0:20:10 batch_cost: 0.1524 data_cost: 0.0002 ips: 52.5026 images/s
+[05/19 19:55:33] ppdet.engine INFO: Epoch: [5] [380/714] learning_rate: 0.000217 loss: 1.465945 loss_cls: 0.780087 loss_iou: 0.114853 loss_dfl: 0.824830 loss_l1: 0.318732 eta: 0:20:07 batch_cost: 0.1613 data_cost: 0.0001 ips: 49.6096 images/s
+[05/19 19:55:37] ppdet.engine INFO: Epoch: [5] [400/714] learning_rate: 0.000216 loss: 1.647239 loss_cls: 0.817818 loss_iou: 0.129276 loss_dfl: 0.878813 loss_l1: 0.346736 eta: 0:20:04 batch_cost: 0.1646 data_cost: 0.0004 ips: 48.5886 images/s
+[05/19 19:55:42] ppdet.engine INFO: Epoch: [5] [420/714] learning_rate: 0.000216 loss: 1.578316 loss_cls: 0.828810 loss_iou: 0.124469 loss_dfl: 0.851541 loss_l1: 0.330777 eta: 0:20:01 batch_cost: 0.1800 data_cost: 0.0001 ips: 44.4550 images/s
+[05/19 19:55:45] ppdet.engine INFO: Epoch: [5] [440/714] learning_rate: 0.000215 loss: 1.557946 loss_cls: 0.778628 loss_iou: 0.123244 loss_dfl: 0.810932 loss_l1: 0.333855 eta: 0:19:58 batch_cost: 0.1540 data_cost: 0.0003 ips: 51.9356 images/s
+[05/19 19:55:49] ppdet.engine INFO: Epoch: [5] [460/714] learning_rate: 0.000215 loss: 1.575753 loss_cls: 0.821125 loss_iou: 0.115430 loss_dfl: 0.817717 loss_l1: 0.287227 eta: 0:19:54 batch_cost: 0.1577 data_cost: 0.0002 ips: 50.7222 images/s
+[05/19 19:55:53] ppdet.engine INFO: Epoch: [5] [480/714] learning_rate: 0.000215 loss: 1.558921 loss_cls: 0.795635 loss_iou: 0.118311 loss_dfl: 0.857527 loss_l1: 0.316439 eta: 0:19:51 batch_cost: 0.1653 data_cost: 0.0002 ips: 48.4027 images/s
+[05/19 19:55:57] ppdet.engine INFO: Epoch: [5] [500/714] learning_rate: 0.000214 loss: 1.547218 loss_cls: 0.814476 loss_iou: 0.108851 loss_dfl: 0.842308 loss_l1: 0.325940 eta: 0:19:48 batch_cost: 0.1635 data_cost: 0.0003 ips: 48.9345 images/s
+[05/19 19:56:01] ppdet.engine INFO: Epoch: [5] [520/714] learning_rate: 0.000214 loss: 1.495149 loss_cls: 0.788190 loss_iou: 0.115387 loss_dfl: 0.803983 loss_l1: 0.332647 eta: 0:19:45 batch_cost: 0.1644 data_cost: 0.0001 ips: 48.6516 images/s
+[05/19 19:56:05] ppdet.engine INFO: Epoch: [5] [540/714] learning_rate: 0.000213 loss: 1.543138 loss_cls: 0.813260 loss_iou: 0.123351 loss_dfl: 0.829235 loss_l1: 0.323046 eta: 0:19:42 batch_cost: 0.1634 data_cost: 0.0001 ips: 48.9575 images/s
+[05/19 19:56:09] ppdet.engine INFO: Epoch: [5] [560/714] learning_rate: 0.000213 loss: 1.522004 loss_cls: 0.799959 loss_iou: 0.130892 loss_dfl: 0.834405 loss_l1: 0.322376 eta: 0:19:38 batch_cost: 0.1518 data_cost: 0.0002 ips: 52.7026 images/s
+[05/19 19:56:13] ppdet.engine INFO: Epoch: [5] [580/714] learning_rate: 0.000212 loss: 1.575204 loss_cls: 0.826002 loss_iou: 0.128281 loss_dfl: 0.855923 loss_l1: 0.326468 eta: 0:19:34 batch_cost: 0.1394 data_cost: 0.0001 ips: 57.4013 images/s
+[05/19 19:56:17] ppdet.engine INFO: Epoch: [5] [600/714] learning_rate: 0.000212 loss: 1.504411 loss_cls: 0.824382 loss_iou: 0.112434 loss_dfl: 0.816319 loss_l1: 0.292468 eta: 0:19:32 batch_cost: 0.1800 data_cost: 0.0001 ips: 44.4402 images/s
+[05/19 19:56:21] ppdet.engine INFO: Epoch: [5] [620/714] learning_rate: 0.000212 loss: 1.437272 loss_cls: 0.787767 loss_iou: 0.109388 loss_dfl: 0.818742 loss_l1: 0.326983 eta: 0:19:28 batch_cost: 0.1522 data_cost: 0.0001 ips: 52.5565 images/s
+[05/19 19:56:25] ppdet.engine INFO: Epoch: [5] [640/714] learning_rate: 0.000211 loss: 1.541873 loss_cls: 0.853688 loss_iou: 0.118161 loss_dfl: 0.860841 loss_l1: 0.309281 eta: 0:19:25 batch_cost: 0.1628 data_cost: 0.0002 ips: 49.1503 images/s
+[05/19 19:56:29] ppdet.engine INFO: Epoch: [5] [660/714] learning_rate: 0.000211 loss: 1.482802 loss_cls: 0.746635 loss_iou: 0.108512 loss_dfl: 0.820279 loss_l1: 0.301547 eta: 0:19:22 batch_cost: 0.1679 data_cost: 0.0001 ips: 47.6409 images/s
+[05/19 19:56:32] ppdet.engine INFO: Epoch: [5] [680/714] learning_rate: 0.000210 loss: 1.549777 loss_cls: 0.836847 loss_iou: 0.121203 loss_dfl: 0.834663 loss_l1: 0.327571 eta: 0:19:18 batch_cost: 0.1422 data_cost: 0.0001 ips: 56.2779 images/s
+[05/19 19:56:36] ppdet.engine INFO: Epoch: [5] [700/714] learning_rate: 0.000210 loss: 1.619650 loss_cls: 0.823488 loss_iou: 0.118910 loss_dfl: 0.824828 loss_l1: 0.357949 eta: 0:19:15 batch_cost: 0.1737 data_cost: 0.0001 ips: 46.0475 images/s
+[05/19 19:56:40] ppdet.engine INFO: Train epoch 6 cost time: 144.6 s.
+[05/19 19:56:41] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 19:56:41] ppdet.engine INFO: Eval iter: 0
+[05/19 19:57:00] ppdet.engine INFO: Eval iter: 100
+[05/19 19:57:21] ppdet.engine INFO: Eval iter: 200
+[05/19 19:57:46] ppdet.engine INFO: Eval iter: 300
+[05/19 19:58:10] ppdet.engine INFO: Eval iter: 400
+[05/19 19:58:35] ppdet.engine INFO: Eval iter: 500
+[05/19 19:58:59] ppdet.engine INFO: Eval iter: 600
+[05/19 19:59:23] ppdet.engine INFO: Eval iter: 700
+[05/19 19:59:49] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.52s)
+creating index...
+index created!
+[05/19 19:59:50] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=9.97s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=40.00s).
+Accumulating evaluation results...
+DONE (t=19.30s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.651
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.822
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.706
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.249
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.741
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.516
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.770
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.812
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.503
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.732
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.874
+[05/19 20:01:02] ppdet.engine INFO: Total sample number: 5823, average FPS: 34.61252982046687
+[05/19 20:01:02] ppdet.engine INFO: Best test bbox ap is 0.651.
+[05/19 20:01:03] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:01:04] ppdet.engine INFO: Epoch: [6] [  0/714] learning_rate: 0.000210 loss: 1.523070 loss_cls: 0.850496 loss_iou: 0.114318 loss_dfl: 0.821994 loss_l1: 0.353888 eta: 0:19:13 batch_cost: 0.1756 data_cost: 0.0004 ips: 45.5465 images/s
+[05/19 20:01:08] ppdet.engine INFO: Epoch: [6] [ 20/714] learning_rate: 0.000209 loss: 1.481535 loss_cls: 0.784776 loss_iou: 0.111622 loss_dfl: 0.804668 loss_l1: 0.286807 eta: 0:19:10 batch_cost: 0.1697 data_cost: 0.0005 ips: 47.1338 images/s
+[05/19 20:01:12] ppdet.engine INFO: Epoch: [6] [ 40/714] learning_rate: 0.000209 loss: 1.505961 loss_cls: 0.772117 loss_iou: 0.114993 loss_dfl: 0.829535 loss_l1: 0.318172 eta: 0:19:07 batch_cost: 0.1554 data_cost: 0.0003 ips: 51.4816 images/s
+[05/19 20:01:16] ppdet.engine INFO: Epoch: [6] [ 60/714] learning_rate: 0.000208 loss: 1.445960 loss_cls: 0.752646 loss_iou: 0.110746 loss_dfl: 0.814894 loss_l1: 0.292795 eta: 0:19:04 batch_cost: 0.1660 data_cost: 0.0002 ips: 48.1908 images/s
+[05/19 20:01:20] ppdet.engine INFO: Epoch: [6] [ 80/714] learning_rate: 0.000208 loss: 1.511374 loss_cls: 0.784134 loss_iou: 0.133270 loss_dfl: 0.849959 loss_l1: 0.344495 eta: 0:19:01 batch_cost: 0.1717 data_cost: 0.0002 ips: 46.5956 images/s
+[05/19 20:01:25] ppdet.engine INFO: Epoch: [6] [100/714] learning_rate: 0.000208 loss: 1.500179 loss_cls: 0.775308 loss_iou: 0.110180 loss_dfl: 0.848840 loss_l1: 0.301097 eta: 0:18:58 batch_cost: 0.1921 data_cost: 0.0002 ips: 41.6408 images/s
+[05/19 20:01:29] ppdet.engine INFO: Epoch: [6] [120/714] learning_rate: 0.000207 loss: 1.461229 loss_cls: 0.780899 loss_iou: 0.114754 loss_dfl: 0.828028 loss_l1: 0.334084 eta: 0:18:55 batch_cost: 0.1584 data_cost: 0.0002 ips: 50.5130 images/s
+[05/19 20:01:33] ppdet.engine INFO: Epoch: [6] [140/714] learning_rate: 0.000207 loss: 1.628582 loss_cls: 0.845033 loss_iou: 0.126177 loss_dfl: 0.885666 loss_l1: 0.353185 eta: 0:18:52 batch_cost: 0.1715 data_cost: 0.0002 ips: 46.6487 images/s
+[05/19 20:01:37] ppdet.engine INFO: Epoch: [6] [160/714] learning_rate: 0.000206 loss: 1.571839 loss_cls: 0.819248 loss_iou: 0.132083 loss_dfl: 0.849496 loss_l1: 0.351670 eta: 0:18:49 batch_cost: 0.1510 data_cost: 0.0002 ips: 52.9897 images/s
+[05/19 20:01:41] ppdet.engine INFO: Epoch: [6] [180/714] learning_rate: 0.000206 loss: 1.530324 loss_cls: 0.824548 loss_iou: 0.115308 loss_dfl: 0.839050 loss_l1: 0.309269 eta: 0:18:45 batch_cost: 0.1630 data_cost: 0.0002 ips: 49.0853 images/s
+[05/19 20:01:45] ppdet.engine INFO: Epoch: [6] [200/714] learning_rate: 0.000205 loss: 1.546856 loss_cls: 0.879284 loss_iou: 0.106775 loss_dfl: 0.794711 loss_l1: 0.290355 eta: 0:18:42 batch_cost: 0.1695 data_cost: 0.0001 ips: 47.2006 images/s
+[05/19 20:01:49] ppdet.engine INFO: Epoch: [6] [220/714] learning_rate: 0.000205 loss: 1.539658 loss_cls: 0.805588 loss_iou: 0.114555 loss_dfl: 0.866532 loss_l1: 0.326959 eta: 0:18:39 batch_cost: 0.1614 data_cost: 0.0004 ips: 49.5736 images/s
+[05/19 20:01:53] ppdet.engine INFO: Epoch: [6] [240/714] learning_rate: 0.000204 loss: 1.474550 loss_cls: 0.814210 loss_iou: 0.109979 loss_dfl: 0.796799 loss_l1: 0.268574 eta: 0:18:36 batch_cost: 0.1761 data_cost: 0.0007 ips: 45.4286 images/s
+[05/19 20:01:57] ppdet.engine INFO: Epoch: [6] [260/714] learning_rate: 0.000204 loss: 1.457959 loss_cls: 0.758530 loss_iou: 0.105929 loss_dfl: 0.804132 loss_l1: 0.296706 eta: 0:18:34 batch_cost: 0.1778 data_cost: 0.0002 ips: 44.9834 images/s
+[05/19 20:02:01] ppdet.engine INFO: Epoch: [6] [280/714] learning_rate: 0.000204 loss: 1.483212 loss_cls: 0.814641 loss_iou: 0.104503 loss_dfl: 0.826972 loss_l1: 0.267726 eta: 0:18:30 batch_cost: 0.1564 data_cost: 0.0002 ips: 51.1472 images/s
+[05/19 20:02:05] ppdet.engine INFO: Epoch: [6] [300/714] learning_rate: 0.000203 loss: 1.521986 loss_cls: 0.805970 loss_iou: 0.129380 loss_dfl: 0.863637 loss_l1: 0.305257 eta: 0:18:27 batch_cost: 0.1537 data_cost: 0.0002 ips: 52.0370 images/s
+[05/19 20:02:09] ppdet.engine INFO: Epoch: [6] [320/714] learning_rate: 0.000203 loss: 1.612791 loss_cls: 0.861894 loss_iou: 0.106904 loss_dfl: 0.868351 loss_l1: 0.320234 eta: 0:18:24 batch_cost: 0.1691 data_cost: 0.0002 ips: 47.2968 images/s
+[05/19 20:02:13] ppdet.engine INFO: Epoch: [6] [340/714] learning_rate: 0.000202 loss: 1.600746 loss_cls: 0.864348 loss_iou: 0.122721 loss_dfl: 0.811393 loss_l1: 0.341179 eta: 0:18:20 batch_cost: 0.1451 data_cost: 0.0002 ips: 55.1506 images/s
+[05/19 20:02:17] ppdet.engine INFO: Epoch: [6] [360/714] learning_rate: 0.000202 loss: 1.564126 loss_cls: 0.884102 loss_iou: 0.102951 loss_dfl: 0.808367 loss_l1: 0.278148 eta: 0:18:17 batch_cost: 0.1742 data_cost: 0.0002 ips: 45.9294 images/s
+[05/19 20:02:21] ppdet.engine INFO: Epoch: [6] [380/714] learning_rate: 0.000201 loss: 1.520562 loss_cls: 0.820118 loss_iou: 0.110218 loss_dfl: 0.825582 loss_l1: 0.269718 eta: 0:18:14 batch_cost: 0.1634 data_cost: 0.0002 ips: 48.9585 images/s
+[05/19 20:02:25] ppdet.engine INFO: Epoch: [6] [400/714] learning_rate: 0.000201 loss: 1.540704 loss_cls: 0.817385 loss_iou: 0.119373 loss_dfl: 0.845015 loss_l1: 0.306055 eta: 0:18:10 batch_cost: 0.1425 data_cost: 0.0002 ips: 56.1543 images/s
+[05/19 20:02:29] ppdet.engine INFO: Epoch: [6] [420/714] learning_rate: 0.000200 loss: 1.485037 loss_cls: 0.787119 loss_iou: 0.125007 loss_dfl: 0.829835 loss_l1: 0.329044 eta: 0:18:07 batch_cost: 0.1639 data_cost: 0.0002 ips: 48.8156 images/s
+[05/19 20:02:33] ppdet.engine INFO: Epoch: [6] [440/714] learning_rate: 0.000200 loss: 1.416005 loss_cls: 0.770840 loss_iou: 0.105234 loss_dfl: 0.786960 loss_l1: 0.290023 eta: 0:18:04 batch_cost: 0.1587 data_cost: 0.0002 ips: 50.4022 images/s
+[05/19 20:02:36] ppdet.engine INFO: Epoch: [6] [460/714] learning_rate: 0.000199 loss: 1.574743 loss_cls: 0.779298 loss_iou: 0.124403 loss_dfl: 0.850275 loss_l1: 0.328415 eta: 0:18:00 batch_cost: 0.1516 data_cost: 0.0002 ips: 52.7540 images/s
+[05/19 20:02:40] ppdet.engine INFO: Epoch: [6] [480/714] learning_rate: 0.000199 loss: 1.465117 loss_cls: 0.783386 loss_iou: 0.108634 loss_dfl: 0.800660 loss_l1: 0.277929 eta: 0:17:57 batch_cost: 0.1517 data_cost: 0.0002 ips: 52.7463 images/s
+[05/19 20:02:44] ppdet.engine INFO: Epoch: [6] [500/714] learning_rate: 0.000198 loss: 1.460373 loss_cls: 0.754653 loss_iou: 0.110512 loss_dfl: 0.832476 loss_l1: 0.309307 eta: 0:17:53 batch_cost: 0.1439 data_cost: 0.0005 ips: 55.6020 images/s
+[05/19 20:02:48] ppdet.engine INFO: Epoch: [6] [520/714] learning_rate: 0.000198 loss: 1.627977 loss_cls: 0.867052 loss_iou: 0.115366 loss_dfl: 0.868508 loss_l1: 0.322248 eta: 0:17:50 batch_cost: 0.1830 data_cost: 0.0004 ips: 43.7076 images/s
+[05/19 20:02:52] ppdet.engine INFO: Epoch: [6] [540/714] learning_rate: 0.000198 loss: 1.582772 loss_cls: 0.855493 loss_iou: 0.120766 loss_dfl: 0.836580 loss_l1: 0.343970 eta: 0:17:47 batch_cost: 0.1753 data_cost: 0.0002 ips: 45.6384 images/s
+[05/19 20:02:56] ppdet.engine INFO: Epoch: [6] [560/714] learning_rate: 0.000197 loss: 1.497135 loss_cls: 0.799445 loss_iou: 0.112474 loss_dfl: 0.796255 loss_l1: 0.293458 eta: 0:17:44 batch_cost: 0.1493 data_cost: 0.0002 ips: 53.6012 images/s
+[05/19 20:03:00] ppdet.engine INFO: Epoch: [6] [580/714] learning_rate: 0.000197 loss: 1.573748 loss_cls: 0.845594 loss_iou: 0.131854 loss_dfl: 0.833870 loss_l1: 0.340010 eta: 0:17:40 batch_cost: 0.1405 data_cost: 0.0002 ips: 56.9200 images/s
+[05/19 20:03:04] ppdet.engine INFO: Epoch: [6] [600/714] learning_rate: 0.000196 loss: 1.471208 loss_cls: 0.804760 loss_iou: 0.116933 loss_dfl: 0.795292 loss_l1: 0.297401 eta: 0:17:37 batch_cost: 0.1566 data_cost: 0.0002 ips: 51.0771 images/s
+[05/19 20:03:08] ppdet.engine INFO: Epoch: [6] [620/714] learning_rate: 0.000196 loss: 1.549911 loss_cls: 0.791930 loss_iou: 0.127375 loss_dfl: 0.838561 loss_l1: 0.331404 eta: 0:17:34 batch_cost: 0.1742 data_cost: 0.0002 ips: 45.9142 images/s
+[05/19 20:03:12] ppdet.engine INFO: Epoch: [6] [640/714] learning_rate: 0.000195 loss: 1.465077 loss_cls: 0.777563 loss_iou: 0.112830 loss_dfl: 0.839200 loss_l1: 0.320224 eta: 0:17:31 batch_cost: 0.1655 data_cost: 0.0002 ips: 48.3255 images/s
+[05/19 20:03:16] ppdet.engine INFO: Epoch: [6] [660/714] learning_rate: 0.000195 loss: 1.532766 loss_cls: 0.796894 loss_iou: 0.116126 loss_dfl: 0.861157 loss_l1: 0.301592 eta: 0:17:27 batch_cost: 0.1616 data_cost: 0.0002 ips: 49.5191 images/s
+[05/19 20:03:20] ppdet.engine INFO: Epoch: [6] [680/714] learning_rate: 0.000194 loss: 1.533919 loss_cls: 0.800881 loss_iou: 0.121605 loss_dfl: 0.857029 loss_l1: 0.340431 eta: 0:17:24 batch_cost: 0.1638 data_cost: 0.0002 ips: 48.8354 images/s
+[05/19 20:03:24] ppdet.engine INFO: Epoch: [6] [700/714] learning_rate: 0.000194 loss: 1.398807 loss_cls: 0.763468 loss_iou: 0.107793 loss_dfl: 0.809961 loss_l1: 0.292424 eta: 0:17:21 batch_cost: 0.1558 data_cost: 0.0002 ips: 51.3353 images/s
+[05/19 20:03:27] ppdet.engine INFO: Train epoch 7 cost time: 143.4 s.
+[05/19 20:03:28] ppdet.engine INFO: Epoch: [7] [  0/714] learning_rate: 0.000193 loss: 1.490925 loss_cls: 0.782971 loss_iou: 0.094307 loss_dfl: 0.802323 loss_l1: 0.244796 eta: 0:17:20 batch_cost: 0.2106 data_cost: 0.0480 ips: 37.9920 images/s
+[05/19 20:03:32] ppdet.engine INFO: Epoch: [7] [ 20/714] learning_rate: 0.000193 loss: 1.490277 loss_cls: 0.779592 loss_iou: 0.117127 loss_dfl: 0.831121 loss_l1: 0.292435 eta: 0:17:17 batch_cost: 0.1698 data_cost: 0.0002 ips: 47.1030 images/s
+[05/19 20:03:37] ppdet.engine INFO: Epoch: [7] [ 40/714] learning_rate: 0.000192 loss: 1.421348 loss_cls: 0.752115 loss_iou: 0.099430 loss_dfl: 0.793427 loss_l1: 0.308608 eta: 0:17:14 batch_cost: 0.1794 data_cost: 0.0010 ips: 44.5910 images/s
+[05/19 20:03:41] ppdet.engine INFO: Epoch: [7] [ 60/714] learning_rate: 0.000192 loss: 1.485613 loss_cls: 0.787022 loss_iou: 0.118626 loss_dfl: 0.832930 loss_l1: 0.293953 eta: 0:17:11 batch_cost: 0.1592 data_cost: 0.0002 ips: 50.2365 images/s
+[05/19 20:03:45] ppdet.engine INFO: Epoch: [7] [ 80/714] learning_rate: 0.000191 loss: 1.523517 loss_cls: 0.812817 loss_iou: 0.113798 loss_dfl: 0.826630 loss_l1: 0.297098 eta: 0:17:07 batch_cost: 0.1588 data_cost: 0.0002 ips: 50.3776 images/s
+[05/19 20:03:49] ppdet.engine INFO: Epoch: [7] [100/714] learning_rate: 0.000191 loss: 1.493269 loss_cls: 0.825602 loss_iou: 0.107878 loss_dfl: 0.803667 loss_l1: 0.287533 eta: 0:17:04 batch_cost: 0.1785 data_cost: 0.0002 ips: 44.8289 images/s
+[05/19 20:03:53] ppdet.engine INFO: Epoch: [7] [120/714] learning_rate: 0.000190 loss: 1.450760 loss_cls: 0.769643 loss_iou: 0.118704 loss_dfl: 0.769850 loss_l1: 0.267893 eta: 0:17:01 batch_cost: 0.1535 data_cost: 0.0002 ips: 52.1225 images/s
+[05/19 20:03:57] ppdet.engine INFO: Epoch: [7] [140/714] learning_rate: 0.000190 loss: 1.438489 loss_cls: 0.744611 loss_iou: 0.120509 loss_dfl: 0.812141 loss_l1: 0.291874 eta: 0:16:58 batch_cost: 0.1621 data_cost: 0.0002 ips: 49.3407 images/s
+[05/19 20:04:01] ppdet.engine INFO: Epoch: [7] [160/714] learning_rate: 0.000189 loss: 1.402358 loss_cls: 0.745844 loss_iou: 0.105308 loss_dfl: 0.783783 loss_l1: 0.288999 eta: 0:16:54 batch_cost: 0.1447 data_cost: 0.0002 ips: 55.2816 images/s
+[05/19 20:04:04] ppdet.engine INFO: Epoch: [7] [180/714] learning_rate: 0.000189 loss: 1.449070 loss_cls: 0.788158 loss_iou: 0.105494 loss_dfl: 0.809483 loss_l1: 0.278196 eta: 0:16:51 batch_cost: 0.1546 data_cost: 0.0002 ips: 51.7351 images/s
+[05/19 20:04:08] ppdet.engine INFO: Epoch: [7] [200/714] learning_rate: 0.000188 loss: 1.486194 loss_cls: 0.825831 loss_iou: 0.100300 loss_dfl: 0.830524 loss_l1: 0.290397 eta: 0:16:47 batch_cost: 0.1546 data_cost: 0.0002 ips: 51.7448 images/s
+[05/19 20:04:12] ppdet.engine INFO: Epoch: [7] [220/714] learning_rate: 0.000188 loss: 1.422505 loss_cls: 0.758641 loss_iou: 0.109306 loss_dfl: 0.784476 loss_l1: 0.283692 eta: 0:16:44 batch_cost: 0.1541 data_cost: 0.0002 ips: 51.9228 images/s
+[05/19 20:04:16] ppdet.engine INFO: Epoch: [7] [240/714] learning_rate: 0.000187 loss: 1.469744 loss_cls: 0.788841 loss_iou: 0.114381 loss_dfl: 0.781145 loss_l1: 0.273665 eta: 0:16:40 batch_cost: 0.1499 data_cost: 0.0002 ips: 53.3728 images/s
+[05/19 20:04:20] ppdet.engine INFO: Epoch: [7] [260/714] learning_rate: 0.000187 loss: 1.501112 loss_cls: 0.807387 loss_iou: 0.112376 loss_dfl: 0.849181 loss_l1: 0.289141 eta: 0:16:37 batch_cost: 0.1584 data_cost: 0.0002 ips: 50.4937 images/s
+[05/19 20:04:24] ppdet.engine INFO: Epoch: [7] [280/714] learning_rate: 0.000186 loss: 1.467885 loss_cls: 0.792311 loss_iou: 0.118100 loss_dfl: 0.773481 loss_l1: 0.273680 eta: 0:16:34 batch_cost: 0.1584 data_cost: 0.0002 ips: 50.5016 images/s
+[05/19 20:04:28] ppdet.engine INFO: Epoch: [7] [300/714] learning_rate: 0.000186 loss: 1.543503 loss_cls: 0.850653 loss_iou: 0.106843 loss_dfl: 0.841463 loss_l1: 0.287270 eta: 0:16:31 batch_cost: 0.1642 data_cost: 0.0005 ips: 48.7309 images/s
+[05/19 20:04:32] ppdet.engine INFO: Epoch: [7] [320/714] learning_rate: 0.000185 loss: 1.549683 loss_cls: 0.824867 loss_iou: 0.115507 loss_dfl: 0.839199 loss_l1: 0.285277 eta: 0:16:27 batch_cost: 0.1614 data_cost: 0.0004 ips: 49.5684 images/s
+[05/19 20:04:36] ppdet.engine INFO: Epoch: [7] [340/714] learning_rate: 0.000185 loss: 1.378737 loss_cls: 0.743289 loss_iou: 0.090360 loss_dfl: 0.814967 loss_l1: 0.255535 eta: 0:16:24 batch_cost: 0.1643 data_cost: 0.0002 ips: 48.6854 images/s
+[05/19 20:04:39] ppdet.engine INFO: Epoch: [7] [360/714] learning_rate: 0.000184 loss: 1.477417 loss_cls: 0.774442 loss_iou: 0.112521 loss_dfl: 0.789321 loss_l1: 0.290949 eta: 0:16:21 batch_cost: 0.1526 data_cost: 0.0002 ips: 52.4348 images/s
+[05/19 20:04:44] ppdet.engine INFO: Epoch: [7] [380/714] learning_rate: 0.000184 loss: 1.453403 loss_cls: 0.771575 loss_iou: 0.110705 loss_dfl: 0.871965 loss_l1: 0.290585 eta: 0:16:18 batch_cost: 0.1757 data_cost: 0.0002 ips: 45.5368 images/s
+[05/19 20:04:48] ppdet.engine INFO: Epoch: [7] [400/714] learning_rate: 0.000183 loss: 1.517305 loss_cls: 0.773254 loss_iou: 0.115647 loss_dfl: 0.823474 loss_l1: 0.300235 eta: 0:16:14 batch_cost: 0.1507 data_cost: 0.0002 ips: 53.0943 images/s
+[05/19 20:04:52] ppdet.engine INFO: Epoch: [7] [420/714] learning_rate: 0.000183 loss: 1.505816 loss_cls: 0.778183 loss_iou: 0.106526 loss_dfl: 0.814984 loss_l1: 0.286133 eta: 0:16:11 batch_cost: 0.1807 data_cost: 0.0002 ips: 44.2834 images/s
+[05/19 20:04:56] ppdet.engine INFO: Epoch: [7] [440/714] learning_rate: 0.000182 loss: 1.453899 loss_cls: 0.752976 loss_iou: 0.106520 loss_dfl: 0.828557 loss_l1: 0.284194 eta: 0:16:08 batch_cost: 0.1640 data_cost: 0.0002 ips: 48.7838 images/s
+[05/19 20:05:01] ppdet.engine INFO: Epoch: [7] [460/714] learning_rate: 0.000182 loss: 1.359876 loss_cls: 0.743600 loss_iou: 0.097548 loss_dfl: 0.773648 loss_l1: 0.263041 eta: 0:16:06 batch_cost: 0.1911 data_cost: 0.0002 ips: 41.8525 images/s
+[05/19 20:05:05] ppdet.engine INFO: Epoch: [7] [480/714] learning_rate: 0.000181 loss: 1.439873 loss_cls: 0.787578 loss_iou: 0.102638 loss_dfl: 0.812830 loss_l1: 0.286178 eta: 0:16:03 batch_cost: 0.1683 data_cost: 0.0004 ips: 47.5415 images/s
+[05/19 20:05:09] ppdet.engine INFO: Epoch: [7] [500/714] learning_rate: 0.000181 loss: 1.392110 loss_cls: 0.749094 loss_iou: 0.104808 loss_dfl: 0.797635 loss_l1: 0.253396 eta: 0:15:59 batch_cost: 0.1536 data_cost: 0.0002 ips: 52.0826 images/s
+[05/19 20:05:13] ppdet.engine INFO: Epoch: [7] [520/714] learning_rate: 0.000180 loss: 1.521467 loss_cls: 0.797301 loss_iou: 0.118667 loss_dfl: 0.811437 loss_l1: 0.287024 eta: 0:15:56 batch_cost: 0.1608 data_cost: 0.0002 ips: 49.7504 images/s
+[05/19 20:05:17] ppdet.engine INFO: Epoch: [7] [540/714] learning_rate: 0.000180 loss: 1.422607 loss_cls: 0.770155 loss_iou: 0.095807 loss_dfl: 0.807396 loss_l1: 0.265333 eta: 0:15:53 batch_cost: 0.1582 data_cost: 0.0005 ips: 50.5757 images/s
+[05/19 20:05:21] ppdet.engine INFO: Epoch: [7] [560/714] learning_rate: 0.000179 loss: 1.456670 loss_cls: 0.801834 loss_iou: 0.111529 loss_dfl: 0.809174 loss_l1: 0.272758 eta: 0:15:50 batch_cost: 0.1712 data_cost: 0.0002 ips: 46.7286 images/s
+[05/19 20:05:24] ppdet.engine INFO: Epoch: [7] [580/714] learning_rate: 0.000179 loss: 1.509717 loss_cls: 0.785115 loss_iou: 0.118005 loss_dfl: 0.848288 loss_l1: 0.271239 eta: 0:15:46 batch_cost: 0.1533 data_cost: 0.0002 ips: 52.1953 images/s
+[05/19 20:05:28] ppdet.engine INFO: Epoch: [7] [600/714] learning_rate: 0.000178 loss: 1.440872 loss_cls: 0.752845 loss_iou: 0.112756 loss_dfl: 0.798962 loss_l1: 0.258916 eta: 0:15:43 batch_cost: 0.1528 data_cost: 0.0002 ips: 52.3671 images/s
+[05/19 20:05:32] ppdet.engine INFO: Epoch: [7] [620/714] learning_rate: 0.000178 loss: 1.542385 loss_cls: 0.834050 loss_iou: 0.111627 loss_dfl: 0.834371 loss_l1: 0.304864 eta: 0:15:39 batch_cost: 0.1503 data_cost: 0.0002 ips: 53.2300 images/s
+[05/19 20:05:36] ppdet.engine INFO: Epoch: [7] [640/714] learning_rate: 0.000177 loss: 1.470949 loss_cls: 0.791516 loss_iou: 0.109462 loss_dfl: 0.803432 loss_l1: 0.275688 eta: 0:15:35 batch_cost: 0.1399 data_cost: 0.0002 ips: 57.1957 images/s
+[05/19 20:05:39] ppdet.engine INFO: Epoch: [7] [660/714] learning_rate: 0.000177 loss: 1.434958 loss_cls: 0.775653 loss_iou: 0.112349 loss_dfl: 0.807845 loss_l1: 0.265922 eta: 0:15:32 batch_cost: 0.1451 data_cost: 0.0002 ips: 55.1434 images/s
+[05/19 20:05:43] ppdet.engine INFO: Epoch: [7] [680/714] learning_rate: 0.000176 loss: 1.415769 loss_cls: 0.808445 loss_iou: 0.102277 loss_dfl: 0.794116 loss_l1: 0.237115 eta: 0:15:28 batch_cost: 0.1523 data_cost: 0.0002 ips: 52.5296 images/s
+[05/19 20:05:47] ppdet.engine INFO: Epoch: [7] [700/714] learning_rate: 0.000176 loss: 1.606303 loss_cls: 0.852623 loss_iou: 0.122065 loss_dfl: 0.834631 loss_l1: 0.353137 eta: 0:15:25 batch_cost: 0.1666 data_cost: 0.0002 ips: 48.0051 images/s
+[05/19 20:05:50] ppdet.engine INFO: Train epoch 8 cost time: 143.2 s.
+[05/19 20:05:51] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:05:51] ppdet.engine INFO: Eval iter: 0
+[05/19 20:06:17] ppdet.engine INFO: Eval iter: 100
+[05/19 20:06:41] ppdet.engine INFO: Eval iter: 200
+[05/19 20:07:05] ppdet.engine INFO: Eval iter: 300
+[05/19 20:07:30] ppdet.engine INFO: Eval iter: 400
+[05/19 20:07:53] ppdet.engine INFO: Eval iter: 500
+[05/19 20:08:15] ppdet.engine INFO: Eval iter: 600
+[05/19 20:08:35] ppdet.engine INFO: Eval iter: 700
+[05/19 20:09:03] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.73s)
+creating index...
+index created!
+[05/19 20:09:04] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=11.78s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=41.07s).
+Accumulating evaluation results...
+DONE (t=19.71s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.832
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.721
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.258
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.753
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.519
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.778
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.819
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.521
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.738
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.880
+[05/19 20:10:20] ppdet.engine INFO: Total sample number: 5823, average FPS: 34.31411658182771
+[05/19 20:10:20] ppdet.engine INFO: Best test bbox ap is 0.663.
+[05/19 20:10:21] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:10:22] ppdet.engine INFO: Epoch: [8] [  0/714] learning_rate: 0.000175 loss: 1.496237 loss_cls: 0.784076 loss_iou: 0.111875 loss_dfl: 0.822378 loss_l1: 0.315943 eta: 0:15:23 batch_cost: 0.1532 data_cost: 0.0005 ips: 52.2070 images/s
+[05/19 20:10:26] ppdet.engine INFO: Epoch: [8] [ 20/714] learning_rate: 0.000175 loss: 1.442373 loss_cls: 0.744935 loss_iou: 0.109900 loss_dfl: 0.840715 loss_l1: 0.299276 eta: 0:15:20 batch_cost: 0.1654 data_cost: 0.0002 ips: 48.3544 images/s
+[05/19 20:10:30] ppdet.engine INFO: Epoch: [8] [ 40/714] learning_rate: 0.000174 loss: 1.457216 loss_cls: 0.817636 loss_iou: 0.108554 loss_dfl: 0.836787 loss_l1: 0.294476 eta: 0:15:17 batch_cost: 0.1676 data_cost: 0.0002 ips: 47.7248 images/s
+[05/19 20:10:34] ppdet.engine INFO: Epoch: [8] [ 60/714] learning_rate: 0.000174 loss: 1.395697 loss_cls: 0.755096 loss_iou: 0.106039 loss_dfl: 0.792046 loss_l1: 0.277546 eta: 0:15:14 batch_cost: 0.1697 data_cost: 0.0002 ips: 47.1415 images/s
+[05/19 20:10:38] ppdet.engine INFO: Epoch: [8] [ 80/714] learning_rate: 0.000173 loss: 1.504149 loss_cls: 0.769082 loss_iou: 0.113761 loss_dfl: 0.787135 loss_l1: 0.260990 eta: 0:15:10 batch_cost: 0.1453 data_cost: 0.0002 ips: 55.0508 images/s
+[05/19 20:10:42] ppdet.engine INFO: Epoch: [8] [100/714] learning_rate: 0.000173 loss: 1.496569 loss_cls: 0.806348 loss_iou: 0.107040 loss_dfl: 0.860695 loss_l1: 0.326366 eta: 0:15:07 batch_cost: 0.1684 data_cost: 0.0002 ips: 47.4949 images/s
+[05/19 20:10:45] ppdet.engine INFO: Epoch: [8] [120/714] learning_rate: 0.000172 loss: 1.417693 loss_cls: 0.745685 loss_iou: 0.101409 loss_dfl: 0.818789 loss_l1: 0.273346 eta: 0:15:03 batch_cost: 0.1478 data_cost: 0.0002 ips: 54.1124 images/s
+[05/19 20:10:49] ppdet.engine INFO: Epoch: [8] [140/714] learning_rate: 0.000171 loss: 1.440739 loss_cls: 0.749142 loss_iou: 0.107731 loss_dfl: 0.809742 loss_l1: 0.251877 eta: 0:15:00 batch_cost: 0.1475 data_cost: 0.0002 ips: 54.2509 images/s
+[05/19 20:10:53] ppdet.engine INFO: Epoch: [8] [160/714] learning_rate: 0.000171 loss: 1.469195 loss_cls: 0.777004 loss_iou: 0.108306 loss_dfl: 0.791961 loss_l1: 0.273697 eta: 0:14:56 batch_cost: 0.1409 data_cost: 0.0003 ips: 56.7904 images/s
+[05/19 20:10:57] ppdet.engine INFO: Epoch: [8] [180/714] learning_rate: 0.000170 loss: 1.497570 loss_cls: 0.784169 loss_iou: 0.103887 loss_dfl: 0.789719 loss_l1: 0.297171 eta: 0:14:53 batch_cost: 0.1770 data_cost: 0.0002 ips: 45.2009 images/s
+[05/19 20:11:01] ppdet.engine INFO: Epoch: [8] [200/714] learning_rate: 0.000170 loss: 1.372404 loss_cls: 0.722927 loss_iou: 0.107678 loss_dfl: 0.770840 loss_l1: 0.280599 eta: 0:14:50 batch_cost: 0.1677 data_cost: 0.0001 ips: 47.7084 images/s
+[05/19 20:11:05] ppdet.engine INFO: Epoch: [8] [220/714] learning_rate: 0.000169 loss: 1.466605 loss_cls: 0.780468 loss_iou: 0.113619 loss_dfl: 0.810875 loss_l1: 0.265398 eta: 0:14:47 batch_cost: 0.1723 data_cost: 0.0002 ips: 46.4264 images/s
+[05/19 20:11:09] ppdet.engine INFO: Epoch: [8] [240/714] learning_rate: 0.000169 loss: 1.454595 loss_cls: 0.751796 loss_iou: 0.113678 loss_dfl: 0.782874 loss_l1: 0.261495 eta: 0:14:44 batch_cost: 0.1530 data_cost: 0.0002 ips: 52.2865 images/s
+[05/19 20:11:14] ppdet.engine INFO: Epoch: [8] [260/714] learning_rate: 0.000168 loss: 1.481927 loss_cls: 0.760418 loss_iou: 0.107594 loss_dfl: 0.815687 loss_l1: 0.277110 eta: 0:14:41 batch_cost: 0.1864 data_cost: 0.0002 ips: 42.9112 images/s
+[05/19 20:11:18] ppdet.engine INFO: Epoch: [8] [280/714] learning_rate: 0.000168 loss: 1.526706 loss_cls: 0.808479 loss_iou: 0.120330 loss_dfl: 0.832727 loss_l1: 0.289495 eta: 0:14:38 batch_cost: 0.1693 data_cost: 0.0002 ips: 47.2638 images/s
+[05/19 20:11:22] ppdet.engine INFO: Epoch: [8] [300/714] learning_rate: 0.000167 loss: 1.441779 loss_cls: 0.752107 loss_iou: 0.117091 loss_dfl: 0.813441 loss_l1: 0.292432 eta: 0:14:35 batch_cost: 0.1537 data_cost: 0.0002 ips: 52.0361 images/s
+[05/19 20:11:26] ppdet.engine INFO: Epoch: [8] [320/714] learning_rate: 0.000167 loss: 1.399005 loss_cls: 0.744073 loss_iou: 0.108133 loss_dfl: 0.796323 loss_l1: 0.263509 eta: 0:14:31 batch_cost: 0.1590 data_cost: 0.0002 ips: 50.3298 images/s
+[05/19 20:11:30] ppdet.engine INFO: Epoch: [8] [340/714] learning_rate: 0.000166 loss: 1.576548 loss_cls: 0.852122 loss_iou: 0.117128 loss_dfl: 0.824104 loss_l1: 0.306332 eta: 0:14:28 batch_cost: 0.1599 data_cost: 0.0003 ips: 50.0354 images/s
+[05/19 20:11:34] ppdet.engine INFO: Epoch: [8] [360/714] learning_rate: 0.000166 loss: 1.431403 loss_cls: 0.757604 loss_iou: 0.112417 loss_dfl: 0.796545 loss_l1: 0.278096 eta: 0:14:25 batch_cost: 0.1557 data_cost: 0.0003 ips: 51.3707 images/s
+[05/19 20:11:37] ppdet.engine INFO: Epoch: [8] [380/714] learning_rate: 0.000165 loss: 1.448097 loss_cls: 0.741045 loss_iou: 0.111832 loss_dfl: 0.817083 loss_l1: 0.274474 eta: 0:14:21 batch_cost: 0.1541 data_cost: 0.0002 ips: 51.9048 images/s
+[05/19 20:11:42] ppdet.engine INFO: Epoch: [8] [400/714] learning_rate: 0.000164 loss: 1.505373 loss_cls: 0.811991 loss_iou: 0.115345 loss_dfl: 0.797889 loss_l1: 0.293749 eta: 0:14:18 batch_cost: 0.1846 data_cost: 0.0002 ips: 43.3358 images/s
+[05/19 20:11:45] ppdet.engine INFO: Epoch: [8] [420/714] learning_rate: 0.000164 loss: 1.448220 loss_cls: 0.753394 loss_iou: 0.102974 loss_dfl: 0.792152 loss_l1: 0.249746 eta: 0:14:15 batch_cost: 0.1412 data_cost: 0.0002 ips: 56.6585 images/s
+[05/19 20:11:50] ppdet.engine INFO: Epoch: [8] [440/714] learning_rate: 0.000163 loss: 1.445500 loss_cls: 0.755321 loss_iou: 0.102614 loss_dfl: 0.826050 loss_l1: 0.281472 eta: 0:14:12 batch_cost: 0.1683 data_cost: 0.0002 ips: 47.5292 images/s
+[05/19 20:11:54] ppdet.engine INFO: Epoch: [8] [460/714] learning_rate: 0.000163 loss: 1.407901 loss_cls: 0.741100 loss_iou: 0.113483 loss_dfl: 0.764136 loss_l1: 0.244583 eta: 0:14:08 batch_cost: 0.1514 data_cost: 0.0002 ips: 52.8403 images/s
+[05/19 20:11:58] ppdet.engine INFO: Epoch: [8] [480/714] learning_rate: 0.000162 loss: 1.450865 loss_cls: 0.782071 loss_iou: 0.106289 loss_dfl: 0.789917 loss_l1: 0.271615 eta: 0:14:05 batch_cost: 0.1725 data_cost: 0.0002 ips: 46.3721 images/s
+[05/19 20:12:02] ppdet.engine INFO: Epoch: [8] [500/714] learning_rate: 0.000162 loss: 1.395861 loss_cls: 0.728548 loss_iou: 0.099341 loss_dfl: 0.788659 loss_l1: 0.245029 eta: 0:14:02 batch_cost: 0.1553 data_cost: 0.0002 ips: 51.5244 images/s
+[05/19 20:12:06] ppdet.engine INFO: Epoch: [8] [520/714] learning_rate: 0.000161 loss: 1.436163 loss_cls: 0.736617 loss_iou: 0.118374 loss_dfl: 0.818608 loss_l1: 0.287479 eta: 0:13:59 batch_cost: 0.1804 data_cost: 0.0002 ips: 44.3464 images/s
+[05/19 20:12:10] ppdet.engine INFO: Epoch: [8] [540/714] learning_rate: 0.000161 loss: 1.406622 loss_cls: 0.766811 loss_iou: 0.109286 loss_dfl: 0.767663 loss_l1: 0.254297 eta: 0:13:56 batch_cost: 0.1494 data_cost: 0.0002 ips: 53.5625 images/s
+[05/19 20:12:15] ppdet.engine INFO: Epoch: [8] [560/714] learning_rate: 0.000160 loss: 1.473769 loss_cls: 0.729832 loss_iou: 0.111372 loss_dfl: 0.832356 loss_l1: 0.340548 eta: 0:13:53 batch_cost: 0.2009 data_cost: 0.0002 ips: 39.8162 images/s
+[05/19 20:12:18] ppdet.engine INFO: Epoch: [8] [580/714] learning_rate: 0.000159 loss: 1.421757 loss_cls: 0.741784 loss_iou: 0.110651 loss_dfl: 0.772542 loss_l1: 0.247761 eta: 0:13:50 batch_cost: 0.1516 data_cost: 0.0002 ips: 52.7543 images/s
+[05/19 20:12:23] ppdet.engine INFO: Epoch: [8] [600/714] learning_rate: 0.000159 loss: 1.454873 loss_cls: 0.755141 loss_iou: 0.097896 loss_dfl: 0.776563 loss_l1: 0.256155 eta: 0:13:47 batch_cost: 0.1830 data_cost: 0.0005 ips: 43.7261 images/s
+[05/19 20:12:27] ppdet.engine INFO: Epoch: [8] [620/714] learning_rate: 0.000158 loss: 1.438991 loss_cls: 0.744851 loss_iou: 0.107089 loss_dfl: 0.820988 loss_l1: 0.268552 eta: 0:13:44 batch_cost: 0.1741 data_cost: 0.0003 ips: 45.9593 images/s
+[05/19 20:12:31] ppdet.engine INFO: Epoch: [8] [640/714] learning_rate: 0.000158 loss: 1.466174 loss_cls: 0.756324 loss_iou: 0.109617 loss_dfl: 0.826206 loss_l1: 0.301471 eta: 0:13:41 batch_cost: 0.1769 data_cost: 0.0002 ips: 45.2154 images/s
+[05/19 20:12:35] ppdet.engine INFO: Epoch: [8] [660/714] learning_rate: 0.000157 loss: 1.469722 loss_cls: 0.828729 loss_iou: 0.111028 loss_dfl: 0.784092 loss_l1: 0.270504 eta: 0:13:38 batch_cost: 0.1655 data_cost: 0.0002 ips: 48.3311 images/s
+[05/19 20:12:40] ppdet.engine INFO: Epoch: [8] [680/714] learning_rate: 0.000157 loss: 1.474242 loss_cls: 0.788527 loss_iou: 0.110683 loss_dfl: 0.815898 loss_l1: 0.331518 eta: 0:13:35 batch_cost: 0.1922 data_cost: 0.0002 ips: 41.6245 images/s
+[05/19 20:12:44] ppdet.engine INFO: Epoch: [8] [700/714] learning_rate: 0.000156 loss: 1.486201 loss_cls: 0.783116 loss_iou: 0.108903 loss_dfl: 0.819326 loss_l1: 0.307124 eta: 0:13:31 batch_cost: 0.1511 data_cost: 0.0002 ips: 52.9382 images/s
+[05/19 20:12:47] ppdet.engine INFO: Train epoch 9 cost time: 145.4 s.
+[05/19 20:12:48] ppdet.engine INFO: Epoch: [9] [  0/714] learning_rate: 0.000156 loss: 1.422194 loss_cls: 0.768103 loss_iou: 0.110555 loss_dfl: 0.812608 loss_l1: 0.276880 eta: 0:13:30 batch_cost: 0.2040 data_cost: 0.0375 ips: 39.2151 images/s
+[05/19 20:12:52] ppdet.engine INFO: Epoch: [9] [ 20/714] learning_rate: 0.000155 loss: 1.442638 loss_cls: 0.741266 loss_iou: 0.108930 loss_dfl: 0.806410 loss_l1: 0.282642 eta: 0:13:27 batch_cost: 0.1939 data_cost: 0.0002 ips: 41.2656 images/s
+[05/19 20:12:57] ppdet.engine INFO: Epoch: [9] [ 40/714] learning_rate: 0.000155 loss: 1.373682 loss_cls: 0.743902 loss_iou: 0.104977 loss_dfl: 0.803596 loss_l1: 0.283731 eta: 0:13:24 batch_cost: 0.1645 data_cost: 0.0002 ips: 48.6351 images/s
+[05/19 20:13:01] ppdet.engine INFO: Epoch: [9] [ 60/714] learning_rate: 0.000154 loss: 1.499421 loss_cls: 0.764122 loss_iou: 0.113810 loss_dfl: 0.831504 loss_l1: 0.264693 eta: 0:13:21 batch_cost: 0.1719 data_cost: 0.0002 ips: 46.5412 images/s
+[05/19 20:13:05] ppdet.engine INFO: Epoch: [9] [ 80/714] learning_rate: 0.000153 loss: 1.427884 loss_cls: 0.756319 loss_iou: 0.107041 loss_dfl: 0.774397 loss_l1: 0.263779 eta: 0:13:17 batch_cost: 0.1578 data_cost: 0.0002 ips: 50.7064 images/s
+[05/19 20:13:09] ppdet.engine INFO: Epoch: [9] [100/714] learning_rate: 0.000153 loss: 1.435483 loss_cls: 0.767539 loss_iou: 0.110605 loss_dfl: 0.800139 loss_l1: 0.326852 eta: 0:13:14 batch_cost: 0.1657 data_cost: 0.0002 ips: 48.2749 images/s
+[05/19 20:13:13] ppdet.engine INFO: Epoch: [9] [120/714] learning_rate: 0.000152 loss: 1.426243 loss_cls: 0.762243 loss_iou: 0.113978 loss_dfl: 0.808339 loss_l1: 0.256645 eta: 0:13:11 batch_cost: 0.1552 data_cost: 0.0002 ips: 51.5582 images/s
+[05/19 20:13:17] ppdet.engine INFO: Epoch: [9] [140/714] learning_rate: 0.000152 loss: 1.439423 loss_cls: 0.800080 loss_iou: 0.121532 loss_dfl: 0.789317 loss_l1: 0.302399 eta: 0:13:07 batch_cost: 0.1533 data_cost: 0.0002 ips: 52.1748 images/s
+[05/19 20:13:21] ppdet.engine INFO: Epoch: [9] [160/714] learning_rate: 0.000151 loss: 1.471209 loss_cls: 0.723760 loss_iou: 0.109889 loss_dfl: 0.811538 loss_l1: 0.320301 eta: 0:13:04 batch_cost: 0.1555 data_cost: 0.0002 ips: 51.4577 images/s
+[05/19 20:13:24] ppdet.engine INFO: Epoch: [9] [180/714] learning_rate: 0.000151 loss: 1.436281 loss_cls: 0.752050 loss_iou: 0.112702 loss_dfl: 0.814167 loss_l1: 0.259230 eta: 0:13:01 batch_cost: 0.1534 data_cost: 0.0002 ips: 52.1535 images/s
+[05/19 20:13:28] ppdet.engine INFO: Epoch: [9] [200/714] learning_rate: 0.000150 loss: 1.461172 loss_cls: 0.762544 loss_iou: 0.115560 loss_dfl: 0.832076 loss_l1: 0.296136 eta: 0:12:57 batch_cost: 0.1592 data_cost: 0.0002 ips: 50.2427 images/s
+[05/19 20:13:32] ppdet.engine INFO: Epoch: [9] [220/714] learning_rate: 0.000149 loss: 1.416644 loss_cls: 0.765105 loss_iou: 0.101218 loss_dfl: 0.776945 loss_l1: 0.242050 eta: 0:12:54 batch_cost: 0.1601 data_cost: 0.0002 ips: 49.9627 images/s
+[05/19 20:13:36] ppdet.engine INFO: Epoch: [9] [240/714] learning_rate: 0.000149 loss: 1.465715 loss_cls: 0.766606 loss_iou: 0.111613 loss_dfl: 0.814901 loss_l1: 0.271339 eta: 0:12:51 batch_cost: 0.1612 data_cost: 0.0002 ips: 49.6379 images/s
+[05/19 20:13:40] ppdet.engine INFO: Epoch: [9] [260/714] learning_rate: 0.000148 loss: 1.430757 loss_cls: 0.752987 loss_iou: 0.107015 loss_dfl: 0.780214 loss_l1: 0.270079 eta: 0:12:47 batch_cost: 0.1410 data_cost: 0.0002 ips: 56.7549 images/s
+[05/19 20:13:44] ppdet.engine INFO: Epoch: [9] [280/714] learning_rate: 0.000148 loss: 1.370075 loss_cls: 0.717896 loss_iou: 0.107028 loss_dfl: 0.805687 loss_l1: 0.277122 eta: 0:12:44 batch_cost: 0.1665 data_cost: 0.0002 ips: 48.0366 images/s
+[05/19 20:13:48] ppdet.engine INFO: Epoch: [9] [300/714] learning_rate: 0.000147 loss: 1.449767 loss_cls: 0.746138 loss_iou: 0.114632 loss_dfl: 0.806987 loss_l1: 0.292266 eta: 0:12:41 batch_cost: 0.1630 data_cost: 0.0002 ips: 49.0672 images/s
+[05/19 20:13:52] ppdet.engine INFO: Epoch: [9] [320/714] learning_rate: 0.000147 loss: 1.408353 loss_cls: 0.699568 loss_iou: 0.109673 loss_dfl: 0.802086 loss_l1: 0.279907 eta: 0:12:38 batch_cost: 0.1548 data_cost: 0.0002 ips: 51.6687 images/s
+[05/19 20:13:56] ppdet.engine INFO: Epoch: [9] [340/714] learning_rate: 0.000146 loss: 1.432660 loss_cls: 0.776220 loss_iou: 0.098589 loss_dfl: 0.769972 loss_l1: 0.270082 eta: 0:12:34 batch_cost: 0.1590 data_cost: 0.0002 ips: 50.2995 images/s
+[05/19 20:14:00] ppdet.engine INFO: Epoch: [9] [360/714] learning_rate: 0.000145 loss: 1.428843 loss_cls: 0.738242 loss_iou: 0.108156 loss_dfl: 0.810512 loss_l1: 0.288577 eta: 0:12:31 batch_cost: 0.1653 data_cost: 0.0002 ips: 48.3826 images/s
+[05/19 20:14:04] ppdet.engine INFO: Epoch: [9] [380/714] learning_rate: 0.000145 loss: 1.444780 loss_cls: 0.763710 loss_iou: 0.118686 loss_dfl: 0.803970 loss_l1: 0.295799 eta: 0:12:28 batch_cost: 0.1569 data_cost: 0.0003 ips: 50.9792 images/s
+[05/19 20:14:08] ppdet.engine INFO: Epoch: [9] [400/714] learning_rate: 0.000144 loss: 1.465954 loss_cls: 0.722077 loss_iou: 0.120354 loss_dfl: 0.833576 loss_l1: 0.315817 eta: 0:12:25 batch_cost: 0.1829 data_cost: 0.0003 ips: 43.7471 images/s
+[05/19 20:14:12] ppdet.engine INFO: Epoch: [9] [420/714] learning_rate: 0.000144 loss: 1.381113 loss_cls: 0.749211 loss_iou: 0.095363 loss_dfl: 0.775506 loss_l1: 0.228184 eta: 0:12:21 batch_cost: 0.1502 data_cost: 0.0004 ips: 53.2629 images/s
+[05/19 20:14:16] ppdet.engine INFO: Epoch: [9] [440/714] learning_rate: 0.000143 loss: 1.380285 loss_cls: 0.738315 loss_iou: 0.102538 loss_dfl: 0.771301 loss_l1: 0.277963 eta: 0:12:18 batch_cost: 0.1581 data_cost: 0.0002 ips: 50.5907 images/s
+[05/19 20:14:20] ppdet.engine INFO: Epoch: [9] [460/714] learning_rate: 0.000143 loss: 1.356969 loss_cls: 0.712347 loss_iou: 0.091410 loss_dfl: 0.781625 loss_l1: 0.237994 eta: 0:12:15 batch_cost: 0.1776 data_cost: 0.0002 ips: 45.0450 images/s
+[05/19 20:14:24] ppdet.engine INFO: Epoch: [9] [480/714] learning_rate: 0.000142 loss: 1.378306 loss_cls: 0.750036 loss_iou: 0.112980 loss_dfl: 0.781795 loss_l1: 0.258252 eta: 0:12:12 batch_cost: 0.1694 data_cost: 0.0002 ips: 47.2171 images/s
+[05/19 20:14:28] ppdet.engine INFO: Epoch: [9] [500/714] learning_rate: 0.000141 loss: 1.417982 loss_cls: 0.779363 loss_iou: 0.101832 loss_dfl: 0.793092 loss_l1: 0.279423 eta: 0:12:09 batch_cost: 0.1553 data_cost: 0.0002 ips: 51.5210 images/s
+[05/19 20:14:32] ppdet.engine INFO: Epoch: [9] [520/714] learning_rate: 0.000141 loss: 1.396361 loss_cls: 0.729667 loss_iou: 0.109948 loss_dfl: 0.779235 loss_l1: 0.246309 eta: 0:12:05 batch_cost: 0.1566 data_cost: 0.0002 ips: 51.1003 images/s
+[05/19 20:14:36] ppdet.engine INFO: Epoch: [9] [540/714] learning_rate: 0.000140 loss: 1.373951 loss_cls: 0.685126 loss_iou: 0.100751 loss_dfl: 0.827462 loss_l1: 0.297869 eta: 0:12:02 batch_cost: 0.1586 data_cost: 0.0002 ips: 50.4415 images/s
+[05/19 20:14:40] ppdet.engine INFO: Epoch: [9] [560/714] learning_rate: 0.000140 loss: 1.327196 loss_cls: 0.737648 loss_iou: 0.099318 loss_dfl: 0.772422 loss_l1: 0.252985 eta: 0:11:59 batch_cost: 0.1781 data_cost: 0.0002 ips: 44.9217 images/s
+[05/19 20:14:44] ppdet.engine INFO: Epoch: [9] [580/714] learning_rate: 0.000139 loss: 1.421268 loss_cls: 0.768435 loss_iou: 0.096418 loss_dfl: 0.825460 loss_l1: 0.274507 eta: 0:11:56 batch_cost: 0.1603 data_cost: 0.0002 ips: 49.9149 images/s
+[05/19 20:14:48] ppdet.engine INFO: Epoch: [9] [600/714] learning_rate: 0.000139 loss: 1.398602 loss_cls: 0.715292 loss_iou: 0.110884 loss_dfl: 0.779275 loss_l1: 0.268397 eta: 0:11:52 batch_cost: 0.1518 data_cost: 0.0002 ips: 52.7112 images/s
+[05/19 20:14:52] ppdet.engine INFO: Epoch: [9] [620/714] learning_rate: 0.000138 loss: 1.377484 loss_cls: 0.730764 loss_iou: 0.096924 loss_dfl: 0.754430 loss_l1: 0.231708 eta: 0:11:49 batch_cost: 0.1417 data_cost: 0.0002 ips: 56.4755 images/s
+[05/19 20:14:55] ppdet.engine INFO: Epoch: [9] [640/714] learning_rate: 0.000137 loss: 1.475172 loss_cls: 0.757494 loss_iou: 0.111943 loss_dfl: 0.809128 loss_l1: 0.279099 eta: 0:11:45 batch_cost: 0.1408 data_cost: 0.0002 ips: 56.8043 images/s
+[05/19 20:14:59] ppdet.engine INFO: Epoch: [9] [660/714] learning_rate: 0.000137 loss: 1.329980 loss_cls: 0.724706 loss_iou: 0.093535 loss_dfl: 0.771697 loss_l1: 0.262757 eta: 0:11:42 batch_cost: 0.1713 data_cost: 0.0002 ips: 46.7052 images/s
+[05/19 20:15:04] ppdet.engine INFO: Epoch: [9] [680/714] learning_rate: 0.000136 loss: 1.457050 loss_cls: 0.754522 loss_iou: 0.102558 loss_dfl: 0.826409 loss_l1: 0.298667 eta: 0:11:39 batch_cost: 0.1683 data_cost: 0.0002 ips: 47.5337 images/s
+[05/19 20:15:08] ppdet.engine INFO: Epoch: [9] [700/714] learning_rate: 0.000136 loss: 1.413184 loss_cls: 0.746923 loss_iou: 0.108428 loss_dfl: 0.796744 loss_l1: 0.283333 eta: 0:11:36 batch_cost: 0.1570 data_cost: 0.0003 ips: 50.9643 images/s
+[05/19 20:15:10] ppdet.engine INFO: Train epoch 10 cost time: 143.6 s.
+[05/19 20:15:12] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:15:12] ppdet.engine INFO: Eval iter: 0
+[05/19 20:15:34] ppdet.engine INFO: Eval iter: 100
+[05/19 20:15:53] ppdet.engine INFO: Eval iter: 200
+[05/19 20:16:13] ppdet.engine INFO: Eval iter: 300
+[05/19 20:16:32] ppdet.engine INFO: Eval iter: 400
+[05/19 20:16:53] ppdet.engine INFO: Eval iter: 500
+[05/19 20:17:15] ppdet.engine INFO: Eval iter: 600
+[05/19 20:17:38] ppdet.engine INFO: Eval iter: 700
+[05/19 20:18:04] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.08s)
+creating index...
+index created!
+[05/19 20:18:04] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=11.83s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=38.28s).
+Accumulating evaluation results...
+DONE (t=23.82s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.674
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.842
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.734
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.272
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.527
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.764
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.524
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.783
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.822
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.527
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.745
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.883
+[05/19 20:19:21] ppdet.engine INFO: Total sample number: 5823, average FPS: 38.21363588855778
+[05/19 20:19:21] ppdet.engine INFO: Best test bbox ap is 0.674.
+[05/19 20:19:22] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:19:22] ppdet.engine INFO: Epoch: [10] [  0/714] learning_rate: 0.000135 loss: 1.436407 loss_cls: 0.748943 loss_iou: 0.105572 loss_dfl: 0.796082 loss_l1: 0.275908 eta: 0:11:33 batch_cost: 0.1559 data_cost: 0.0007 ips: 51.3092 images/s
+[05/19 20:19:27] ppdet.engine INFO: Epoch: [10] [ 20/714] learning_rate: 0.000135 loss: 1.420590 loss_cls: 0.727507 loss_iou: 0.100598 loss_dfl: 0.806015 loss_l1: 0.270812 eta: 0:11:30 batch_cost: 0.1687 data_cost: 0.0006 ips: 47.4222 images/s
+[05/19 20:19:31] ppdet.engine INFO: Epoch: [10] [ 40/714] learning_rate: 0.000134 loss: 1.393069 loss_cls: 0.754315 loss_iou: 0.113556 loss_dfl: 0.779648 loss_l1: 0.282137 eta: 0:11:27 batch_cost: 0.1557 data_cost: 0.0002 ips: 51.3728 images/s
+[05/19 20:19:35] ppdet.engine INFO: Epoch: [10] [ 60/714] learning_rate: 0.000134 loss: 1.457023 loss_cls: 0.742269 loss_iou: 0.117743 loss_dfl: 0.823494 loss_l1: 0.310972 eta: 0:11:24 batch_cost: 0.1672 data_cost: 0.0002 ips: 47.8538 images/s
+[05/19 20:19:39] ppdet.engine INFO: Epoch: [10] [ 80/714] learning_rate: 0.000133 loss: 1.435019 loss_cls: 0.737963 loss_iou: 0.123342 loss_dfl: 0.780496 loss_l1: 0.273777 eta: 0:11:20 batch_cost: 0.1456 data_cost: 0.0002 ips: 54.9497 images/s
+[05/19 20:19:43] ppdet.engine INFO: Epoch: [10] [100/714] learning_rate: 0.000132 loss: 1.345620 loss_cls: 0.695117 loss_iou: 0.095072 loss_dfl: 0.774434 loss_l1: 0.227223 eta: 0:11:17 batch_cost: 0.1593 data_cost: 0.0002 ips: 50.2289 images/s
+[05/19 20:19:47] ppdet.engine INFO: Epoch: [10] [120/714] learning_rate: 0.000132 loss: 1.380564 loss_cls: 0.731551 loss_iou: 0.097778 loss_dfl: 0.772398 loss_l1: 0.232462 eta: 0:11:14 batch_cost: 0.1752 data_cost: 0.0002 ips: 45.6704 images/s
+[05/19 20:19:51] ppdet.engine INFO: Epoch: [10] [140/714] learning_rate: 0.000131 loss: 1.341127 loss_cls: 0.713348 loss_iou: 0.100913 loss_dfl: 0.782477 loss_l1: 0.229927 eta: 0:11:11 batch_cost: 0.1694 data_cost: 0.0002 ips: 47.2139 images/s
+[05/19 20:19:55] ppdet.engine INFO: Epoch: [10] [160/714] learning_rate: 0.000131 loss: 1.310845 loss_cls: 0.710787 loss_iou: 0.097111 loss_dfl: 0.765780 loss_l1: 0.250858 eta: 0:11:08 batch_cost: 0.1602 data_cost: 0.0002 ips: 49.9390 images/s
+[05/19 20:19:59] ppdet.engine INFO: Epoch: [10] [180/714] learning_rate: 0.000130 loss: 1.400489 loss_cls: 0.733127 loss_iou: 0.113706 loss_dfl: 0.787917 loss_l1: 0.277070 eta: 0:11:04 batch_cost: 0.1457 data_cost: 0.0003 ips: 54.9196 images/s
+[05/19 20:20:03] ppdet.engine INFO: Epoch: [10] [200/714] learning_rate: 0.000130 loss: 1.406393 loss_cls: 0.738354 loss_iou: 0.112930 loss_dfl: 0.800138 loss_l1: 0.284524 eta: 0:11:01 batch_cost: 0.1716 data_cost: 0.0004 ips: 46.6066 images/s
+[05/19 20:20:07] ppdet.engine INFO: Epoch: [10] [220/714] learning_rate: 0.000129 loss: 1.457274 loss_cls: 0.769198 loss_iou: 0.113593 loss_dfl: 0.795569 loss_l1: 0.306236 eta: 0:10:58 batch_cost: 0.1828 data_cost: 0.0005 ips: 43.7715 images/s
+[05/19 20:20:11] ppdet.engine INFO: Epoch: [10] [240/714] learning_rate: 0.000128 loss: 1.328142 loss_cls: 0.709362 loss_iou: 0.088375 loss_dfl: 0.740376 loss_l1: 0.225356 eta: 0:10:55 batch_cost: 0.1436 data_cost: 0.0002 ips: 55.7130 images/s
+[05/19 20:20:15] ppdet.engine INFO: Epoch: [10] [260/714] learning_rate: 0.000128 loss: 1.352645 loss_cls: 0.747453 loss_iou: 0.101043 loss_dfl: 0.761870 loss_l1: 0.256784 eta: 0:10:51 batch_cost: 0.1621 data_cost: 0.0007 ips: 49.3652 images/s
+[05/19 20:20:20] ppdet.engine INFO: Epoch: [10] [280/714] learning_rate: 0.000127 loss: 1.339065 loss_cls: 0.715224 loss_iou: 0.092774 loss_dfl: 0.762203 loss_l1: 0.248007 eta: 0:10:48 batch_cost: 0.1760 data_cost: 0.0002 ips: 45.4452 images/s
+[05/19 20:20:24] ppdet.engine INFO: Epoch: [10] [300/714] learning_rate: 0.000127 loss: 1.422506 loss_cls: 0.758247 loss_iou: 0.111535 loss_dfl: 0.818347 loss_l1: 0.268952 eta: 0:10:45 batch_cost: 0.1668 data_cost: 0.0002 ips: 47.9756 images/s
+[05/19 20:20:28] ppdet.engine INFO: Epoch: [10] [320/714] learning_rate: 0.000126 loss: 1.421760 loss_cls: 0.758693 loss_iou: 0.109789 loss_dfl: 0.763578 loss_l1: 0.263815 eta: 0:10:42 batch_cost: 0.1622 data_cost: 0.0002 ips: 49.3262 images/s
+[05/19 20:20:32] ppdet.engine INFO: Epoch: [10] [340/714] learning_rate: 0.000125 loss: 1.417368 loss_cls: 0.770338 loss_iou: 0.103506 loss_dfl: 0.761028 loss_l1: 0.268580 eta: 0:10:39 batch_cost: 0.1592 data_cost: 0.0002 ips: 50.2384 images/s
+[05/19 20:20:36] ppdet.engine INFO: Epoch: [10] [360/714] learning_rate: 0.000125 loss: 1.310701 loss_cls: 0.708858 loss_iou: 0.092175 loss_dfl: 0.795492 loss_l1: 0.251456 eta: 0:10:35 batch_cost: 0.1795 data_cost: 0.0002 ips: 44.5567 images/s
+[05/19 20:20:41] ppdet.engine INFO: Epoch: [10] [380/714] learning_rate: 0.000124 loss: 1.448108 loss_cls: 0.771106 loss_iou: 0.103908 loss_dfl: 0.801836 loss_l1: 0.304564 eta: 0:10:33 batch_cost: 0.1955 data_cost: 0.0010 ips: 40.9133 images/s
+[05/19 20:20:45] ppdet.engine INFO: Epoch: [10] [400/714] learning_rate: 0.000124 loss: 1.305018 loss_cls: 0.710228 loss_iou: 0.103624 loss_dfl: 0.750690 loss_l1: 0.239560 eta: 0:10:29 batch_cost: 0.1535 data_cost: 0.0004 ips: 52.1113 images/s
+[05/19 20:20:51] ppdet.engine INFO: Epoch: [10] [420/714] learning_rate: 0.000123 loss: 1.413243 loss_cls: 0.742288 loss_iou: 0.106200 loss_dfl: 0.788382 loss_l1: 0.270020 eta: 0:10:26 batch_cost: 0.2083 data_cost: 0.0014 ips: 38.4083 images/s
+[05/19 20:20:54] ppdet.engine INFO: Epoch: [10] [440/714] learning_rate: 0.000123 loss: 1.422584 loss_cls: 0.737563 loss_iou: 0.111080 loss_dfl: 0.773772 loss_l1: 0.245231 eta: 0:10:23 batch_cost: 0.1385 data_cost: 0.0004 ips: 57.7438 images/s
+[05/19 20:20:58] ppdet.engine INFO: Epoch: [10] [460/714] learning_rate: 0.000122 loss: 1.397690 loss_cls: 0.745460 loss_iou: 0.112697 loss_dfl: 0.792894 loss_l1: 0.250338 eta: 0:10:20 batch_cost: 0.1763 data_cost: 0.0003 ips: 45.3851 images/s
+[05/19 20:21:02] ppdet.engine INFO: Epoch: [10] [480/714] learning_rate: 0.000121 loss: 1.406846 loss_cls: 0.725110 loss_iou: 0.106370 loss_dfl: 0.774052 loss_l1: 0.278918 eta: 0:10:17 batch_cost: 0.1610 data_cost: 0.0010 ips: 49.6749 images/s
+[05/19 20:21:06] ppdet.engine INFO: Epoch: [10] [500/714] learning_rate: 0.000121 loss: 1.429843 loss_cls: 0.782581 loss_iou: 0.107618 loss_dfl: 0.758083 loss_l1: 0.243815 eta: 0:10:13 batch_cost: 0.1610 data_cost: 0.0003 ips: 49.6927 images/s
+[05/19 20:21:10] ppdet.engine INFO: Epoch: [10] [520/714] learning_rate: 0.000120 loss: 1.353007 loss_cls: 0.739343 loss_iou: 0.094331 loss_dfl: 0.748998 loss_l1: 0.251321 eta: 0:10:10 batch_cost: 0.1590 data_cost: 0.0004 ips: 50.3090 images/s
+[05/19 20:21:14] ppdet.engine INFO: Epoch: [10] [540/714] learning_rate: 0.000120 loss: 1.364191 loss_cls: 0.696030 loss_iou: 0.108362 loss_dfl: 0.788800 loss_l1: 0.292736 eta: 0:10:07 batch_cost: 0.1724 data_cost: 0.0002 ips: 46.3906 images/s
+[05/19 20:21:19] ppdet.engine INFO: Epoch: [10] [560/714] learning_rate: 0.000119 loss: 1.475827 loss_cls: 0.777253 loss_iou: 0.111659 loss_dfl: 0.809649 loss_l1: 0.263373 eta: 0:10:04 batch_cost: 0.1769 data_cost: 0.0002 ips: 45.2260 images/s
+[05/19 20:21:23] ppdet.engine INFO: Epoch: [10] [580/714] learning_rate: 0.000119 loss: 1.356111 loss_cls: 0.698923 loss_iou: 0.097767 loss_dfl: 0.783683 loss_l1: 0.247771 eta: 0:10:01 batch_cost: 0.1760 data_cost: 0.0004 ips: 45.4657 images/s
+[05/19 20:21:27] ppdet.engine INFO: Epoch: [10] [600/714] learning_rate: 0.000118 loss: 1.495242 loss_cls: 0.732191 loss_iou: 0.116929 loss_dfl: 0.872668 loss_l1: 0.322965 eta: 0:09:58 batch_cost: 0.1717 data_cost: 0.0002 ips: 46.5855 images/s
+[05/19 20:21:31] ppdet.engine INFO: Epoch: [10] [620/714] learning_rate: 0.000117 loss: 1.471525 loss_cls: 0.747339 loss_iou: 0.115561 loss_dfl: 0.762471 loss_l1: 0.269259 eta: 0:09:54 batch_cost: 0.1375 data_cost: 0.0002 ips: 58.1697 images/s
+[05/19 20:21:35] ppdet.engine INFO: Epoch: [10] [640/714] learning_rate: 0.000117 loss: 1.327518 loss_cls: 0.709836 loss_iou: 0.101676 loss_dfl: 0.745876 loss_l1: 0.242778 eta: 0:09:51 batch_cost: 0.1699 data_cost: 0.0002 ips: 47.0931 images/s
+[05/19 20:21:39] ppdet.engine INFO: Epoch: [10] [660/714] learning_rate: 0.000116 loss: 1.370866 loss_cls: 0.724393 loss_iou: 0.094970 loss_dfl: 0.826956 loss_l1: 0.293111 eta: 0:09:48 batch_cost: 0.1818 data_cost: 0.0002 ips: 44.0074 images/s
+[05/19 20:21:43] ppdet.engine INFO: Epoch: [10] [680/714] learning_rate: 0.000116 loss: 1.352152 loss_cls: 0.716616 loss_iou: 0.099120 loss_dfl: 0.755429 loss_l1: 0.224099 eta: 0:09:44 batch_cost: 0.1485 data_cost: 0.0005 ips: 53.8730 images/s
+[05/19 20:21:47] ppdet.engine INFO: Epoch: [10] [700/714] learning_rate: 0.000115 loss: 1.393343 loss_cls: 0.700133 loss_iou: 0.106698 loss_dfl: 0.802954 loss_l1: 0.297850 eta: 0:09:41 batch_cost: 0.1504 data_cost: 0.0002 ips: 53.2048 images/s
+[05/19 20:21:50] ppdet.engine INFO: Train epoch 11 cost time: 147.7 s.
+[05/19 20:21:51] ppdet.engine INFO: Epoch: [11] [  0/714] learning_rate: 0.000115 loss: 1.451136 loss_cls: 0.756493 loss_iou: 0.107716 loss_dfl: 0.802907 loss_l1: 0.298794 eta: 0:09:39 batch_cost: 0.2079 data_cost: 0.0363 ips: 38.4756 images/s
+[05/19 20:21:55] ppdet.engine INFO: Epoch: [11] [ 20/714] learning_rate: 0.000114 loss: 1.394830 loss_cls: 0.733262 loss_iou: 0.109383 loss_dfl: 0.800370 loss_l1: 0.291727 eta: 0:09:36 batch_cost: 0.1646 data_cost: 0.0002 ips: 48.6024 images/s
+[05/19 20:21:59] ppdet.engine INFO: Epoch: [11] [ 40/714] learning_rate: 0.000114 loss: 1.361284 loss_cls: 0.700563 loss_iou: 0.099754 loss_dfl: 0.753282 loss_l1: 0.236736 eta: 0:09:33 batch_cost: 0.1597 data_cost: 0.0002 ips: 50.1000 images/s
+[05/19 20:22:03] ppdet.engine INFO: Epoch: [11] [ 60/714] learning_rate: 0.000113 loss: 1.369563 loss_cls: 0.714667 loss_iou: 0.102174 loss_dfl: 0.793345 loss_l1: 0.256965 eta: 0:09:29 batch_cost: 0.1528 data_cost: 0.0002 ips: 52.3613 images/s
+[05/19 20:22:07] ppdet.engine INFO: Epoch: [11] [ 80/714] learning_rate: 0.000112 loss: 1.417909 loss_cls: 0.735505 loss_iou: 0.110432 loss_dfl: 0.824173 loss_l1: 0.266980 eta: 0:09:26 batch_cost: 0.1814 data_cost: 0.0002 ips: 44.0931 images/s
+[05/19 20:22:11] ppdet.engine INFO: Epoch: [11] [100/714] learning_rate: 0.000112 loss: 1.438744 loss_cls: 0.738817 loss_iou: 0.119985 loss_dfl: 0.815578 loss_l1: 0.268432 eta: 0:09:23 batch_cost: 0.1478 data_cost: 0.0004 ips: 54.1290 images/s
+[05/19 20:22:15] ppdet.engine INFO: Epoch: [11] [120/714] learning_rate: 0.000111 loss: 1.381494 loss_cls: 0.705486 loss_iou: 0.107211 loss_dfl: 0.804454 loss_l1: 0.266636 eta: 0:09:20 batch_cost: 0.1624 data_cost: 0.0003 ips: 49.2681 images/s
+[05/19 20:22:19] ppdet.engine INFO: Epoch: [11] [140/714] learning_rate: 0.000111 loss: 1.395215 loss_cls: 0.693398 loss_iou: 0.112976 loss_dfl: 0.779211 loss_l1: 0.261879 eta: 0:09:17 batch_cost: 0.1712 data_cost: 0.0002 ips: 46.7240 images/s
+[05/19 20:22:23] ppdet.engine INFO: Epoch: [11] [160/714] learning_rate: 0.000110 loss: 1.339266 loss_cls: 0.669986 loss_iou: 0.110221 loss_dfl: 0.729406 loss_l1: 0.242769 eta: 0:09:13 batch_cost: 0.1566 data_cost: 0.0002 ips: 51.0905 images/s
+[05/19 20:22:27] ppdet.engine INFO: Epoch: [11] [180/714] learning_rate: 0.000109 loss: 1.391445 loss_cls: 0.741243 loss_iou: 0.108563 loss_dfl: 0.793821 loss_l1: 0.282119 eta: 0:09:10 batch_cost: 0.1687 data_cost: 0.0002 ips: 47.4113 images/s
+[05/19 20:22:31] ppdet.engine INFO: Epoch: [11] [200/714] learning_rate: 0.000109 loss: 1.446669 loss_cls: 0.753904 loss_iou: 0.102753 loss_dfl: 0.795958 loss_l1: 0.255278 eta: 0:09:07 batch_cost: 0.1732 data_cost: 0.0002 ips: 46.2005 images/s
+[05/19 20:22:35] ppdet.engine INFO: Epoch: [11] [220/714] learning_rate: 0.000108 loss: 1.352901 loss_cls: 0.705747 loss_iou: 0.098199 loss_dfl: 0.773963 loss_l1: 0.228029 eta: 0:09:04 batch_cost: 0.1677 data_cost: 0.0002 ips: 47.7004 images/s
+[05/19 20:22:39] ppdet.engine INFO: Epoch: [11] [240/714] learning_rate: 0.000108 loss: 1.357466 loss_cls: 0.721114 loss_iou: 0.113030 loss_dfl: 0.804992 loss_l1: 0.276412 eta: 0:09:00 batch_cost: 0.1600 data_cost: 0.0002 ips: 49.9922 images/s
+[05/19 20:22:43] ppdet.engine INFO: Epoch: [11] [260/714] learning_rate: 0.000107 loss: 1.317410 loss_cls: 0.683558 loss_iou: 0.092650 loss_dfl: 0.766612 loss_l1: 0.230228 eta: 0:08:57 batch_cost: 0.1728 data_cost: 0.0002 ips: 46.3038 images/s
+[05/19 20:22:48] ppdet.engine INFO: Epoch: [11] [280/714] learning_rate: 0.000107 loss: 1.479020 loss_cls: 0.741302 loss_iou: 0.111628 loss_dfl: 0.823365 loss_l1: 0.284970 eta: 0:08:54 batch_cost: 0.1761 data_cost: 0.0002 ips: 45.4234 images/s
+[05/19 20:22:52] ppdet.engine INFO: Epoch: [11] [300/714] learning_rate: 0.000106 loss: 1.384711 loss_cls: 0.715045 loss_iou: 0.100876 loss_dfl: 0.798002 loss_l1: 0.275603 eta: 0:08:51 batch_cost: 0.1497 data_cost: 0.0002 ips: 53.4369 images/s
+[05/19 20:22:55] ppdet.engine INFO: Epoch: [11] [320/714] learning_rate: 0.000105 loss: 1.389629 loss_cls: 0.739473 loss_iou: 0.104237 loss_dfl: 0.775853 loss_l1: 0.242318 eta: 0:08:47 batch_cost: 0.1550 data_cost: 0.0003 ips: 51.6269 images/s
+[05/19 20:22:59] ppdet.engine INFO: Epoch: [11] [340/714] learning_rate: 0.000105 loss: 1.373991 loss_cls: 0.747111 loss_iou: 0.100545 loss_dfl: 0.810188 loss_l1: 0.273592 eta: 0:08:44 batch_cost: 0.1590 data_cost: 0.0006 ips: 50.3286 images/s
+[05/19 20:23:03] ppdet.engine INFO: Epoch: [11] [360/714] learning_rate: 0.000104 loss: 1.417373 loss_cls: 0.730896 loss_iou: 0.107874 loss_dfl: 0.800979 loss_l1: 0.251679 eta: 0:08:41 batch_cost: 0.1450 data_cost: 0.0003 ips: 55.1640 images/s
+[05/19 20:23:07] ppdet.engine INFO: Epoch: [11] [380/714] learning_rate: 0.000104 loss: 1.304344 loss_cls: 0.695211 loss_iou: 0.095760 loss_dfl: 0.762109 loss_l1: 0.260557 eta: 0:08:38 batch_cost: 0.1622 data_cost: 0.0002 ips: 49.3122 images/s
+[05/19 20:23:11] ppdet.engine INFO: Epoch: [11] [400/714] learning_rate: 0.000103 loss: 1.416082 loss_cls: 0.728865 loss_iou: 0.104164 loss_dfl: 0.788515 loss_l1: 0.289619 eta: 0:08:34 batch_cost: 0.1787 data_cost: 0.0002 ips: 44.7572 images/s
+[05/19 20:23:15] ppdet.engine INFO: Epoch: [11] [420/714] learning_rate: 0.000103 loss: 1.252906 loss_cls: 0.683147 loss_iou: 0.094947 loss_dfl: 0.736403 loss_l1: 0.225221 eta: 0:08:31 batch_cost: 0.1533 data_cost: 0.0002 ips: 52.1913 images/s
+[05/19 20:23:19] ppdet.engine INFO: Epoch: [11] [440/714] learning_rate: 0.000102 loss: 1.288093 loss_cls: 0.703854 loss_iou: 0.085177 loss_dfl: 0.755884 loss_l1: 0.218522 eta: 0:08:28 batch_cost: 0.1727 data_cost: 0.0002 ips: 46.3329 images/s
+[05/19 20:23:24] ppdet.engine INFO: Epoch: [11] [460/714] learning_rate: 0.000101 loss: 1.320323 loss_cls: 0.696908 loss_iou: 0.105748 loss_dfl: 0.793364 loss_l1: 0.273820 eta: 0:08:25 batch_cost: 0.1745 data_cost: 0.0002 ips: 45.8369 images/s
+[05/19 20:23:28] ppdet.engine INFO: Epoch: [11] [480/714] learning_rate: 0.000101 loss: 1.380701 loss_cls: 0.731122 loss_iou: 0.106023 loss_dfl: 0.782890 loss_l1: 0.268979 eta: 0:08:22 batch_cost: 0.1698 data_cost: 0.0002 ips: 47.1026 images/s
+[05/19 20:23:31] ppdet.engine INFO: Epoch: [11] [500/714] learning_rate: 0.000100 loss: 1.330919 loss_cls: 0.734586 loss_iou: 0.104732 loss_dfl: 0.745901 loss_l1: 0.233008 eta: 0:08:18 batch_cost: 0.1491 data_cost: 0.0002 ips: 53.6474 images/s
+[05/19 20:23:36] ppdet.engine INFO: Epoch: [11] [520/714] learning_rate: 0.000100 loss: 1.320504 loss_cls: 0.695104 loss_iou: 0.091147 loss_dfl: 0.752803 loss_l1: 0.237902 eta: 0:08:15 batch_cost: 0.1710 data_cost: 0.0003 ips: 46.7917 images/s
+[05/19 20:23:40] ppdet.engine INFO: Epoch: [11] [540/714] learning_rate: 0.000099 loss: 1.390975 loss_cls: 0.700719 loss_iou: 0.106958 loss_dfl: 0.793495 loss_l1: 0.236738 eta: 0:08:12 batch_cost: 0.1553 data_cost: 0.0002 ips: 51.5066 images/s
+[05/19 20:23:44] ppdet.engine INFO: Epoch: [11] [560/714] learning_rate: 0.000099 loss: 1.358288 loss_cls: 0.688683 loss_iou: 0.097683 loss_dfl: 0.783303 loss_l1: 0.252338 eta: 0:08:08 batch_cost: 0.1611 data_cost: 0.0002 ips: 49.6568 images/s
+[05/19 20:23:47] ppdet.engine INFO: Epoch: [11] [580/714] learning_rate: 0.000098 loss: 1.240772 loss_cls: 0.638936 loss_iou: 0.088626 loss_dfl: 0.756132 loss_l1: 0.210534 eta: 0:08:05 batch_cost: 0.1504 data_cost: 0.0005 ips: 53.2060 images/s
+[05/19 20:23:51] ppdet.engine INFO: Epoch: [11] [600/714] learning_rate: 0.000098 loss: 1.308134 loss_cls: 0.667286 loss_iou: 0.105877 loss_dfl: 0.767083 loss_l1: 0.238524 eta: 0:08:02 batch_cost: 0.1633 data_cost: 0.0003 ips: 48.9856 images/s
+[05/19 20:23:55] ppdet.engine INFO: Epoch: [11] [620/714] learning_rate: 0.000097 loss: 1.319940 loss_cls: 0.664478 loss_iou: 0.097394 loss_dfl: 0.767337 loss_l1: 0.231501 eta: 0:07:59 batch_cost: 0.1550 data_cost: 0.0005 ips: 51.6047 images/s
+[05/19 20:23:59] ppdet.engine INFO: Epoch: [11] [640/714] learning_rate: 0.000096 loss: 1.394530 loss_cls: 0.690958 loss_iou: 0.100751 loss_dfl: 0.790594 loss_l1: 0.263700 eta: 0:07:55 batch_cost: 0.1515 data_cost: 0.0002 ips: 52.8062 images/s
+[05/19 20:24:03] ppdet.engine INFO: Epoch: [11] [660/714] learning_rate: 0.000096 loss: 1.369956 loss_cls: 0.736240 loss_iou: 0.102732 loss_dfl: 0.765042 loss_l1: 0.230672 eta: 0:07:52 batch_cost: 0.1380 data_cost: 0.0002 ips: 57.9818 images/s
+[05/19 20:24:06] ppdet.engine INFO: Epoch: [11] [680/714] learning_rate: 0.000095 loss: 1.407384 loss_cls: 0.754402 loss_iou: 0.098868 loss_dfl: 0.779075 loss_l1: 0.281021 eta: 0:07:49 batch_cost: 0.1546 data_cost: 0.0002 ips: 51.7567 images/s
+[05/19 20:24:11] ppdet.engine INFO: Epoch: [11] [700/714] learning_rate: 0.000095 loss: 1.329486 loss_cls: 0.685578 loss_iou: 0.096423 loss_dfl: 0.745688 loss_l1: 0.244864 eta: 0:07:45 batch_cost: 0.1797 data_cost: 0.0002 ips: 44.5095 images/s
+[05/19 20:24:14] ppdet.engine INFO: Train epoch 12 cost time: 144.4 s.
+[05/19 20:24:16] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:24:16] ppdet.engine INFO: Eval iter: 0
+[05/19 20:24:37] ppdet.engine INFO: Eval iter: 100
+[05/19 20:24:59] ppdet.engine INFO: Eval iter: 200
+[05/19 20:25:23] ppdet.engine INFO: Eval iter: 300
+[05/19 20:25:46] ppdet.engine INFO: Eval iter: 400
+[05/19 20:26:09] ppdet.engine INFO: Eval iter: 500
+[05/19 20:26:32] ppdet.engine INFO: Eval iter: 600
+[05/19 20:26:57] ppdet.engine INFO: Eval iter: 700
+[05/19 20:27:23] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.08s)
+creating index...
+index created!
+[05/19 20:27:23] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=11.22s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=41.48s).
+Accumulating evaluation results...
+DONE (t=20.98s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.682
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.849
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.742
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.284
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.529
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.771
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.526
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.785
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.825
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.534
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.747
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.886
+[05/19 20:28:40] ppdet.engine INFO: Total sample number: 5823, average FPS: 34.81473373144179
+[05/19 20:28:40] ppdet.engine INFO: Best test bbox ap is 0.682.
+[05/19 20:28:41] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:28:42] ppdet.engine INFO: Epoch: [12] [  0/714] learning_rate: 0.000094 loss: 1.371816 loss_cls: 0.702335 loss_iou: 0.102410 loss_dfl: 0.794777 loss_l1: 0.255716 eta: 0:07:43 batch_cost: 0.1838 data_cost: 0.0005 ips: 43.5253 images/s
+[05/19 20:28:47] ppdet.engine INFO: Epoch: [12] [ 20/714] learning_rate: 0.000094 loss: 1.395137 loss_cls: 0.714938 loss_iou: 0.107908 loss_dfl: 0.816277 loss_l1: 0.271287 eta: 0:07:40 batch_cost: 0.1924 data_cost: 0.0011 ips: 41.5869 images/s
+[05/19 20:28:51] ppdet.engine INFO: Epoch: [12] [ 40/714] learning_rate: 0.000093 loss: 1.287770 loss_cls: 0.662482 loss_iou: 0.095603 loss_dfl: 0.757217 loss_l1: 0.257283 eta: 0:07:37 batch_cost: 0.1582 data_cost: 0.0002 ips: 50.5733 images/s
+[05/19 20:28:55] ppdet.engine INFO: Epoch: [12] [ 60/714] learning_rate: 0.000093 loss: 1.266777 loss_cls: 0.653111 loss_iou: 0.091214 loss_dfl: 0.748296 loss_l1: 0.215560 eta: 0:07:34 batch_cost: 0.1789 data_cost: 0.0002 ips: 44.7119 images/s
+[05/19 20:29:00] ppdet.engine INFO: Epoch: [12] [ 80/714] learning_rate: 0.000092 loss: 1.399264 loss_cls: 0.698316 loss_iou: 0.108490 loss_dfl: 0.781497 loss_l1: 0.240102 eta: 0:07:31 batch_cost: 0.1652 data_cost: 0.0006 ips: 48.4328 images/s
+[05/19 20:29:04] ppdet.engine INFO: Epoch: [12] [100/714] learning_rate: 0.000092 loss: 1.311394 loss_cls: 0.712413 loss_iou: 0.091256 loss_dfl: 0.754766 loss_l1: 0.228287 eta: 0:07:28 batch_cost: 0.2012 data_cost: 0.0005 ips: 39.7667 images/s
+[05/19 20:29:10] ppdet.engine INFO: Epoch: [12] [120/714] learning_rate: 0.000091 loss: 1.347053 loss_cls: 0.709928 loss_iou: 0.089169 loss_dfl: 0.781271 loss_l1: 0.217680 eta: 0:07:25 batch_cost: 0.2032 data_cost: 0.0009 ips: 39.3668 images/s
+[05/19 20:29:14] ppdet.engine INFO: Epoch: [12] [140/714] learning_rate: 0.000090 loss: 1.341704 loss_cls: 0.667265 loss_iou: 0.102814 loss_dfl: 0.792708 loss_l1: 0.260264 eta: 0:07:21 batch_cost: 0.1770 data_cost: 0.0009 ips: 45.1869 images/s
+[05/19 20:29:18] ppdet.engine INFO: Epoch: [12] [160/714] learning_rate: 0.000090 loss: 1.315160 loss_cls: 0.675177 loss_iou: 0.101193 loss_dfl: 0.784442 loss_l1: 0.258169 eta: 0:07:18 batch_cost: 0.1592 data_cost: 0.0005 ips: 50.2444 images/s
+[05/19 20:29:23] ppdet.engine INFO: Epoch: [12] [180/714] learning_rate: 0.000089 loss: 1.285151 loss_cls: 0.691760 loss_iou: 0.093542 loss_dfl: 0.761637 loss_l1: 0.241155 eta: 0:07:15 batch_cost: 0.1832 data_cost: 0.0007 ips: 43.6641 images/s
+[05/19 20:29:27] ppdet.engine INFO: Epoch: [12] [200/714] learning_rate: 0.000089 loss: 1.393197 loss_cls: 0.700039 loss_iou: 0.112847 loss_dfl: 0.770067 loss_l1: 0.244116 eta: 0:07:12 batch_cost: 0.1605 data_cost: 0.0003 ips: 49.8456 images/s
+[05/19 20:29:31] ppdet.engine INFO: Epoch: [12] [220/714] learning_rate: 0.000088 loss: 1.361253 loss_cls: 0.723242 loss_iou: 0.110351 loss_dfl: 0.794123 loss_l1: 0.273696 eta: 0:07:09 batch_cost: 0.1783 data_cost: 0.0006 ips: 44.8746 images/s
+[05/19 20:29:35] ppdet.engine INFO: Epoch: [12] [240/714] learning_rate: 0.000088 loss: 1.289804 loss_cls: 0.680574 loss_iou: 0.095604 loss_dfl: 0.711985 loss_l1: 0.245753 eta: 0:07:05 batch_cost: 0.1541 data_cost: 0.0002 ips: 51.9074 images/s
+[05/19 20:29:40] ppdet.engine INFO: Epoch: [12] [260/714] learning_rate: 0.000087 loss: 1.392027 loss_cls: 0.711265 loss_iou: 0.096399 loss_dfl: 0.781011 loss_l1: 0.275687 eta: 0:07:02 batch_cost: 0.1794 data_cost: 0.0002 ips: 44.5901 images/s
+[05/19 20:29:44] ppdet.engine INFO: Epoch: [12] [280/714] learning_rate: 0.000087 loss: 1.358919 loss_cls: 0.695268 loss_iou: 0.104574 loss_dfl: 0.772171 loss_l1: 0.273603 eta: 0:06:59 batch_cost: 0.1812 data_cost: 0.0009 ips: 44.1543 images/s
+[05/19 20:29:49] ppdet.engine INFO: Epoch: [12] [300/714] learning_rate: 0.000086 loss: 1.394409 loss_cls: 0.721417 loss_iou: 0.110949 loss_dfl: 0.788442 loss_l1: 0.270157 eta: 0:06:56 batch_cost: 0.1748 data_cost: 0.0002 ips: 45.7598 images/s
+[05/19 20:29:53] ppdet.engine INFO: Epoch: [12] [320/714] learning_rate: 0.000085 loss: 1.321270 loss_cls: 0.684961 loss_iou: 0.104448 loss_dfl: 0.751212 loss_l1: 0.260900 eta: 0:06:52 batch_cost: 0.1611 data_cost: 0.0002 ips: 49.6693 images/s
+[05/19 20:29:57] ppdet.engine INFO: Epoch: [12] [340/714] learning_rate: 0.000085 loss: 1.367327 loss_cls: 0.673038 loss_iou: 0.094867 loss_dfl: 0.799148 loss_l1: 0.266394 eta: 0:06:49 batch_cost: 0.1680 data_cost: 0.0002 ips: 47.6247 images/s
+[05/19 20:30:01] ppdet.engine INFO: Epoch: [12] [360/714] learning_rate: 0.000084 loss: 1.289496 loss_cls: 0.689808 loss_iou: 0.091384 loss_dfl: 0.727695 loss_l1: 0.231196 eta: 0:06:46 batch_cost: 0.1771 data_cost: 0.0004 ips: 45.1764 images/s
+[05/19 20:30:05] ppdet.engine INFO: Epoch: [12] [380/714] learning_rate: 0.000084 loss: 1.331798 loss_cls: 0.696791 loss_iou: 0.101442 loss_dfl: 0.766564 loss_l1: 0.222014 eta: 0:06:43 batch_cost: 0.1404 data_cost: 0.0005 ips: 56.9769 images/s
+[05/19 20:30:10] ppdet.engine INFO: Epoch: [12] [400/714] learning_rate: 0.000083 loss: 1.373076 loss_cls: 0.708095 loss_iou: 0.095987 loss_dfl: 0.774872 loss_l1: 0.227570 eta: 0:06:40 batch_cost: 0.1821 data_cost: 0.0002 ips: 43.9288 images/s
+[05/19 20:30:14] ppdet.engine INFO: Epoch: [12] [420/714] learning_rate: 0.000083 loss: 1.310003 loss_cls: 0.678160 loss_iou: 0.090526 loss_dfl: 0.732021 loss_l1: 0.235417 eta: 0:06:36 batch_cost: 0.1580 data_cost: 0.0002 ips: 50.6245 images/s
+[05/19 20:30:18] ppdet.engine INFO: Epoch: [12] [440/714] learning_rate: 0.000082 loss: 1.391242 loss_cls: 0.701683 loss_iou: 0.113718 loss_dfl: 0.780185 loss_l1: 0.262579 eta: 0:06:33 batch_cost: 0.1672 data_cost: 0.0002 ips: 47.8326 images/s
+[05/19 20:30:22] ppdet.engine INFO: Epoch: [12] [460/714] learning_rate: 0.000082 loss: 1.371922 loss_cls: 0.669636 loss_iou: 0.103095 loss_dfl: 0.801290 loss_l1: 0.255050 eta: 0:06:30 batch_cost: 0.1549 data_cost: 0.0002 ips: 51.6413 images/s
+[05/19 20:30:26] ppdet.engine INFO: Epoch: [12] [480/714] learning_rate: 0.000081 loss: 1.388011 loss_cls: 0.689333 loss_iou: 0.103559 loss_dfl: 0.811475 loss_l1: 0.269366 eta: 0:06:27 batch_cost: 0.1833 data_cost: 0.0002 ips: 43.6367 images/s
+[05/19 20:30:30] ppdet.engine INFO: Epoch: [12] [500/714] learning_rate: 0.000081 loss: 1.344894 loss_cls: 0.674661 loss_iou: 0.106015 loss_dfl: 0.752923 loss_l1: 0.245644 eta: 0:06:23 batch_cost: 0.1437 data_cost: 0.0004 ips: 55.6640 images/s
+[05/19 20:30:34] ppdet.engine INFO: Epoch: [12] [520/714] learning_rate: 0.000080 loss: 1.288712 loss_cls: 0.668033 loss_iou: 0.099224 loss_dfl: 0.753094 loss_l1: 0.216542 eta: 0:06:20 batch_cost: 0.1417 data_cost: 0.0003 ips: 56.4422 images/s
+[05/19 20:30:38] ppdet.engine INFO: Epoch: [12] [540/714] learning_rate: 0.000079 loss: 1.329199 loss_cls: 0.703138 loss_iou: 0.096668 loss_dfl: 0.784053 loss_l1: 0.249730 eta: 0:06:17 batch_cost: 0.1655 data_cost: 0.0002 ips: 48.3316 images/s
+[05/19 20:30:43] ppdet.engine INFO: Epoch: [12] [560/714] learning_rate: 0.000079 loss: 1.339406 loss_cls: 0.688859 loss_iou: 0.104657 loss_dfl: 0.754581 loss_l1: 0.244951 eta: 0:06:13 batch_cost: 0.1756 data_cost: 0.0002 ips: 45.5672 images/s
+[05/19 20:30:46] ppdet.engine INFO: Epoch: [12] [580/714] learning_rate: 0.000078 loss: 1.343992 loss_cls: 0.710134 loss_iou: 0.106057 loss_dfl: 0.806173 loss_l1: 0.262715 eta: 0:06:10 batch_cost: 0.1542 data_cost: 0.0002 ips: 51.8716 images/s
+[05/19 20:30:51] ppdet.engine INFO: Epoch: [12] [600/714] learning_rate: 0.000078 loss: 1.322857 loss_cls: 0.710517 loss_iou: 0.091354 loss_dfl: 0.754864 loss_l1: 0.241305 eta: 0:06:07 batch_cost: 0.1865 data_cost: 0.0003 ips: 42.9010 images/s
+[05/19 20:30:55] ppdet.engine INFO: Epoch: [12] [620/714] learning_rate: 0.000077 loss: 1.357922 loss_cls: 0.710401 loss_iou: 0.106253 loss_dfl: 0.758061 loss_l1: 0.247738 eta: 0:06:04 batch_cost: 0.1640 data_cost: 0.0005 ips: 48.7815 images/s
+[05/19 20:30:59] ppdet.engine INFO: Epoch: [12] [640/714] learning_rate: 0.000077 loss: 1.379072 loss_cls: 0.718725 loss_iou: 0.109873 loss_dfl: 0.785178 loss_l1: 0.256919 eta: 0:06:00 batch_cost: 0.1623 data_cost: 0.0005 ips: 49.2797 images/s
+[05/19 20:31:04] ppdet.engine INFO: Epoch: [12] [660/714] learning_rate: 0.000076 loss: 1.325096 loss_cls: 0.692369 loss_iou: 0.105401 loss_dfl: 0.740883 loss_l1: 0.242117 eta: 0:05:57 batch_cost: 0.1645 data_cost: 0.0004 ips: 48.6315 images/s
+[05/19 20:31:07] ppdet.engine INFO: Epoch: [12] [680/714] learning_rate: 0.000076 loss: 1.390572 loss_cls: 0.690782 loss_iou: 0.101575 loss_dfl: 0.754102 loss_l1: 0.247625 eta: 0:05:54 batch_cost: 0.1498 data_cost: 0.0007 ips: 53.4126 images/s
+[05/19 20:31:12] ppdet.engine INFO: Epoch: [12] [700/714] learning_rate: 0.000075 loss: 1.352119 loss_cls: 0.673188 loss_iou: 0.101089 loss_dfl: 0.788275 loss_l1: 0.237581 eta: 0:05:51 batch_cost: 0.1624 data_cost: 0.0003 ips: 49.2681 images/s
+[05/19 20:31:15] ppdet.engine INFO: Train epoch 13 cost time: 153.7 s.
+[05/19 20:31:16] ppdet.engine INFO: Epoch: [13] [  0/714] learning_rate: 0.000075 loss: 1.343705 loss_cls: 0.699529 loss_iou: 0.095583 loss_dfl: 0.765069 loss_l1: 0.215938 eta: 0:05:49 batch_cost: 0.2148 data_cost: 0.0409 ips: 37.2495 images/s
+[05/19 20:31:20] ppdet.engine INFO: Epoch: [13] [ 20/714] learning_rate: 0.000074 loss: 1.346428 loss_cls: 0.697946 loss_iou: 0.099320 loss_dfl: 0.779906 loss_l1: 0.262274 eta: 0:05:45 batch_cost: 0.1598 data_cost: 0.0003 ips: 50.0554 images/s
+[05/19 20:31:25] ppdet.engine INFO: Epoch: [13] [ 40/714] learning_rate: 0.000074 loss: 1.379638 loss_cls: 0.668926 loss_iou: 0.103691 loss_dfl: 0.797096 loss_l1: 0.288463 eta: 0:05:42 batch_cost: 0.1754 data_cost: 0.0002 ips: 45.6228 images/s
+[05/19 20:31:29] ppdet.engine INFO: Epoch: [13] [ 60/714] learning_rate: 0.000073 loss: 1.348667 loss_cls: 0.687659 loss_iou: 0.111900 loss_dfl: 0.747982 loss_l1: 0.240292 eta: 0:05:39 batch_cost: 0.1549 data_cost: 0.0010 ips: 51.6613 images/s
+[05/19 20:31:33] ppdet.engine INFO: Epoch: [13] [ 80/714] learning_rate: 0.000073 loss: 1.376230 loss_cls: 0.704844 loss_iou: 0.104806 loss_dfl: 0.776499 loss_l1: 0.261601 eta: 0:05:36 batch_cost: 0.1575 data_cost: 0.0004 ips: 50.7808 images/s
+[05/19 20:31:37] ppdet.engine INFO: Epoch: [13] [100/714] learning_rate: 0.000072 loss: 1.379664 loss_cls: 0.675228 loss_iou: 0.104653 loss_dfl: 0.760702 loss_l1: 0.244116 eta: 0:05:32 batch_cost: 0.1495 data_cost: 0.0006 ips: 53.5134 images/s
+[05/19 20:31:41] ppdet.engine INFO: Epoch: [13] [120/714] learning_rate: 0.000072 loss: 1.353602 loss_cls: 0.681367 loss_iou: 0.106667 loss_dfl: 0.745676 loss_l1: 0.243792 eta: 0:05:29 batch_cost: 0.1618 data_cost: 0.0010 ips: 49.4479 images/s
+[05/19 20:31:45] ppdet.engine INFO: Epoch: [13] [140/714] learning_rate: 0.000071 loss: 1.292704 loss_cls: 0.672303 loss_iou: 0.093391 loss_dfl: 0.756960 loss_l1: 0.242048 eta: 0:05:26 batch_cost: 0.1716 data_cost: 0.0011 ips: 46.6142 images/s
+[05/19 20:31:49] ppdet.engine INFO: Epoch: [13] [160/714] learning_rate: 0.000071 loss: 1.341696 loss_cls: 0.677031 loss_iou: 0.101384 loss_dfl: 0.749296 loss_l1: 0.231691 eta: 0:05:22 batch_cost: 0.1572 data_cost: 0.0008 ips: 50.8946 images/s
+[05/19 20:31:54] ppdet.engine INFO: Epoch: [13] [180/714] learning_rate: 0.000070 loss: 1.347450 loss_cls: 0.660573 loss_iou: 0.098962 loss_dfl: 0.759403 loss_l1: 0.247536 eta: 0:05:19 batch_cost: 0.1722 data_cost: 0.0002 ips: 46.4484 images/s
+[05/19 20:31:58] ppdet.engine INFO: Epoch: [13] [200/714] learning_rate: 0.000070 loss: 1.291809 loss_cls: 0.654030 loss_iou: 0.095421 loss_dfl: 0.754649 loss_l1: 0.232901 eta: 0:05:16 batch_cost: 0.1599 data_cost: 0.0006 ips: 50.0261 images/s
+[05/19 20:32:03] ppdet.engine INFO: Epoch: [13] [220/714] learning_rate: 0.000069 loss: 1.282690 loss_cls: 0.680862 loss_iou: 0.096190 loss_dfl: 0.777872 loss_l1: 0.231128 eta: 0:05:13 batch_cost: 0.2080 data_cost: 0.0004 ips: 38.4640 images/s
+[05/19 20:32:08] ppdet.engine INFO: Epoch: [13] [240/714] learning_rate: 0.000069 loss: 1.327273 loss_cls: 0.673711 loss_iou: 0.105328 loss_dfl: 0.779189 loss_l1: 0.275619 eta: 0:05:10 batch_cost: 0.1887 data_cost: 0.0003 ips: 42.3861 images/s
+[05/19 20:32:12] ppdet.engine INFO: Epoch: [13] [260/714] learning_rate: 0.000068 loss: 1.273906 loss_cls: 0.653780 loss_iou: 0.097465 loss_dfl: 0.748799 loss_l1: 0.243860 eta: 0:05:07 batch_cost: 0.1877 data_cost: 0.0013 ips: 42.6257 images/s
+[05/19 20:32:16] ppdet.engine INFO: Epoch: [13] [280/714] learning_rate: 0.000067 loss: 1.276994 loss_cls: 0.656315 loss_iou: 0.100960 loss_dfl: 0.747781 loss_l1: 0.223622 eta: 0:05:03 batch_cost: 0.1596 data_cost: 0.0002 ips: 50.1360 images/s
+[05/19 20:32:21] ppdet.engine INFO: Epoch: [13] [300/714] learning_rate: 0.000067 loss: 1.322164 loss_cls: 0.686485 loss_iou: 0.098402 loss_dfl: 0.795741 loss_l1: 0.247324 eta: 0:05:00 batch_cost: 0.1765 data_cost: 0.0003 ips: 45.3219 images/s
+[05/19 20:32:25] ppdet.engine INFO: Epoch: [13] [320/714] learning_rate: 0.000066 loss: 1.331449 loss_cls: 0.685194 loss_iou: 0.100165 loss_dfl: 0.779595 loss_l1: 0.250851 eta: 0:04:57 batch_cost: 0.1629 data_cost: 0.0007 ips: 49.0970 images/s
+[05/19 20:32:29] ppdet.engine INFO: Epoch: [13] [340/714] learning_rate: 0.000066 loss: 1.264630 loss_cls: 0.654564 loss_iou: 0.094685 loss_dfl: 0.769068 loss_l1: 0.239169 eta: 0:04:54 batch_cost: 0.1691 data_cost: 0.0004 ips: 47.2969 images/s
+[05/19 20:32:33] ppdet.engine INFO: Epoch: [13] [360/714] learning_rate: 0.000065 loss: 1.323083 loss_cls: 0.687737 loss_iou: 0.108417 loss_dfl: 0.765851 loss_l1: 0.254702 eta: 0:04:50 batch_cost: 0.1583 data_cost: 0.0002 ips: 50.5245 images/s
+[05/19 20:32:38] ppdet.engine INFO: Epoch: [13] [380/714] learning_rate: 0.000065 loss: 1.324766 loss_cls: 0.675028 loss_iou: 0.105570 loss_dfl: 0.788083 loss_l1: 0.269506 eta: 0:04:47 batch_cost: 0.1762 data_cost: 0.0003 ips: 45.3942 images/s
+[05/19 20:32:42] ppdet.engine INFO: Epoch: [13] [400/714] learning_rate: 0.000064 loss: 1.307801 loss_cls: 0.680127 loss_iou: 0.093729 loss_dfl: 0.759173 loss_l1: 0.241381 eta: 0:04:44 batch_cost: 0.1729 data_cost: 0.0009 ips: 46.2827 images/s
+[05/19 20:32:47] ppdet.engine INFO: Epoch: [13] [420/714] learning_rate: 0.000064 loss: 1.377725 loss_cls: 0.706053 loss_iou: 0.098262 loss_dfl: 0.774877 loss_l1: 0.249442 eta: 0:04:41 batch_cost: 0.1830 data_cost: 0.0009 ips: 43.7194 images/s
+[05/19 20:32:51] ppdet.engine INFO: Epoch: [13] [440/714] learning_rate: 0.000063 loss: 1.369570 loss_cls: 0.681579 loss_iou: 0.097291 loss_dfl: 0.788299 loss_l1: 0.252206 eta: 0:04:37 batch_cost: 0.1801 data_cost: 0.0003 ips: 44.4303 images/s
+[05/19 20:32:56] ppdet.engine INFO: Epoch: [13] [460/714] learning_rate: 0.000063 loss: 1.309882 loss_cls: 0.679382 loss_iou: 0.094216 loss_dfl: 0.760170 loss_l1: 0.252974 eta: 0:04:34 batch_cost: 0.1966 data_cost: 0.0002 ips: 40.7005 images/s
+[05/19 20:33:00] ppdet.engine INFO: Epoch: [13] [480/714] learning_rate: 0.000062 loss: 1.291057 loss_cls: 0.673223 loss_iou: 0.100294 loss_dfl: 0.749223 loss_l1: 0.238315 eta: 0:04:31 batch_cost: 0.1795 data_cost: 0.0002 ips: 44.5674 images/s
+[05/19 20:33:05] ppdet.engine INFO: Epoch: [13] [500/714] learning_rate: 0.000062 loss: 1.363308 loss_cls: 0.710012 loss_iou: 0.105863 loss_dfl: 0.783570 loss_l1: 0.230385 eta: 0:04:28 batch_cost: 0.1794 data_cost: 0.0002 ips: 44.6043 images/s
+[05/19 20:33:10] ppdet.engine INFO: Epoch: [13] [520/714] learning_rate: 0.000061 loss: 1.339470 loss_cls: 0.687531 loss_iou: 0.097743 loss_dfl: 0.793962 loss_l1: 0.259073 eta: 0:04:25 batch_cost: 0.1845 data_cost: 0.0003 ips: 43.3619 images/s
+[05/19 20:33:14] ppdet.engine INFO: Epoch: [13] [540/714] learning_rate: 0.000061 loss: 1.330204 loss_cls: 0.711100 loss_iou: 0.090160 loss_dfl: 0.735608 loss_l1: 0.231397 eta: 0:04:21 batch_cost: 0.1663 data_cost: 0.0002 ips: 48.1033 images/s
+[05/19 20:33:18] ppdet.engine INFO: Epoch: [13] [560/714] learning_rate: 0.000060 loss: 1.279182 loss_cls: 0.676898 loss_iou: 0.093546 loss_dfl: 0.786944 loss_l1: 0.260179 eta: 0:04:18 batch_cost: 0.1799 data_cost: 0.0003 ips: 44.4724 images/s
+[05/19 20:33:23] ppdet.engine INFO: Epoch: [13] [580/714] learning_rate: 0.000060 loss: 1.406037 loss_cls: 0.709504 loss_iou: 0.105758 loss_dfl: 0.808589 loss_l1: 0.262748 eta: 0:04:15 batch_cost: 0.1750 data_cost: 0.0008 ips: 45.7041 images/s
+[05/19 20:33:27] ppdet.engine INFO: Epoch: [13] [600/714] learning_rate: 0.000059 loss: 1.402590 loss_cls: 0.728703 loss_iou: 0.106418 loss_dfl: 0.794282 loss_l1: 0.285826 eta: 0:04:12 batch_cost: 0.1689 data_cost: 0.0002 ips: 47.3597 images/s
+[05/19 20:33:31] ppdet.engine INFO: Epoch: [13] [620/714] learning_rate: 0.000059 loss: 1.194411 loss_cls: 0.592538 loss_iou: 0.090518 loss_dfl: 0.716123 loss_l1: 0.222326 eta: 0:04:08 batch_cost: 0.1717 data_cost: 0.0002 ips: 46.5882 images/s
+[05/19 20:33:35] ppdet.engine INFO: Epoch: [13] [640/714] learning_rate: 0.000058 loss: 1.348410 loss_cls: 0.672601 loss_iou: 0.100641 loss_dfl: 0.763180 loss_l1: 0.239195 eta: 0:04:05 batch_cost: 0.1661 data_cost: 0.0002 ips: 48.1525 images/s
+[05/19 20:33:40] ppdet.engine INFO: Epoch: [13] [660/714] learning_rate: 0.000058 loss: 1.246298 loss_cls: 0.666511 loss_iou: 0.081585 loss_dfl: 0.746479 loss_l1: 0.224177 eta: 0:04:02 batch_cost: 0.1879 data_cost: 0.0002 ips: 42.5743 images/s
+[05/19 20:33:44] ppdet.engine INFO: Epoch: [13] [680/714] learning_rate: 0.000057 loss: 1.378873 loss_cls: 0.678756 loss_iou: 0.103130 loss_dfl: 0.791139 loss_l1: 0.290229 eta: 0:03:59 batch_cost: 0.1662 data_cost: 0.0002 ips: 48.1228 images/s
+[05/19 20:33:49] ppdet.engine INFO: Epoch: [13] [700/714] learning_rate: 0.000057 loss: 1.313132 loss_cls: 0.673218 loss_iou: 0.104017 loss_dfl: 0.769519 loss_l1: 0.246189 eta: 0:03:56 batch_cost: 0.1846 data_cost: 0.0002 ips: 43.3392 images/s
+[05/19 20:33:52] ppdet.engine INFO: Train epoch 14 cost time: 156.8 s.
+[05/19 20:33:54] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:33:54] ppdet.engine INFO: Eval iter: 0
+[05/19 20:34:14] ppdet.engine INFO: Eval iter: 100
+[05/19 20:34:34] ppdet.engine INFO: Eval iter: 200
+[05/19 20:34:53] ppdet.engine INFO: Eval iter: 300
+[05/19 20:35:12] ppdet.engine INFO: Eval iter: 400
+[05/19 20:35:32] ppdet.engine INFO: Eval iter: 500
+[05/19 20:35:51] ppdet.engine INFO: Eval iter: 600
+[05/19 20:36:11] ppdet.engine INFO: Eval iter: 700
+[05/19 20:36:35] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.08s)
+creating index...
+index created!
+[05/19 20:36:35] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=9.94s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=38.57s).
+Accumulating evaluation results...
+DONE (t=19.30s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.687
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.854
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.746
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.288
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.533
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.776
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.529
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.787
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.827
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.532
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.749
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.887
+[05/19 20:37:46] ppdet.engine INFO: Total sample number: 5823, average FPS: 40.8649601724694
+[05/19 20:37:46] ppdet.engine INFO: Best test bbox ap is 0.687.
+[05/19 20:37:46] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:37:47] ppdet.engine INFO: Epoch: [14] [  0/714] learning_rate: 0.000057 loss: 1.329832 loss_cls: 0.670168 loss_iou: 0.105958 loss_dfl: 0.758147 loss_l1: 0.242313 eta: 0:03:53 batch_cost: 0.1738 data_cost: 0.0004 ips: 46.0244 images/s
+[05/19 20:37:52] ppdet.engine INFO: Epoch: [14] [ 20/714] learning_rate: 0.000056 loss: 1.321156 loss_cls: 0.710558 loss_iou: 0.101218 loss_dfl: 0.786204 loss_l1: 0.247443 eta: 0:03:50 batch_cost: 0.1756 data_cost: 0.0008 ips: 45.5539 images/s
+[05/19 20:37:56] ppdet.engine INFO: Epoch: [14] [ 40/714] learning_rate: 0.000056 loss: 1.248587 loss_cls: 0.676013 loss_iou: 0.097758 loss_dfl: 0.746709 loss_l1: 0.231322 eta: 0:03:47 batch_cost: 0.1679 data_cost: 0.0002 ips: 47.6389 images/s
+[05/19 20:38:00] ppdet.engine INFO: Epoch: [14] [ 60/714] learning_rate: 0.000055 loss: 1.325009 loss_cls: 0.686115 loss_iou: 0.108308 loss_dfl: 0.798169 loss_l1: 0.267129 eta: 0:03:43 batch_cost: 0.1659 data_cost: 0.0005 ips: 48.2102 images/s
+[05/19 20:38:04] ppdet.engine INFO: Epoch: [14] [ 80/714] learning_rate: 0.000055 loss: 1.293225 loss_cls: 0.666842 loss_iou: 0.095369 loss_dfl: 0.748690 loss_l1: 0.238135 eta: 0:03:40 batch_cost: 0.1556 data_cost: 0.0002 ips: 51.4233 images/s
+[05/19 20:38:07] ppdet.engine INFO: Epoch: [14] [100/714] learning_rate: 0.000054 loss: 1.356701 loss_cls: 0.695790 loss_iou: 0.114474 loss_dfl: 0.790435 loss_l1: 0.254562 eta: 0:03:37 batch_cost: 0.1500 data_cost: 0.0002 ips: 53.3211 images/s
+[05/19 20:38:11] ppdet.engine INFO: Epoch: [14] [120/714] learning_rate: 0.000054 loss: 1.262279 loss_cls: 0.661362 loss_iou: 0.091070 loss_dfl: 0.747932 loss_l1: 0.235559 eta: 0:03:34 batch_cost: 0.1627 data_cost: 0.0002 ips: 49.1796 images/s
+[05/19 20:38:16] ppdet.engine INFO: Epoch: [14] [140/714] learning_rate: 0.000053 loss: 1.260471 loss_cls: 0.666345 loss_iou: 0.095663 loss_dfl: 0.764328 loss_l1: 0.256537 eta: 0:03:30 batch_cost: 0.1824 data_cost: 0.0003 ips: 43.8503 images/s
+[05/19 20:38:20] ppdet.engine INFO: Epoch: [14] [160/714] learning_rate: 0.000053 loss: 1.362991 loss_cls: 0.707386 loss_iou: 0.116815 loss_dfl: 0.774242 loss_l1: 0.256788 eta: 0:03:27 batch_cost: 0.1650 data_cost: 0.0002 ips: 48.4793 images/s
+[05/19 20:38:24] ppdet.engine INFO: Epoch: [14] [180/714] learning_rate: 0.000052 loss: 1.291736 loss_cls: 0.669505 loss_iou: 0.087574 loss_dfl: 0.744736 loss_l1: 0.205785 eta: 0:03:24 batch_cost: 0.1548 data_cost: 0.0002 ips: 51.6715 images/s
+[05/19 20:38:27] ppdet.engine INFO: Epoch: [14] [200/714] learning_rate: 0.000052 loss: 1.277263 loss_cls: 0.640970 loss_iou: 0.098456 loss_dfl: 0.760169 loss_l1: 0.252014 eta: 0:03:20 batch_cost: 0.1489 data_cost: 0.0002 ips: 53.7130 images/s
+[05/19 20:38:32] ppdet.engine INFO: Epoch: [14] [220/714] learning_rate: 0.000051 loss: 1.385701 loss_cls: 0.734474 loss_iou: 0.104689 loss_dfl: 0.826681 loss_l1: 0.277895 eta: 0:03:17 batch_cost: 0.1687 data_cost: 0.0002 ips: 47.4109 images/s
+[05/19 20:38:36] ppdet.engine INFO: Epoch: [14] [240/714] learning_rate: 0.000051 loss: 1.310484 loss_cls: 0.681973 loss_iou: 0.093684 loss_dfl: 0.762396 loss_l1: 0.206204 eta: 0:03:14 batch_cost: 0.1672 data_cost: 0.0002 ips: 47.8410 images/s
+[05/19 20:38:40] ppdet.engine INFO: Epoch: [14] [260/714] learning_rate: 0.000050 loss: 1.307218 loss_cls: 0.692555 loss_iou: 0.088935 loss_dfl: 0.720812 loss_l1: 0.219700 eta: 0:03:11 batch_cost: 0.1758 data_cost: 0.0002 ips: 45.5179 images/s
+[05/19 20:38:44] ppdet.engine INFO: Epoch: [14] [280/714] learning_rate: 0.000050 loss: 1.241480 loss_cls: 0.631784 loss_iou: 0.102106 loss_dfl: 0.728908 loss_l1: 0.243065 eta: 0:03:07 batch_cost: 0.1446 data_cost: 0.0002 ips: 55.3274 images/s
+[05/19 20:38:47] ppdet.engine INFO: Epoch: [14] [300/714] learning_rate: 0.000050 loss: 1.297323 loss_cls: 0.655058 loss_iou: 0.101169 loss_dfl: 0.752143 loss_l1: 0.233876 eta: 0:03:04 batch_cost: 0.1532 data_cost: 0.0002 ips: 52.2246 images/s
+[05/19 20:38:51] ppdet.engine INFO: Epoch: [14] [320/714] learning_rate: 0.000049 loss: 1.366246 loss_cls: 0.711729 loss_iou: 0.100026 loss_dfl: 0.754176 loss_l1: 0.274488 eta: 0:03:01 batch_cost: 0.1633 data_cost: 0.0008 ips: 48.9800 images/s
+[05/19 20:38:55] ppdet.engine INFO: Epoch: [14] [340/714] learning_rate: 0.000049 loss: 1.304961 loss_cls: 0.667833 loss_iou: 0.106714 loss_dfl: 0.769707 loss_l1: 0.215305 eta: 0:02:58 batch_cost: 0.1630 data_cost: 0.0002 ips: 49.0857 images/s
+[05/19 20:38:59] ppdet.engine INFO: Epoch: [14] [360/714] learning_rate: 0.000048 loss: 1.276939 loss_cls: 0.650499 loss_iou: 0.100831 loss_dfl: 0.734898 loss_l1: 0.229232 eta: 0:02:54 batch_cost: 0.1588 data_cost: 0.0002 ips: 50.3748 images/s
+[05/19 20:39:03] ppdet.engine INFO: Epoch: [14] [380/714] learning_rate: 0.000048 loss: 1.291684 loss_cls: 0.675997 loss_iou: 0.092422 loss_dfl: 0.756024 loss_l1: 0.228706 eta: 0:02:51 batch_cost: 0.1573 data_cost: 0.0002 ips: 50.8623 images/s
+[05/19 20:39:07] ppdet.engine INFO: Epoch: [14] [400/714] learning_rate: 0.000047 loss: 1.369577 loss_cls: 0.704945 loss_iou: 0.103646 loss_dfl: 0.751152 loss_l1: 0.235623 eta: 0:02:48 batch_cost: 0.1539 data_cost: 0.0002 ips: 51.9901 images/s
+[05/19 20:39:11] ppdet.engine INFO: Epoch: [14] [420/714] learning_rate: 0.000047 loss: 1.252133 loss_cls: 0.664393 loss_iou: 0.094625 loss_dfl: 0.752956 loss_l1: 0.220604 eta: 0:02:44 batch_cost: 0.1486 data_cost: 0.0002 ips: 53.8224 images/s
+[05/19 20:39:15] ppdet.engine INFO: Epoch: [14] [440/714] learning_rate: 0.000046 loss: 1.282459 loss_cls: 0.670853 loss_iou: 0.094519 loss_dfl: 0.750622 loss_l1: 0.222202 eta: 0:02:41 batch_cost: 0.1667 data_cost: 0.0002 ips: 47.9965 images/s
+[05/19 20:39:19] ppdet.engine INFO: Epoch: [14] [460/714] learning_rate: 0.000046 loss: 1.255860 loss_cls: 0.649796 loss_iou: 0.099271 loss_dfl: 0.753547 loss_l1: 0.234029 eta: 0:02:38 batch_cost: 0.1611 data_cost: 0.0002 ips: 49.6727 images/s
+[05/19 20:39:23] ppdet.engine INFO: Epoch: [14] [480/714] learning_rate: 0.000045 loss: 1.329239 loss_cls: 0.663938 loss_iou: 0.101725 loss_dfl: 0.762406 loss_l1: 0.271787 eta: 0:02:35 batch_cost: 0.1633 data_cost: 0.0001 ips: 48.9844 images/s
+[05/19 20:39:27] ppdet.engine INFO: Epoch: [14] [500/714] learning_rate: 0.000045 loss: 1.320037 loss_cls: 0.662788 loss_iou: 0.101269 loss_dfl: 0.737908 loss_l1: 0.211528 eta: 0:02:31 batch_cost: 0.1757 data_cost: 0.0002 ips: 45.5290 images/s
+[05/19 20:39:32] ppdet.engine INFO: Epoch: [14] [520/714] learning_rate: 0.000045 loss: 1.278458 loss_cls: 0.685950 loss_iou: 0.092932 loss_dfl: 0.754307 loss_l1: 0.206490 eta: 0:02:28 batch_cost: 0.1680 data_cost: 0.0002 ips: 47.6212 images/s
+[05/19 20:39:36] ppdet.engine INFO: Epoch: [14] [540/714] learning_rate: 0.000044 loss: 1.302336 loss_cls: 0.668511 loss_iou: 0.101578 loss_dfl: 0.747259 loss_l1: 0.232441 eta: 0:02:25 batch_cost: 0.1643 data_cost: 0.0002 ips: 48.7016 images/s
+[05/19 20:39:40] ppdet.engine INFO: Epoch: [14] [560/714] learning_rate: 0.000044 loss: 1.320635 loss_cls: 0.699106 loss_iou: 0.091896 loss_dfl: 0.767346 loss_l1: 0.250307 eta: 0:02:22 batch_cost: 0.1764 data_cost: 0.0002 ips: 45.3585 images/s
+[05/19 20:39:44] ppdet.engine INFO: Epoch: [14] [580/714] learning_rate: 0.000043 loss: 1.332534 loss_cls: 0.696815 loss_iou: 0.098952 loss_dfl: 0.744659 loss_l1: 0.221169 eta: 0:02:18 batch_cost: 0.1621 data_cost: 0.0006 ips: 49.3437 images/s
+[05/19 20:39:48] ppdet.engine INFO: Epoch: [14] [600/714] learning_rate: 0.000043 loss: 1.281161 loss_cls: 0.677647 loss_iou: 0.092859 loss_dfl: 0.753559 loss_l1: 0.233550 eta: 0:02:15 batch_cost: 0.1505 data_cost: 0.0002 ips: 53.1497 images/s
+[05/19 20:39:52] ppdet.engine INFO: Epoch: [14] [620/714] learning_rate: 0.000042 loss: 1.333181 loss_cls: 0.658957 loss_iou: 0.097250 loss_dfl: 0.776648 loss_l1: 0.217788 eta: 0:02:12 batch_cost: 0.1662 data_cost: 0.0002 ips: 48.1466 images/s
+[05/19 20:39:56] ppdet.engine INFO: Epoch: [14] [640/714] learning_rate: 0.000042 loss: 1.233505 loss_cls: 0.645065 loss_iou: 0.090647 loss_dfl: 0.734357 loss_l1: 0.218330 eta: 0:02:08 batch_cost: 0.1529 data_cost: 0.0002 ips: 52.3333 images/s
+[05/19 20:40:00] ppdet.engine INFO: Epoch: [14] [660/714] learning_rate: 0.000041 loss: 1.283027 loss_cls: 0.677664 loss_iou: 0.090717 loss_dfl: 0.747317 loss_l1: 0.222650 eta: 0:02:05 batch_cost: 0.1641 data_cost: 0.0002 ips: 48.7624 images/s
+[05/19 20:40:04] ppdet.engine INFO: Epoch: [14] [680/714] learning_rate: 0.000041 loss: 1.308810 loss_cls: 0.656755 loss_iou: 0.105448 loss_dfl: 0.797859 loss_l1: 0.243569 eta: 0:02:02 batch_cost: 0.1650 data_cost: 0.0002 ips: 48.4966 images/s
+[05/19 20:40:08] ppdet.engine INFO: Epoch: [14] [700/714] learning_rate: 0.000041 loss: 1.213417 loss_cls: 0.629786 loss_iou: 0.094917 loss_dfl: 0.707892 loss_l1: 0.208268 eta: 0:01:59 batch_cost: 0.1713 data_cost: 0.0002 ips: 46.7042 images/s
+[05/19 20:40:11] ppdet.engine INFO: Train epoch 15 cost time: 143.7 s.
+[05/19 20:40:12] ppdet.engine INFO: Epoch: [15] [  0/714] learning_rate: 0.000040 loss: 1.268094 loss_cls: 0.635808 loss_iou: 0.094667 loss_dfl: 0.722580 loss_l1: 0.230299 eta: 0:01:56 batch_cost: 0.1949 data_cost: 0.0447 ips: 41.0534 images/s
+[05/19 20:40:16] ppdet.engine INFO: Epoch: [15] [ 20/714] learning_rate: 0.000040 loss: 1.322283 loss_cls: 0.685296 loss_iou: 0.093792 loss_dfl: 0.740912 loss_l1: 0.216217 eta: 0:01:53 batch_cost: 0.1621 data_cost: 0.0002 ips: 49.3472 images/s
+[05/19 20:40:20] ppdet.engine INFO: Epoch: [15] [ 40/714] learning_rate: 0.000039 loss: 1.249436 loss_cls: 0.668982 loss_iou: 0.093188 loss_dfl: 0.740015 loss_l1: 0.245443 eta: 0:01:50 batch_cost: 0.1594 data_cost: 0.0002 ips: 50.1902 images/s
+[05/19 20:40:24] ppdet.engine INFO: Epoch: [15] [ 60/714] learning_rate: 0.000039 loss: 1.359657 loss_cls: 0.683120 loss_iou: 0.098570 loss_dfl: 0.778968 loss_l1: 0.262232 eta: 0:01:47 batch_cost: 0.1883 data_cost: 0.0002 ips: 42.4879 images/s
+[05/19 20:40:29] ppdet.engine INFO: Epoch: [15] [ 80/714] learning_rate: 0.000039 loss: 1.281520 loss_cls: 0.648438 loss_iou: 0.099118 loss_dfl: 0.758558 loss_l1: 0.243919 eta: 0:01:43 batch_cost: 0.1745 data_cost: 0.0003 ips: 45.8483 images/s
+[05/19 20:40:32] ppdet.engine INFO: Epoch: [15] [100/714] learning_rate: 0.000038 loss: 1.229010 loss_cls: 0.630048 loss_iou: 0.087836 loss_dfl: 0.724024 loss_l1: 0.200383 eta: 0:01:40 batch_cost: 0.1449 data_cost: 0.0002 ips: 55.1956 images/s
+[05/19 20:40:37] ppdet.engine INFO: Epoch: [15] [120/714] learning_rate: 0.000038 loss: 1.357793 loss_cls: 0.683075 loss_iou: 0.112696 loss_dfl: 0.767161 loss_l1: 0.232097 eta: 0:01:37 batch_cost: 0.1670 data_cost: 0.0002 ips: 47.9041 images/s
+[05/19 20:40:41] ppdet.engine INFO: Epoch: [15] [140/714] learning_rate: 0.000037 loss: 1.278143 loss_cls: 0.662812 loss_iou: 0.089462 loss_dfl: 0.747116 loss_l1: 0.215826 eta: 0:01:33 batch_cost: 0.1785 data_cost: 0.0002 ips: 44.8185 images/s
+[05/19 20:40:45] ppdet.engine INFO: Epoch: [15] [160/714] learning_rate: 0.000037 loss: 1.237684 loss_cls: 0.655948 loss_iou: 0.083378 loss_dfl: 0.703734 loss_l1: 0.170943 eta: 0:01:30 batch_cost: 0.1530 data_cost: 0.0002 ips: 52.2814 images/s
+[05/19 20:40:49] ppdet.engine INFO: Epoch: [15] [180/714] learning_rate: 0.000037 loss: 1.335109 loss_cls: 0.669299 loss_iou: 0.104062 loss_dfl: 0.762802 loss_l1: 0.256503 eta: 0:01:27 batch_cost: 0.1626 data_cost: 0.0002 ips: 49.2150 images/s
+[05/19 20:40:53] ppdet.engine INFO: Epoch: [15] [200/714] learning_rate: 0.000036 loss: 1.262681 loss_cls: 0.659025 loss_iou: 0.095960 loss_dfl: 0.743751 loss_l1: 0.247596 eta: 0:01:24 batch_cost: 0.1519 data_cost: 0.0002 ips: 52.6682 images/s
+[05/19 20:40:56] ppdet.engine INFO: Epoch: [15] [220/714] learning_rate: 0.000036 loss: 1.283465 loss_cls: 0.637681 loss_iou: 0.106544 loss_dfl: 0.754740 loss_l1: 0.233892 eta: 0:01:20 batch_cost: 0.1556 data_cost: 0.0002 ips: 51.4199 images/s
+[05/19 20:41:00] ppdet.engine INFO: Epoch: [15] [240/714] learning_rate: 0.000035 loss: 1.296954 loss_cls: 0.658470 loss_iou: 0.094479 loss_dfl: 0.755682 loss_l1: 0.245059 eta: 0:01:17 batch_cost: 0.1506 data_cost: 0.0001 ips: 53.1258 images/s
+[05/19 20:41:04] ppdet.engine INFO: Epoch: [15] [260/714] learning_rate: 0.000035 loss: 1.256722 loss_cls: 0.643056 loss_iou: 0.085462 loss_dfl: 0.751630 loss_l1: 0.229510 eta: 0:01:14 batch_cost: 0.1755 data_cost: 0.0002 ips: 45.5738 images/s
+[05/19 20:41:08] ppdet.engine INFO: Epoch: [15] [280/714] learning_rate: 0.000035 loss: 1.273995 loss_cls: 0.682731 loss_iou: 0.098349 loss_dfl: 0.724904 loss_l1: 0.200408 eta: 0:01:11 batch_cost: 0.1337 data_cost: 0.0001 ips: 59.8253 images/s
+[05/19 20:41:12] ppdet.engine INFO: Epoch: [15] [300/714] learning_rate: 0.000034 loss: 1.226884 loss_cls: 0.622226 loss_iou: 0.095895 loss_dfl: 0.706672 loss_l1: 0.211549 eta: 0:01:07 batch_cost: 0.1558 data_cost: 0.0002 ips: 51.3571 images/s
+[05/19 20:41:16] ppdet.engine INFO: Epoch: [15] [320/714] learning_rate: 0.000034 loss: 1.214899 loss_cls: 0.657075 loss_iou: 0.090103 loss_dfl: 0.706279 loss_l1: 0.229796 eta: 0:01:04 batch_cost: 0.1644 data_cost: 0.0002 ips: 48.6658 images/s
+[05/19 20:41:20] ppdet.engine INFO: Epoch: [15] [340/714] learning_rate: 0.000033 loss: 1.307977 loss_cls: 0.656919 loss_iou: 0.094473 loss_dfl: 0.757379 loss_l1: 0.259060 eta: 0:01:01 batch_cost: 0.1551 data_cost: 0.0003 ips: 51.5961 images/s
+[05/19 20:41:23] ppdet.engine INFO: Epoch: [15] [360/714] learning_rate: 0.000033 loss: 1.302809 loss_cls: 0.670123 loss_iou: 0.093031 loss_dfl: 0.744752 loss_l1: 0.242387 eta: 0:00:57 batch_cost: 0.1548 data_cost: 0.0006 ips: 51.6754 images/s
+[05/19 20:41:28] ppdet.engine INFO: Epoch: [15] [380/714] learning_rate: 0.000033 loss: 1.231336 loss_cls: 0.667048 loss_iou: 0.089097 loss_dfl: 0.755489 loss_l1: 0.217985 eta: 0:00:54 batch_cost: 0.1771 data_cost: 0.0002 ips: 45.1710 images/s
+[05/19 20:41:32] ppdet.engine INFO: Epoch: [15] [400/714] learning_rate: 0.000032 loss: 1.325075 loss_cls: 0.697376 loss_iou: 0.106990 loss_dfl: 0.747900 loss_l1: 0.251963 eta: 0:00:51 batch_cost: 0.1559 data_cost: 0.0002 ips: 51.2998 images/s
+[05/19 20:41:36] ppdet.engine INFO: Epoch: [15] [420/714] learning_rate: 0.000032 loss: 1.305547 loss_cls: 0.674158 loss_iou: 0.103000 loss_dfl: 0.767245 loss_l1: 0.266564 eta: 0:00:48 batch_cost: 0.1589 data_cost: 0.0001 ips: 50.3525 images/s
+[05/19 20:41:40] ppdet.engine INFO: Epoch: [15] [440/714] learning_rate: 0.000031 loss: 1.305682 loss_cls: 0.661902 loss_iou: 0.094449 loss_dfl: 0.762605 loss_l1: 0.229293 eta: 0:00:44 batch_cost: 0.1643 data_cost: 0.0002 ips: 48.6873 images/s
+[05/19 20:41:43] ppdet.engine INFO: Epoch: [15] [460/714] learning_rate: 0.000031 loss: 1.219328 loss_cls: 0.639776 loss_iou: 0.087618 loss_dfl: 0.719337 loss_l1: 0.202382 eta: 0:00:41 batch_cost: 0.1311 data_cost: 0.0002 ips: 61.0110 images/s
+[05/19 20:41:47] ppdet.engine INFO: Epoch: [15] [480/714] learning_rate: 0.000031 loss: 1.300646 loss_cls: 0.680031 loss_iou: 0.098838 loss_dfl: 0.752929 loss_l1: 0.224417 eta: 0:00:38 batch_cost: 0.1616 data_cost: 0.0002 ips: 49.4966 images/s
+[05/19 20:41:50] ppdet.engine INFO: Epoch: [15] [500/714] learning_rate: 0.000030 loss: 1.258039 loss_cls: 0.662491 loss_iou: 0.096977 loss_dfl: 0.752741 loss_l1: 0.212987 eta: 0:00:34 batch_cost: 0.1425 data_cost: 0.0002 ips: 56.1499 images/s
+[05/19 20:41:54] ppdet.engine INFO: Epoch: [15] [520/714] learning_rate: 0.000030 loss: 1.258950 loss_cls: 0.642457 loss_iou: 0.097857 loss_dfl: 0.749852 loss_l1: 0.238815 eta: 0:00:31 batch_cost: 0.1574 data_cost: 0.0002 ips: 50.8302 images/s
+[05/19 20:41:58] ppdet.engine INFO: Epoch: [15] [540/714] learning_rate: 0.000030 loss: 1.221897 loss_cls: 0.637693 loss_iou: 0.094970 loss_dfl: 0.727519 loss_l1: 0.208608 eta: 0:00:28 batch_cost: 0.1582 data_cost: 0.0002 ips: 50.5720 images/s
+[05/19 20:42:02] ppdet.engine INFO: Epoch: [15] [560/714] learning_rate: 0.000029 loss: 1.277674 loss_cls: 0.632473 loss_iou: 0.088147 loss_dfl: 0.762604 loss_l1: 0.223433 eta: 0:00:25 batch_cost: 0.1561 data_cost: 0.0001 ips: 51.2578 images/s
+[05/19 20:42:06] ppdet.engine INFO: Epoch: [15] [580/714] learning_rate: 0.000029 loss: 1.334704 loss_cls: 0.656034 loss_iou: 0.094570 loss_dfl: 0.768529 loss_l1: 0.229324 eta: 0:00:21 batch_cost: 0.1442 data_cost: 0.0001 ips: 55.4898 images/s
+[05/19 20:42:10] ppdet.engine INFO: Epoch: [15] [600/714] learning_rate: 0.000028 loss: 1.264499 loss_cls: 0.619681 loss_iou: 0.090786 loss_dfl: 0.745681 loss_l1: 0.223261 eta: 0:00:18 batch_cost: 0.1904 data_cost: 0.0002 ips: 42.0067 images/s
+[05/19 20:42:14] ppdet.engine INFO: Epoch: [15] [620/714] learning_rate: 0.000028 loss: 1.352461 loss_cls: 0.681262 loss_iou: 0.100945 loss_dfl: 0.763471 loss_l1: 0.256818 eta: 0:00:15 batch_cost: 0.1632 data_cost: 0.0005 ips: 49.0153 images/s
+[05/19 20:42:18] ppdet.engine INFO: Epoch: [15] [640/714] learning_rate: 0.000028 loss: 1.364486 loss_cls: 0.714785 loss_iou: 0.097046 loss_dfl: 0.780241 loss_l1: 0.250764 eta: 0:00:12 batch_cost: 0.1474 data_cost: 0.0004 ips: 54.2910 images/s
+[05/19 20:42:22] ppdet.engine INFO: Epoch: [15] [660/714] learning_rate: 0.000027 loss: 1.326570 loss_cls: 0.668567 loss_iou: 0.102903 loss_dfl: 0.741967 loss_l1: 0.222481 eta: 0:00:08 batch_cost: 0.1504 data_cost: 0.0002 ips: 53.1817 images/s
+[05/19 20:42:26] ppdet.engine INFO: Epoch: [15] [680/714] learning_rate: 0.000027 loss: 1.347276 loss_cls: 0.680531 loss_iou: 0.099067 loss_dfl: 0.758826 loss_l1: 0.273780 eta: 0:00:05 batch_cost: 0.1825 data_cost: 0.0002 ips: 43.8351 images/s
+[05/19 20:42:30] ppdet.engine INFO: Epoch: [15] [700/714] learning_rate: 0.000027 loss: 1.258734 loss_cls: 0.673286 loss_iou: 0.090283 loss_dfl: 0.739400 loss_l1: 0.204240 eta: 0:00:02 batch_cost: 0.1602 data_cost: 0.0002 ips: 49.9476 images/s
+[05/19 20:42:33] ppdet.engine INFO: Train epoch 16 cost time: 142.4 s.
+[05/19 20:42:34] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+[05/19 20:42:34] ppdet.engine INFO: Eval iter: 0
+[05/19 20:42:55] ppdet.engine INFO: Eval iter: 100
+[05/19 20:43:17] ppdet.engine INFO: Eval iter: 200
+[05/19 20:43:35] ppdet.engine INFO: Eval iter: 300
+[05/19 20:43:54] ppdet.engine INFO: Eval iter: 400
+[05/19 20:44:13] ppdet.engine INFO: Eval iter: 500
+[05/19 20:44:33] ppdet.engine INFO: Eval iter: 600
+[05/19 20:44:56] ppdet.engine INFO: Eval iter: 700
+[05/19 20:45:21] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.10s)
+creating index...
+index created!
+[05/19 20:45:22] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=11.17s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=40.66s).
+Accumulating evaluation results...
+DONE (t=20.66s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.689
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.856
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.749
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.290
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.536
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.779
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.530
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.788
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.828
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.534
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.755
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.889
+[05/19 20:46:37] ppdet.engine INFO: Total sample number: 5823, average FPS: 39.45030598813841
+[05/19 20:46:37] ppdet.engine INFO: Best test bbox ap is 0.689.
+[05/19 20:46:38] ppdet.utils.checkpoint INFO: Save checkpoint: output/ppyoloe_plus_crn_l_16e_voc2012
+Exception in thread Thread-25 (_thread_loop):
+Traceback (most recent call last):
+  File "/home/tanqiyou/anaconda3/lib/python3.10/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 623, in _get_data
+Exception in thread Thread-26 (_thread_loop):
+Traceback (most recent call last):
+    data = self._data_queue.get(timeout=self._timeout)
+  File "/home/tanqiyou/anaconda3/lib/python3.10/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 623, in _get_data
+  File "/home/tanqiyou/anaconda3/lib/python3.10/multiprocessing/queues.py", line 114, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+    data = self._data_queue.get(timeout=self._timeout)
+  File "/home/tanqiyou/anaconda3/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/home/tanqiyou/anaconda3/lib/python3.10/multiprocessing/queues.py", line 114, in get
+    self.run()
+  File "/home/tanqiyou/anaconda3/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/tanqiyou/anaconda3/lib/python3.10/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 536, in _thread_loop
+    raise Empty
+    batch = self._get_data()
+_queue.Empty
+  File "/home/tanqiyou/anaconda3/lib/python3.10/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 638, in _get_data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+    raise RuntimeError("DataLoader {} workers exit unexpectedly, " \
+  File "/home/tanqiyou/anaconda3/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+RuntimeError: DataLoader 3 workers exit unexpectedly, pids: 36860, 36862, 36864
+    self.run()
+  File "/home/tanqiyou/anaconda3/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/tanqiyou/anaconda3/lib/python3.10/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 536, in _thread_loop
+    batch = self._get_data()
+  File "/home/tanqiyou/anaconda3/lib/python3.10/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 638, in _get_data
+    raise RuntimeError("DataLoader {} workers exit unexpectedly, " \
+RuntimeError: DataLoader 3 workers exit unexpectedly, pids: 39796, 39798, 39800
