@@ -50,9 +50,8 @@ from .op_helper import (satisfy_sample_constraint, filter_and_process,
                         generate_sample_bbox_square, bbox_area_sampling,
                         is_poly, get_border)
 
-from ppdet.utils.logger import setup_logger
+from loguru import logger
 from ppdet.modeling.keypoint_utils import get_affine_transform, affine_transform
-logger = setup_logger(__name__)
 
 registered_ops = []
 

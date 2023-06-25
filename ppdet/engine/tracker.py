@@ -38,8 +38,7 @@ import ppdet.utils.stats as stats
 
 from .callbacks import Callback, ComposeCallback
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 MOT_ARCH = ['JDE', 'FairMOT', 'DeepSORT', 'ByteTrack', 'CenterTrack']
 MOT_ARCH_JDE = MOT_ARCH[:2]

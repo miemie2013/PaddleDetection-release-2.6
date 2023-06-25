@@ -20,8 +20,7 @@ import os
 
 from ppdet.data.source.voc import pascalvoc_label
 from ppdet.data.source.widerface import widerface_label
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = ['get_categories']
 

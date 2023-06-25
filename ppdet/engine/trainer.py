@@ -52,8 +52,8 @@ from .export_utils import _dump_infer_config, _prune_input_spec, apply_to_static
 
 from paddle.distributed.fleet.utils.hybrid_parallel_util import fused_allreduce_gradients
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger('ppdet.engine')
+from loguru import logger
+from ppdet.utils.logger import setup_logger_yolox
 
 __all__ = ['Trainer']
 
@@ -86,6 +86,7 @@ class Trainer(object):
             self.dataset = self.cfg['{}Dataset'.format(capital_mode)] = create(
                 '{}Dataset'.format(capital_mode))()
 
+        setup_logger_yolox('./output/', distributed_rank=dist.get_rank(), filename="%s_log.txt" % self.mode, mode="a")
         if cfg.architecture == 'DeepSORT' and self.mode == 'train':
             logger.error('DeepSORT has no need of training on mot dataset.')
             sys.exit(1)

@@ -31,9 +31,7 @@ import math
 from .operators import BaseOperator, register_op
 from .batch_operators import Gt2TTFTarget
 from ppdet.modeling.bbox_utils import bbox_iou_np_expand
-from ppdet.utils.logger import setup_logger
 from .op_helper import gaussian_radius
-logger = setup_logger(__name__)
 
 __all__ = [
     'RGBReverse', 'LetterBoxResize', 'MOTRandomAffine', 'Gt2JDETargetThres',

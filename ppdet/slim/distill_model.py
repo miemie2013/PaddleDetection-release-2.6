@@ -21,8 +21,7 @@ import paddle.nn as nn
 
 from ppdet.core.workspace import register, create, load_config
 from ppdet.utils.checkpoint import load_pretrain_weight
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = [
     'DistillModel',

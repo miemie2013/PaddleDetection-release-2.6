@@ -24,9 +24,7 @@ import itertools
 from ppdet.metrics.json_results import get_det_res, get_det_poly_res, get_seg_res, get_solov2_segm_res, get_keypoint_res, get_pose3d_res
 from ppdet.metrics.map_utils import draw_pr_curve
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
-
+from loguru import logger
 
 def get_infer_results(outs, catid, bias=0):
     """

@@ -25,9 +25,7 @@ import paddle
 import paddle.nn as nn
 from .download import get_weights_path
 
-from .logger import setup_logger
-logger = setup_logger(__name__)
-
+from loguru import logger
 
 def is_url(path):
     """

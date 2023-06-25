@@ -23,8 +23,7 @@ import cv2
 import math
 
 from .colormap import colormap
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = ['visualize_results']
 

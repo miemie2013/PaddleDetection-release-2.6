@@ -27,9 +27,7 @@ from ppdet.core.workspace import register, serializable
 from ppdet.data.crop_utils.annotation_cropper import AnnoCropper
 from .coco import COCODataSet
 from .dataset import _make_dataset, _is_valid_file
-from ppdet.utils.logger import setup_logger
-
-logger = setup_logger('sniper_coco_dataset')
+from loguru import logger
 
 
 @register

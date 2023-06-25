@@ -24,8 +24,6 @@ from .base_sde_tracker import Track
 from ..utils import Detection
 
 from ppdet.core.workspace import register, serializable
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
 
 __all__ = ['DeepSORTTracker']
 

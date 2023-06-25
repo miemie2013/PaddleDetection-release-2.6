@@ -24,8 +24,7 @@ except Exception:
     from collections import Sequence
 from .dataset import DetDataset, _make_dataset, _is_valid_file
 from ppdet.core.workspace import register, serializable
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 
 @register

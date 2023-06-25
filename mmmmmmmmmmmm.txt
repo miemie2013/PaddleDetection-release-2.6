@@ -53,9 +53,7 @@ docs/tutorials/DistributedTraining_cn.md
 
 export CUDA_VISIBLE_DEVICES=0,1
 
-fleetrun --selected_gpu 8,9 tools/train.py -c configs/ppyoloe/ppyoloe_plus_crn_s_16e_voc2012.yml --eval    &>ppyoloe_plus_s_from_coco.txt 2>&1 &
-
-nohup python -m paddle.distributed.launch --gpus 8,9 tools/train.py -c configs/ppyoloe/ppyoloe_plus_crn_s_16e_voc2012.yml --eval     > ppyoloe_plus_s_from_coco.log 2>&1 &
+nohup python -m paddle.distributed.launch --gpus 0,1 tools/train.py -c configs/ppyoloe/ppyoloe_plus_crn_s_16e_voc2012.yml --eval     > ppyoloe_plus_s_from_coco.log 2>&1 &
 
 
 

@@ -34,8 +34,7 @@ from ppdet.utils import profiler
 from ppdet.modeling.ssod.utils import align_weak_strong_shape
 from .trainer import Trainer
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger('ppdet.engine')
+from loguru import logger
 
 __all__ = ['Trainer_DenseTeacher']
 

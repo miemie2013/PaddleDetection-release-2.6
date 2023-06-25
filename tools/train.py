@@ -17,6 +17,7 @@ from __future__ import division
 from __future__ import print_function
 
 import os
+from loguru import logger
 import sys
 
 # add python path of PaddleDetection to sys.path
@@ -38,8 +39,6 @@ from ppdet.slim import build_slim_model
 
 from ppdet.utils.cli import ArgsParser, merge_args
 import ppdet.utils.check as check
-from ppdet.utils.logger import setup_logger
-logger = setup_logger('train')
 
 
 def parse_args():
@@ -151,6 +150,7 @@ def run(FLAGS, cfg):
     trainer.train(FLAGS.eval)
 
 
+@logger.catch
 def main():
     FLAGS = parse_args()
     # 判断是否是调试状态

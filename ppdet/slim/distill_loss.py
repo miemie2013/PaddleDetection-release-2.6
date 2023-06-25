@@ -25,8 +25,7 @@ from paddle import ParamAttr
 from ppdet.core.workspace import register
 from ppdet.modeling import ops
 from ppdet.modeling.losses.iou_loss import GIoULoss
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = [
     'DistillYOLOv3Loss',

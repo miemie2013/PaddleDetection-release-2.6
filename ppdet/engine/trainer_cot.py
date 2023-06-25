@@ -13,8 +13,7 @@
 # limitations under the License.
 
 from ppdet.core.workspace import create
-from ppdet.utils.logger import setup_logger
-logger = setup_logger('ppdet.engine')
+from loguru import logger
 
 from . import Trainer
 __all__ = ['TrainerCot']

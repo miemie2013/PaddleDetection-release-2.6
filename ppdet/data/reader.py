@@ -33,9 +33,7 @@ from .utils import default_collate_fn
 from ppdet.core.workspace import register
 from . import transform
 from .shm_utils import _get_shared_memory_size_in_M
-
-from ppdet.utils.logger import setup_logger
-logger = setup_logger('reader')
+from loguru import logger
 
 MAIN_PID = os.getpid()
 

@@ -19,8 +19,7 @@ from __future__ import print_function
 from paddle.utils import try_import
 
 from ppdet.core.workspace import register, serializable
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 
 @register

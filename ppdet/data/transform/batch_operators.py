@@ -33,9 +33,7 @@ from .atss_assigner import ATSSAssigner
 from scipy import ndimage
 
 from ppdet.modeling import bbox_utils
-from ppdet.utils.logger import setup_logger
 from ppdet.modeling.keypoint_utils import get_affine_transform, affine_transform
-logger = setup_logger(__name__)
 
 __all__ = [
     'PadBatch',

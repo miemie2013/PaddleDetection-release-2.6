@@ -17,9 +17,7 @@ import numpy as np
 
 from ppdet.core.workspace import register, serializable
 from .dataset import DetDataset
-
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 
 @register

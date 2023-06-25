@@ -23,8 +23,7 @@ import paddle.nn as nn
 import paddle.nn.functional as F
 
 from ppdet.core.workspace import register, serializable
-from ppdet.utils.logger import setup_logger
-logger = setup_logger('ppdet.engine')
+from loguru import logger
 
 __all__ = ['Pose3DLoss']
 

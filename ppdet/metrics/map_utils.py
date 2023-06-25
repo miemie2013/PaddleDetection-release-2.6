@@ -24,8 +24,7 @@ import itertools
 import paddle
 from ppdet.modeling.rbox_utils import poly2rbox_np
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = [
     'draw_pr_curve',

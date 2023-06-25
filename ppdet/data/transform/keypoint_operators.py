@@ -30,8 +30,6 @@ import copy
 
 from ...modeling.keypoint_utils import get_affine_mat_kernel, warp_affine_joints, get_affine_transform, affine_transform, get_warp_matrix
 from ppdet.core.workspace import serializable
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
 
 registered_ops = []
 

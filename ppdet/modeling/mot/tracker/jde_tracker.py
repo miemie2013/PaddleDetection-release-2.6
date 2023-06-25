@@ -24,8 +24,7 @@ from .base_jde_tracker import TrackState, STrack
 from .base_jde_tracker import joint_stracks, sub_stracks, remove_duplicate_stracks
 
 from ppdet.core.workspace import register, serializable
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = ['JDETracker']
 

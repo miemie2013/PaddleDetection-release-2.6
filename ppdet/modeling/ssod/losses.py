@@ -24,8 +24,6 @@ from ppdet.core.workspace import register
 from ppdet.modeling.losses.iou_loss import GIoULoss
 from .utils import QFLv2
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
 
 __all__ = [
     'SSODFCOSLoss',

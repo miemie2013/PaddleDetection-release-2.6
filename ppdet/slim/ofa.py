@@ -8,12 +8,11 @@ import paddle.nn.functional as F
 
 from ppdet.core.workspace import load_config, merge_config, create
 from ppdet.utils.checkpoint import load_weight, load_pretrain_weight
-from ppdet.utils.logger import setup_logger
+from loguru import logger
 from ppdet.core.workspace import register, serializable
 
 from paddle.utils import try_import
 
-logger = setup_logger(__name__)
 
 
 @register

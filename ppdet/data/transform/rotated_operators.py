@@ -30,8 +30,6 @@ import copy
 
 from .operators import register_op, BaseOperator
 from ppdet.modeling.rbox_utils import poly2rbox_le135_np, poly2rbox_oc_np, rbox2poly_np
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
 
 
 @register_op

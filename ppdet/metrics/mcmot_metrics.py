@@ -36,8 +36,7 @@ except:
         'Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics'
     )
     pass
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = ['MCMOTEvaluator', 'MCMOTMetric']
 

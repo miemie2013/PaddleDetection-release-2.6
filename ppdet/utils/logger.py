@@ -12,59 +12,97 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import logging
+from loguru import logger
+import inspect
 import os
 import sys
 
-import paddle.distributed as dist
 
-__all__ = ['setup_logger']
-
-logger_initialized = []
+__all__ = ['setup_logger_yolox']
 
 
-def setup_logger(name="ppdet", output=None):
+def get_caller_name(depth=0):
     """
-    Initialize logger and set its verbosity level to INFO.
     Args:
-        output (str): a file name or a directory to save log. If None, will not save log file.
-            If ends with ".txt" or ".log", assumed to be a file name.
-            Otherwise, logs will be saved to `output/log.txt`.
-        name (str): the root module name of this logger
+        depth (int): Depth of caller conext, use 0 for caller depth. Default value: 0.
 
     Returns:
-        logging.Logger: a logger
+        str: module name of the caller
     """
-    logger = logging.getLogger(name)
-    if name in logger_initialized:
-        return logger
+    # the following logic is a little bit faster than inspect.stack() logic
+    frame = inspect.currentframe().f_back
+    for _ in range(depth):
+        frame = frame.f_back
 
-    logger.setLevel(logging.INFO)
-    logger.propagate = False
+    return frame.f_globals["__name__"]
 
-    formatter = logging.Formatter(
-        "[%(asctime)s] %(name)s %(levelname)s: %(message)s",
-        datefmt="%m/%d %H:%M:%S")
-    # stdout logging: master only
-    local_rank = dist.get_rank()
-    if local_rank == 0:
-        ch = logging.StreamHandler(stream=sys.stdout)
-        ch.setLevel(logging.DEBUG)
-        ch.setFormatter(formatter)
-        logger.addHandler(ch)
 
-    # file logging: all workers
-    if output is not None:
-        if output.endswith(".txt") or output.endswith(".log"):
-            filename = output
+class StreamToLoguru:
+    """
+    stream object that redirects writes to a logger instance.
+    """
+
+    def __init__(self, level="INFO", caller_names=("apex", "pycocotools")):
+        """
+        Args:
+            level(str): log level string of loguru. Default value: "INFO".
+            caller_names(tuple): caller names of redirected module.
+                Default value: (apex, pycocotools).
+        """
+        self.level = level
+        self.linebuf = ""
+        self.caller_names = caller_names
+
+    def write(self, buf):
+        full_name = get_caller_name(depth=1)
+        module_name = full_name.rsplit(".", maxsplit=-1)[0]
+        if module_name in self.caller_names:
+            for line in buf.rstrip().splitlines():
+                # use caller level log
+                logger.opt(depth=2).log(self.level, line.rstrip())
         else:
-            filename = os.path.join(output, "log.txt")
-        if local_rank > 0:
-            filename = filename + ".rank{}".format(local_rank)
-        os.makedirs(os.path.dirname(filename))
-        fh = logging.FileHandler(filename, mode='a')
-        fh.setLevel(logging.DEBUG)
-        fh.setFormatter(logging.Formatter())
-        logger.addHandler(fh)
-    logger_initialized.append(name)
-    return logger
+            sys.__stdout__.write(buf)
+
+    def flush(self):
+        pass
+
+
+def redirect_sys_output(log_level="INFO"):
+    redirect_logger = StreamToLoguru(log_level)
+    sys.stderr = redirect_logger
+    sys.stdout = redirect_logger
+
+
+def setup_logger_yolox(save_dir, distributed_rank=0, filename="log.txt", mode="a"):
+    """setup logger for training and testing.
+    Args:
+        save_dir(str): location to save log file
+        distributed_rank(int): device rank when multi-gpu environment
+        filename (string): log save name.
+        mode(str): log file write mode, `append` or `override`. default is `a`.
+
+    Return:
+        logger instance.
+    """
+    loguru_format = (
+        "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | "
+        "<level>{level: <8}</level> | "
+        "<cyan>{name}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+    )
+
+    logger.remove()
+    save_file = os.path.join(save_dir, filename)
+    if mode == "o" and os.path.exists(save_file):
+        os.remove(save_file)
+    # only keep logger in rank0 process
+    if distributed_rank == 0:
+        logger.add(
+            sys.stderr,
+            format=loguru_format,
+            level="INFO",
+            enqueue=True,
+        )
+        logger.add(save_file)
+
+    # redirect stdout/stderr to loguru
+    redirect_sys_output("INFO")

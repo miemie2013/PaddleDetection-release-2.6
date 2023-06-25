@@ -24,8 +24,7 @@ from ppdet.core.workspace import load_config, create
 from ppdet.utils.checkpoint import load_weight
 from ppdet.utils.download import get_config_path
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = [
     'list_model', 'get_config_file', 'get_weights_url', 'get_model',

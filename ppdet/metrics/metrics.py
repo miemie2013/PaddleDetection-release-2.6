@@ -31,8 +31,7 @@ from .widerface_utils import face_eval_run
 from ppdet.data.source.category import get_categories
 from ppdet.modeling.rbox_utils import poly2rbox_np
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = [
     'Metric', 'COCOMetric', 'VOCMetric', 'WiderFaceMetric', 'get_infer_results',

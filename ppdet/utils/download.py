@@ -33,10 +33,9 @@ import errno
 
 from paddle.utils.download import _get_unique_endpoints
 from ppdet.core.workspace import BASE_KEY
-from .logger import setup_logger
 from .voc_utils import create_list
+from loguru import logger
 
-logger = setup_logger(__name__)
 
 __all__ = [
     'get_weights_path', 'get_dataset_path', 'get_config_path',

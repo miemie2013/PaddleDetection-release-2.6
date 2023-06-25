@@ -20,8 +20,7 @@ from __future__ import division
 from __future__ import print_function
 
 import numpy as np
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 
 def bbox_overlaps(bboxes1, bboxes2, mode='iou', is_aligned=False, eps=1e-6):

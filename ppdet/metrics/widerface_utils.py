@@ -23,8 +23,7 @@ from collections import OrderedDict
 
 import paddle
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = ['face_eval_run', 'lmk2out']
 

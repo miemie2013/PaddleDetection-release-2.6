@@ -23,8 +23,7 @@ from collections import OrderedDict
 import paddle
 from ppdet.data.source.category import get_categories
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger('ppdet.engine')
+from loguru import logger
 
 # Global dictionary
 TRT_MIN_SUBGRAPH = {

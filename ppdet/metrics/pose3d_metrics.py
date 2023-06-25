@@ -18,8 +18,7 @@ import os
 import json
 from collections import defaultdict, OrderedDict
 import numpy as np
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = ['Pose3DEval']
 

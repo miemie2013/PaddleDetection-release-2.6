@@ -22,8 +22,7 @@ import paddle
 import six
 import paddle.version as paddle_version
 
-from .logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = [
     'check_gpu', 'check_npu', 'check_xpu', 'check_mlu', 'check_version',

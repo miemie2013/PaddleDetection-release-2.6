@@ -21,9 +21,7 @@ except Exception:
 import numpy as np
 from ppdet.core.workspace import register, serializable
 from .dataset import DetDataset
-
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 __all__ = ['COCODataSet', 'SlicedCOCODataSet', 'SemiCOCODataSet']
 
@@ -229,8 +227,7 @@ class COCODataSet(DetDataset):
                                             'train2017', im_fname[:-3] + 'png')
                     coco_rec.update({'semantic': seg_path})
 
-            logger.debug('Load file: {}, im_id: {}, h: {}, w: {}.'.format(
-                im_path, img_id, im_h, im_w))
+            # logger.debug('Load file: {}, im_id: {}, h: {}, w: {}.'.format(im_path, img_id, im_h, im_w))
             if is_empty:
                 empty_records.append(coco_rec)
             else:

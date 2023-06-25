@@ -31,8 +31,6 @@ from .adamw import AdamWDL, build_adamwdl
 
 __all__ = ['LearningRate', 'OptimizerBuilder']
 
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
 
 
 @serializable

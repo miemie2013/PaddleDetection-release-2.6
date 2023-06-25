@@ -23,9 +23,7 @@ from paddle.io import Dataset
 from ppdet.core.workspace import register, serializable
 from ppdet.utils.download import get_dataset_path
 from ppdet.data import source
-
-from ppdet.utils.logger import setup_logger
-logger = setup_logger(__name__)
+from loguru import logger
 
 
 @serializable
